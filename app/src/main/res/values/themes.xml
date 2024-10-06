@@ -1,0 +1,27 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <style name="Base.Theme.W_2_wmatch" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/brand_blue</item>
+        <item name="colorPrimaryVariant">@color/brand_lightblue</item>
+        <item name="colorOnPrimary">@color/stroke_color_text</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/black</item>
+        <item name="colorSecondaryVariant">@android:color/holo_red_dark</item>
+        <item name="colorOnSecondary">@color/black</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor">?attr/colorPrimaryVariant</item>
+        <!-- главный цвет фона для приложения -->
+        <item name="android:windowBackground">?attr/colorPrimaryVariant</item>
+        <!-- Основной цвет текста -->
+        <item name="android:textColor">?attr/colorOnPrimary</item>
+
+<!--        <item name="android:fontFamily">@font/roboto_regular</item>-->
+    </style>
+
+    <style name="Theme.W_2_wmatch" parent="Base.Theme.W_2_wmatch.NoActionBar" />
+
+    <style name="Base.Theme.W_2_wmatch.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+</resources>
