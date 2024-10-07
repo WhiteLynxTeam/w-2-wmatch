@@ -2,7 +2,23 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+
+    <!-- colorPrimary -->
+    <!-- button -->
     <color name="brand_blue">#FF91A0BF</color>
-    <color name="brand_lightblue">#FFF8F8F8</color>
-    <color name="stroke_color_text">#FFADB5C5</color>
+    <!-- colorPrimaryVariant -->
+    <color name="brand_lightblue">#FFDEE5F2</color>
+    <!-- colorSecondary -->
+    <color name="brand_orange">#FFFF9345</color>
+
+    <color name="text_stroke">#FFADB5C5</color>
+    <color name="text_main">#FF123E96</color>
+    <color name="text_body">#FF5E76A5</color>
+    <color name="text_main_light">#FFAEB5C4</color>
+
+    <!-- colorOnPrimary -->
+    <!-- windowBackground main -->
+    <!-- text on button -->
+    <color name="gray_bg">#FFF8F8F8</color>
+    <color name="gray_figma_bg">#FFF3F3F3</color>
 </resources>

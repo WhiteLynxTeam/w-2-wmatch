@@ -1,3 +1,11 @@
 <resources>
     <string name="app_name">w_2_wmatch</string>
+
+    <string name="pass">Password</string>
+    <string name="reg">Регистрация</string>
+    <string name="enter">Вход</string>
+    <string name="yes">Да</string>
+    <string name="decline">Нет</string>
+    <string name="no">Нет</string>
+    <string name="ok">Ок</string>
 </resources>
