@@ -8,13 +8,13 @@
         <!-- Secondary brand color. -->
         <item name="colorSecondary">@color/brand_orange</item>
         <item name="colorSecondaryVariant">@android:color/holo_red_dark</item>
-        <item name="colorOnSecondary">@color/text_main</item>
+        <item name="colorOnSecondary">@color/text_body</item>
         <!-- Status bar color. -->
 <!--        <item name="android:statusBarColor">?attr/colorPrimaryVariant</item>-->
         <!-- главный цвет фона для приложения -->
         <item name="android:windowBackground">@color/white</item>
         <!-- Основной цвет текста -->
-        <item name="android:textColor">@color/text_body</item>
+        <item name="android:textColor">?attr/colorOnSecondary</item>
 
         <!--Params-->
         <item name="android:windowTranslucentStatus">true</item>

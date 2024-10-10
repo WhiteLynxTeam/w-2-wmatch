@@ -6,13 +6,14 @@
     <!-- colorPrimary -->
     <!-- button -->
     <color name="brand_blue">#FF91A0BF</color>
-    <!-- colorPrimaryVariant -->
     <color name="brand_lightblue">#FFDEE5F2</color>
     <!-- colorSecondary -->
     <color name="brand_orange">#FFFF9345</color>
 
     <color name="text_stroke">#FFADB5C5</color>
-    <color name="text_main">#FF123E96</color>
+    <color name="text_main">#FF1B3972</color>
+    <color name="text_main2">#FF123E96</color>
+    <!-- colorPrimaryVariant -->
     <color name="text_body">#FF5E76A5</color>
     <color name="text_main_light">#FFAEB5C4</color>
 
