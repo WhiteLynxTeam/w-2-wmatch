@@ -9,6 +9,14 @@
         android:id="@+id/introFragment"
         android:name="ru.w_2_wmatch.view.intro.IntroFragment"
         android:label="fragment_intro"
-        tools:layout="@layout/fragment_intro"/>
+        tools:layout="@layout/fragment_intro">
+        <action
+            android:id="@+id/action_introFragment_to_authFragment"
+            app:destination="@id/authFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/authFragment"
+        android:name="ru.w_2_wmatch.view.auth.AuthFragment"
+        android:label="AuthFragment" />
 
 </navigation>

@@ -1,27 +1,73 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".view.auth.AuthFragment">
+    tools:context=".view.intro.IntroFragment">
 
     <ImageView
-        android:id="@+id/back_button"
-        style="@style/MaiboBackButton"
+        android:id="@+id/btn_back"
+        style="@style/BackButton"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="3.5dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/tv_title"
-        style="@style/TextTitleStyle"
-        android:layout_width="0dp"
-        android:autoSizeMinTextSize="@dimen/default_text_size"
-        android:text="@string/back"
-        android:layout_marginEnd="@dimen/default_margin"
-        android:maxLines="1"
-        app:layout_constraintBottom_toBottomOf="@+id/back_button"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/back_button"
-        app:layout_constraintTop_toTopOf="@+id/back_button" />
+        style="@style/Back.TextStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:text="Вход"
+        app:layout_constraintBottom_toBottomOf="@id/btn_back"
+        app:layout_constraintStart_toEndOf="@id/btn_back"
+        app:layout_constraintTop_toTopOf="@id/btn_back" />
 
-</FrameLayout>
+    <TextView
+        android:id="@+id/tv_del_account"
+        style="@style/Back.TextStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:textSize="14sp"
+        android:text="Чтобы удалить аккаунт, подтвердите код\nстраны и введите номер телефона"
+        app:layout_constraintStart_toStartOf="@id/btn_back"
+        app:layout_constraintTop_toBottomOf="@id/btn_back" />
+
+    <ImageView
+        android:id="@+id/iv_help"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="25dp"
+        android:scaleType="centerInside"
+        android:src="@drawable/ic_help"
+        app:layout_constraintStart_toEndOf="@id/tv_del_account"
+        app:layout_constraintTop_toTopOf="@id/tv_del_account" />
+
+    <com.google.android.material.textfield.TextInputEditText
+        style="@style/PrimaryBigEt"
+        android:id="@+id/et_email"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="30dp"
+        android:inputType="text"
+        android:maxLines="1"
+        app:layout_constraintStart_toStartOf="@id/tv_del_account"
+        app:layout_constraintTop_toBottomOf="@id/tv_del_account"/>
+
+    <com.google.android.material.textfield.TextInputEditText
+        style="@style/PrimaryBigEt"
+        android:id="@+id/et_pass"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="5dp"
+        android:inputType="text"
+        android:maxLines="1"
+        app:layout_constraintStart_toStartOf="@id/tv_del_account"
+        app:layout_constraintTop_toBottomOf="@id/et_email"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
