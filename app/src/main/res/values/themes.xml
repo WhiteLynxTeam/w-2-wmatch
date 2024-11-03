@@ -17,7 +17,7 @@
         <item name="android:textColor">?attr/colorOnSecondary</item>
 
         <!--Params-->
-        <item name="android:windowTranslucentStatus">true</item>
+<!--        <item name="android:windowTranslucentStatus">true</item>-->
 
 <!--        <item name="android:fontFamily">@font/roboto_regular</item>-->
     </style>

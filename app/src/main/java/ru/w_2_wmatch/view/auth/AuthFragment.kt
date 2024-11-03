@@ -2,17 +2,15 @@ package ru.w_2_wmatch.view.auth
 
 import android.content.Context
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.Fragment
 import dagger.android.support.AndroidSupportInjection
-import ru.w_2_wmatch.R
-import ru.w_2_wmatch.databinding.FragmentIntroBinding
-import ru.w_2_wmatch.view.intro.IntroViewModel
+import ru.w_2_wmatch.databinding.FragmentAuthBinding
 
 class AuthFragment : Fragment() {
-    private var _binding: FragmentIntroBinding? = null
+    private var _binding: FragmentAuthBinding? = null
     private val binding get() = _binding!!
 
     private lateinit var viewModel: AuthViewModel
@@ -26,7 +24,12 @@ class AuthFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        _binding = FragmentIntroBinding.inflate(inflater, container, false)
+        _binding = FragmentAuthBinding.inflate(inflater, container, false)
         return binding.root
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
     }
 }

@@ -20,7 +20,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="15dp"
-        android:text="Вход"
+        android:text="Регистрация"
         app:layout_constraintBottom_toBottomOf="@id/btn_back"
         app:layout_constraintStart_toEndOf="@id/btn_back"
         app:layout_constraintTop_toTopOf="@id/btn_back" />
@@ -48,16 +48,42 @@
 
     <com.google.android.material.textfield.TextInputEditText
         style="@style/PrimaryBigEt"
-        android:id="@+id/et_email"
+        android:id="@+id/et_fio"
         android:layout_width="match_parent"
         android:layout_height="56dp"
         android:layout_marginStart="30dp"
         android:layout_marginTop="30dp"
-        android:hint="Ваш email"
+        android:hint="Ваше ФИО"
         android:inputType="text"
         android:maxLines="1"
         app:layout_constraintStart_toStartOf="@id/tv_del_account"
         app:layout_constraintTop_toBottomOf="@id/tv_del_account"/>
+
+    <com.google.android.material.textfield.TextInputEditText
+        style="@style/PrimaryBigEt"
+        android:id="@+id/et_phone"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="5dp"
+        android:hint="Телефон"
+        android:inputType="textPassword"
+        android:maxLines="1"
+        app:layout_constraintStart_toStartOf="@id/tv_del_account"
+        app:layout_constraintTop_toBottomOf="@id/et_fio"/>
+
+    <com.google.android.material.textfield.TextInputEditText
+        style="@style/PrimaryBigEt"
+        android:id="@+id/et_email"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="5dp"
+        android:hint="Ваш email"
+        android:inputType="text"
+        android:maxLines="1"
+        app:layout_constraintStart_toStartOf="@id/et_phone"
+        app:layout_constraintTop_toBottomOf="@id/et_phone"/>
 
     <com.google.android.material.textfield.TextInputEditText
         style="@style/PrimaryBigEt"
@@ -69,29 +95,17 @@
         android:hint="Пароль"
         android:inputType="textPassword"
         android:maxLines="1"
-        app:layout_constraintStart_toStartOf="@id/tv_del_account"
+        app:layout_constraintStart_toStartOf="@id/et_email"
         app:layout_constraintTop_toBottomOf="@id/et_email"/>
-
-    <TextView
-        android:id="@+id/tv_forget"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="5dp"
-        android:layout_marginEnd="30dp"
-        android:textSize="12sp"
-        android:textColor="@color/text_stroke"
-        android:text="Забыли пароль?"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/et_pass" />
 
     <androidx.appcompat.widget.AppCompatButton
         style="@style/PrimaryBigButton"
-        android:id="@+id/btn_enter"
-        android:layout_marginTop="56dp"
+        android:id="@+id/btn_reg"
+        android:layout_marginTop="35dp"
         android:clickable="true"
         android:enabled="true"
         android:focusable="true"
-        android:text="@string/enter"
+        android:text="Зарегистрироваться"
         android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -103,11 +117,11 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="15dp"
         android:textSize="12sp"
-        android:textColor="@color/brand_blue"
-        android:text="Нет аккаунта?"
-        app:layout_constraintStart_toStartOf="@id/btn_enter"
-        app:layout_constraintEnd_toEndOf="@id/btn_enter"
-        app:layout_constraintTop_toBottomOf="@id/btn_enter" />
+        android:textColor="@color/text_stroke"
+        android:text="У меня уже есть аккаунт"
+        app:layout_constraintStart_toStartOf="@id/btn_reg"
+        app:layout_constraintEnd_toEndOf="@id/btn_reg"
+        app:layout_constraintTop_toBottomOf="@id/btn_reg" />
 
     <TextView
         style="@style/w2wmatch.TextStyle"
@@ -117,31 +131,31 @@
         android:layout_marginTop="36dp"
         android:textSize="14sp"
         android:textColor="@color/text_stroke"
-        android:text="Зарегистрируйтесь"
-        app:layout_constraintStart_toStartOf="@id/btn_enter"
-        app:layout_constraintEnd_toEndOf="@id/btn_enter"
-        app:layout_constraintTop_toBottomOf="@id/btn_enter" />
+        android:text="Войти"
+        app:layout_constraintStart_toStartOf="@id/btn_reg"
+        app:layout_constraintEnd_toEndOf="@id/btn_reg"
+        app:layout_constraintTop_toBottomOf="@id/btn_reg" />
 
     <TextView
         style="@style/w2wmatch.TextStyle"
         android:id="@+id/tv_enter_with"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="300dp"
+        android:layout_marginTop="199dp"
         android:text="Войти с помощью"
         android:textAlignment="center"
         android:textSize="14sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/btn_enter" />
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btn_reg" />
 
     <LinearLayout
         android:layout_width="180dp"
         android:layout_height="30dp"
         android:layout_marginTop="8dp"
         android:orientation="horizontal"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@id/tv_enter_with" >
 
         <ImageView
