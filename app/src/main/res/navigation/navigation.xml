@@ -13,6 +13,9 @@
         <action
             android:id="@+id/action_introFragment_to_authFragment"
             app:destination="@id/authFragment" />
+        <action
+            android:id="@+id/action_introFragment_to_regFragment"
+            app:destination="@id/regFragment" />
     </fragment>
     <fragment
         android:id="@+id/authFragment"
@@ -27,5 +30,14 @@
         android:name="ru.w_2_wmatch.view.questionnaire.QuestionnaireFragment"
         android:label="fragment_questionnaire"
         tools:layout="@layout/fragment_questionnaire" />
+    <fragment
+        android:id="@+id/regFragment"
+        android:name="ru.w_2_wmatch.view.reg.RegFragment"
+        android:label="RegFragment" />
+    <fragment
+        android:id="@+id/brandPositionFragment"
+        android:name="ru.w_2_wmatch.view.questionnaire.brand_position.BrandPositionFragment"
+        android:label="fragment_brand_position"
+        tools:layout="@layout/fragment_brand_position" />
 
 </navigation>
