@@ -1,4 +1,4 @@
-package ru.w_2_wmatch.view.auth
+package ru.w_2_wmatch.view.questionnaire.nick_telegram
 
 import android.content.Context
 import android.os.Bundle
@@ -6,13 +6,13 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import androidx.navigation.fragment.findNavController
 import dagger.android.support.AndroidSupportInjection
-import ru.w_2_wmatch.R
-import ru.w_2_wmatch.databinding.FragmentAuthBinding
+import ru.w_2_wmatch.databinding.FragmentNickTelegramBinding
+import ru.w_2_wmatch.view.auth.AuthViewModel
 
-class AuthFragment : Fragment() {
-    private var _binding: FragmentAuthBinding? = null
+class NickTelegramFragment : Fragment() {
+
+    private var _binding: FragmentNickTelegramBinding? = null
     private val binding get() = _binding!!
 
     private lateinit var viewModel: AuthViewModel
@@ -26,15 +26,17 @@ class AuthFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        _binding = FragmentAuthBinding.inflate(inflater, container, false)
+        _binding = FragmentNickTelegramBinding.inflate(inflater, container, false)
         return binding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        binding.btnEnter.setOnClickListener {
-            findNavController().navigate(R.id.action_authFragment_to_questionnaireFragment)
-        }
+    }
+
+
+    companion object {
+        fun newInstance() = NickTelegramFragment()
     }
 }

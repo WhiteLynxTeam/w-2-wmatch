@@ -17,6 +17,15 @@
     <fragment
         android:id="@+id/authFragment"
         android:name="ru.w_2_wmatch.view.auth.AuthFragment"
-        android:label="AuthFragment" />
+        android:label="AuthFragment" >
+        <action
+            android:id="@+id/action_authFragment_to_questionnaireFragment"
+            app:destination="@id/questionnaireFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/questionnaireFragment"
+        android:name="ru.w_2_wmatch.view.questionnaire.QuestionnaireFragment"
+        android:label="fragment_questionnaire"
+        tools:layout="@layout/fragment_questionnaire" />
 
 </navigation>
