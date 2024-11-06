@@ -1,12 +1,19 @@
 package ru.w_2_wmatch.view.questionnaire.nick_telegram
 
+import android.animation.ObjectAnimator
+import android.annotation.SuppressLint
+import android.app.AlertDialog
 import android.content.Context
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
+import android.widget.LinearLayout
+import android.widget.PopupWindow
 import androidx.fragment.app.Fragment
 import dagger.android.support.AndroidSupportInjection
+import ru.w_2_wmatch.R
 import ru.w_2_wmatch.databinding.FragmentNickTelegramBinding
 import ru.w_2_wmatch.view.auth.AuthViewModel
 
@@ -33,8 +40,41 @@ class NickTelegramFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        binding.ivHelpNick.setOnClickListener {
+            showPopupWindow(it)
+        }
+
+        binding.ivAdd.setOnClickListener {
+            animImageAdd(it)
+        }
     }
 
+    private fun animImageAdd(view: View) {
+        val animator = ObjectAnimator.ofFloat(view, "rotation", 0f, 90f)
+        animator.duration = 500
+        animator.start()
+    }
+
+    @SuppressLint("InflateParams", "MissingInflatedId")
+    private fun showPopupWindow(anchorView: View) {
+        // Создаем инфлятор для наших popup-элементов
+        val inflater = layoutInflater
+        val popupView = inflater.inflate(R.layout.help_info_builder, null)
+
+        // Создаем PopupWindow
+        val popupWindow = PopupWindow(popupView,
+            LinearLayout.LayoutParams.WRAP_CONTENT,
+            LinearLayout.LayoutParams.WRAP_CONTENT)
+
+        // Устанавливаем кнопку закрытия
+        val closeButton: Button = popupView.findViewById(R.id.btn_send)
+        closeButton.setOnClickListener {
+            popupWindow.dismiss() // Закрываем всплывающее окно
+        }
+
+        // Устанавливаем PopupWindow рядом с элементом
+        popupWindow.showAsDropDown(anchorView) // Отображение под элементом
+    }
 
     companion object {
         fun newInstance() = NickTelegramFragment()
