@@ -1,4 +1,4 @@
-package ru.w_2_wmatch.view.intro
+package ru.w_2_wmatch.view.questionnaire.brand_position
 
 import android.content.Context
 import android.os.Bundle
@@ -6,16 +6,16 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
-import androidx.navigation.fragment.findNavController
 import dagger.android.support.AndroidSupportInjection
 import ru.w_2_wmatch.R
-import ru.w_2_wmatch.databinding.FragmentIntroBinding
+import ru.w_2_wmatch.databinding.FragmentBrandPositionBinding
+import ru.w_2_wmatch.view.auth.AuthViewModel
 
-class IntroFragment : Fragment() {
-    private var _binding: FragmentIntroBinding? = null
+class BrandPositionFragment : Fragment() {
+    private var _binding: FragmentBrandPositionBinding? = null
     private val binding get() = _binding!!
 
-    private lateinit var viewModel: IntroViewModel
+    private lateinit var viewModel: AuthViewModel
 
     override fun onAttach(context: Context) {
         AndroidSupportInjection.inject(this)
@@ -26,19 +26,15 @@ class IntroFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        _binding = FragmentIntroBinding.inflate(inflater, container, false)
+        _binding = FragmentBrandPositionBinding.inflate(inflater,container,false)
         return binding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+    }
 
-        binding.btnEnter.setOnClickListener{
-            findNavController().navigate(R.id.action_introFragment_to_authFragment)
-        }
-
-        binding.btnReg.setOnClickListener {
-            findNavController().navigate(R.id.action_introFragment_to_regFragment)
-        }
+    companion object{
+        fun newInstance() = BrandPositionFragment
     }
 }

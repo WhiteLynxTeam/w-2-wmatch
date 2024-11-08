@@ -1,0 +1,342 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.questionnaire.brand_position.BrandPositionFragment">
+
+
+    <TextView
+        android:id="@+id/tv_brand_position"
+        style="@style/Back.TextStyle"
+        android:layout_width="296dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="50dp"
+        android:text="Название Вашего бренда и должность"
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/iv_help_nick"
+        android:layout_width="30dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="15dp"
+        android:scaleType="centerInside"
+        android:src="@drawable/ic_help"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_brand_position"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/tv_brand_position" />
+
+    <TextView
+        android:id="@+id/count"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="3/30"
+        app:layout_constraintEnd_toEndOf="@id/iv_help_nick"
+        app:layout_constraintStart_toStartOf="@id/iv_help_nick"
+        app:layout_constraintTop_toBottomOf="@id/iv_help_nick" />
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/et_brand_name"
+        style="@style/PrimaryBigEt"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="10dp"
+        android:hint="Название бренда"
+        android:inputType="text"
+        android:maxLines="1"
+        android:textSize="12sp"
+        app:layout_constraintStart_toStartOf="@+id/tv_brand_position"
+        app:layout_constraintTop_toBottomOf="@id/count" />
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/et_position"
+        style="@style/PrimaryBigEt"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="5dp"
+        android:hint="Должность"
+        android:inputType="text"
+        android:maxLines="1"
+        android:textSize="12sp"
+        app:layout_constraintStart_toStartOf="@+id/tv_brand_position"
+        app:layout_constraintTop_toBottomOf="@id/et_brand_name" />
+
+    <TextView
+        android:id="@+id/tv_business_category"
+        style="@style/Back.TextStyle"
+        android:layout_width="296dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="45dp"
+        android:layout_marginEnd="50dp"
+        android:text="К какой категории относится Ваш бизнес?"
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/et_position" />
+
+    <ImageView
+        android:id="@+id/iv_help_link"
+        android:layout_width="30dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="15dp"
+        android:scaleType="centerInside"
+        android:src="@drawable/ic_help"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_business_category"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/tv_business_category" />
+
+    <TextView
+        android:id="@+id/count_link"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="4/30"
+        app:layout_constraintEnd_toEndOf="@id/iv_help_link"
+        app:layout_constraintStart_toStartOf="@id/iv_help_link"
+        app:layout_constraintTop_toBottomOf="@id/iv_help_link" />
+
+    <TextView
+        android:id="@+id/tv_brand1"
+        android:layout_width="88dp"
+        android:layout_height="28dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/bg_outline_brand"
+        android:gravity="center"
+        android:text="HoReca"
+        android:textAlignment="center"
+        android:textSize="10sp"
+        app:layout_constraintStart_toStartOf="@+id/tv_brand_position"
+        app:layout_constraintTop_toBottomOf="@+id/count_link" />
+
+    <TextView
+        android:id="@+id/tv_brand2"
+        android:layout_width="71dp"
+        android:layout_height="28dp"
+        android:layout_marginStart="5dp"
+        android:background="@drawable/bg_outline_brand"
+        android:gravity="center"
+        android:text="Kids"
+        android:textAlignment="center"
+        android:textSize="10sp"
+        app:layout_constraintStart_toEndOf="@+id/tv_brand1"
+        app:layout_constraintTop_toTopOf="@id/tv_brand1" />
+
+    <TextView
+        android:id="@+id/tv_brand3"
+        android:layout_width="126dp"
+        android:layout_height="28dp"
+        android:layout_marginStart="5dp"
+        android:background="@drawable/bg_outline_brand"
+        android:gravity="center"
+        android:text="Home &amp; Design"
+        android:textAlignment="center"
+        android:textSize="10sp"
+        app:layout_constraintStart_toEndOf="@+id/tv_brand2"
+        app:layout_constraintTop_toTopOf="@id/tv_brand1" />
+
+    <TextView
+        android:id="@+id/tv_brand4"
+        android:layout_width="90dp"
+        android:layout_height="28dp"
+        android:layout_marginStart="5dp"
+        android:background="@drawable/bg_outline_brand"
+        android:gravity="center"
+        android:text="Fashion"
+        android:textAlignment="center"
+        android:textSize="10sp"
+        app:layout_constraintStart_toEndOf="@+id/tv_brand3"
+        app:layout_constraintTop_toTopOf="@id/tv_brand1" />
+
+    <TextView
+        android:id="@+id/tv_brand5"
+        android:layout_width="129dp"
+        android:layout_height="28dp"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/bg_outline_brand"
+        android:gravity="center"
+        android:text="Health &amp; Beaty"
+        android:textAlignment="center"
+        android:textSize="10sp"
+        app:layout_constraintStart_toStartOf="@+id/tv_brand_position"
+        app:layout_constraintTop_toBottomOf="@id/tv_brand1" />
+
+    <TextView
+        android:id="@+id/tv_brand6"
+        android:layout_width="134dp"
+        android:layout_height="28dp"
+        android:layout_marginStart="5dp"
+        android:background="@drawable/bg_outline_brand"
+        android:gravity="center"
+        android:text="Wellness &amp; Sport"
+        android:textAlignment="center"
+        android:textSize="10sp"
+        app:layout_constraintStart_toEndOf="@+id/tv_brand5"
+        app:layout_constraintTop_toTopOf="@id/tv_brand5" />
+
+    <TextView
+        android:id="@+id/tv_brand7"
+        android:layout_width="126dp"
+        android:layout_height="28dp"
+        android:layout_marginStart="5dp"
+        android:background="@drawable/bg_outline_brand"
+        android:gravity="center"
+        android:text="Education &amp; Art"
+        android:textAlignment="center"
+        android:textSize="10sp"
+        app:layout_constraintStart_toEndOf="@+id/tv_brand6"
+        app:layout_constraintTop_toTopOf="@id/tv_brand6" />
+
+    <TextView
+        android:id="@+id/tv_brand8"
+        android:layout_width="105dp"
+        android:layout_height="28dp"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/bg_outline_brand"
+        android:gravity="center"
+        android:text="Influencers"
+        android:textAlignment="center"
+        android:textSize="10sp"
+        app:layout_constraintStart_toStartOf="@+id/tv_brand_position"
+        app:layout_constraintTop_toBottomOf="@id/tv_brand5" />
+
+    <TextView
+        android:id="@+id/tv_brand9"
+        android:layout_width="85dp"
+        android:layout_height="28dp"
+        android:layout_marginStart="5dp"
+        android:background="@drawable/bg_outline_brand"
+        android:gravity="center"
+        android:text="Charity"
+        android:textAlignment="center"
+        android:textSize="10sp"
+        app:layout_constraintStart_toEndOf="@+id/tv_brand8"
+        app:layout_constraintTop_toTopOf="@id/tv_brand8" />
+
+    <TextView
+        android:id="@+id/tv_brand10"
+        android:layout_width="92dp"
+        android:layout_height="28dp"
+        android:layout_marginStart="5dp"
+        android:background="@drawable/bg_outline_brand"
+        android:gravity="center"
+        android:text="Services"
+        android:textAlignment="center"
+        android:textSize="10sp"
+        app:layout_constraintStart_toEndOf="@+id/tv_brand9"
+        app:layout_constraintTop_toTopOf="@id/tv_brand9" />
+
+    <TextView
+        android:id="@+id/tv_brand11"
+        android:layout_width="87dp"
+        android:layout_height="28dp"
+        android:layout_marginStart="5dp"
+        android:background="@drawable/bg_outline_brand"
+        android:gravity="center"
+        android:text="Другое"
+        android:textAlignment="center"
+        android:textSize="10sp"
+        app:layout_constraintStart_toEndOf="@+id/tv_brand10"
+        app:layout_constraintTop_toTopOf="@id/tv_brand10" />
+
+    <TextView
+        android:id="@+id/tv_links_marketplaces"
+        style="@style/Back.TextStyle"
+        android:layout_width="296dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="45dp"
+        android:layout_marginEnd="50dp"
+        android:text="Ссылка на актуальный  сайт / маркетплейс  ( Lamoda / WB )"
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_brand11" />
+
+    <ImageView
+        android:id="@+id/iv_help_marketplaces"
+        android:layout_width="30dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="15dp"
+        android:scaleType="centerInside"
+        android:src="@drawable/ic_help"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_links_marketplaces"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/tv_links_marketplaces" />
+
+    <TextView
+        android:id="@+id/count_link_marketplaces"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="5/30"
+        app:layout_constraintEnd_toEndOf="@+id/iv_help_marketplaces"
+        app:layout_constraintStart_toStartOf="@+id/iv_help_marketplaces"
+        app:layout_constraintTop_toBottomOf="@+id/iv_help_marketplaces" />
+
+    <View
+        android:id="@+id/view_link"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/bg_et_primary"
+        app:layout_constraintStart_toStartOf="@id/tv_brand_position"
+        app:layout_constraintTop_toBottomOf="@+id/count_link_marketplaces" />
+
+    <ImageButton
+        android:id="@+id/ib_vk"
+        style="@style/SocialNetworks"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:scaleType="center"
+        android:src="@drawable/ic_vk"
+        app:layout_constraintBottom_toBottomOf="@id/view_link"
+        app:layout_constraintStart_toStartOf="@+id/view_link"
+        app:layout_constraintTop_toTopOf="@id/view_link" />
+
+    <ImageButton
+        android:id="@+id/ib_wb"
+        style="@style/SocialNetworks"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="20dp"
+        android:scaleType="center"
+        android:src="@drawable/ic_vk"
+        app:layout_constraintBottom_toBottomOf="@id/view_link"
+        app:layout_constraintStart_toEndOf="@+id/ib_vk"
+        app:layout_constraintTop_toTopOf="@id/view_link" />
+
+    <ImageButton
+        android:id="@+id/ib_la"
+        style="@style/SocialNetworks"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="20dp"
+        android:scaleType="center"
+        android:src="@drawable/ic_vk"
+        app:layout_constraintBottom_toBottomOf="@id/view_link"
+        app:layout_constraintStart_toEndOf="@id/ib_wb"
+        app:layout_constraintTop_toTopOf="@id/view_link" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        style="@style/PrimaryBigButton"
+        android:id="@+id/btn_next"
+        android:layout_marginBottom="16dp"
+        android:clickable="true"
+        android:enabled="true"
+        android:focusable="true"
+        android:text="Далее"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
