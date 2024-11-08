@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.questionnaire.social_network_link.SocialNetworkLinkFragment">
+
+    <TextView
+        android:id="@+id/tv_links_social_network"
+        style="@style/Back.TextStyle"
+        android:layout_width="296dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="50dp"
+        android:text="Ссылка на актуальные соцсети  ( Instagram / VK / Telegram )"
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/iv_help_marketplaces"
+        android:layout_width="30dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="15dp"
+        android:scaleType="centerInside"
+        android:src="@drawable/ic_help"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_links_social_network"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/tv_links_social_network" />
+
+    <TextView
+        android:id="@+id/count_link_marketplaces"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="6/30"
+        app:layout_constraintEnd_toEndOf="@+id/iv_help_marketplaces"
+        app:layout_constraintStart_toStartOf="@+id/iv_help_marketplaces"
+        app:layout_constraintTop_toBottomOf="@+id/iv_help_marketplaces" />
+
+    <View
+        android:id="@+id/view_social"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/bg_et_primary"
+        app:layout_constraintStart_toStartOf="@id/tv_links_social_network"
+        app:layout_constraintTop_toBottomOf="@+id/count_link_marketplaces" />
+
+    <ImageButton
+        android:id="@+id/ib_inst"
+        style="@style/SocialNetworks"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:scaleType="center"
+        android:src="@drawable/ic_vk"
+        app:layout_constraintBottom_toBottomOf="@id/view_social"
+        app:layout_constraintStart_toStartOf="@+id/view_social"
+        app:layout_constraintTop_toTopOf="@id/view_social" />
+
+    <ImageButton
+        android:id="@+id/ib_vk"
+        style="@style/SocialNetworks"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="20dp"
+        android:scaleType="center"
+        android:src="@drawable/ic_vk"
+        app:layout_constraintBottom_toBottomOf="@id/view_social"
+        app:layout_constraintStart_toEndOf="@+id/ib_inst"
+        app:layout_constraintTop_toTopOf="@id/view_social" />
+
+    <ImageButton
+        android:id="@+id/ib_telega"
+        style="@style/SocialNetworks"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="20dp"
+        android:scaleType="center"
+        android:src="@drawable/ic_telegramm"
+        app:layout_constraintBottom_toBottomOf="@id/view_social"
+        app:layout_constraintStart_toEndOf="@id/ib_vk"
+        app:layout_constraintTop_toTopOf="@id/view_social" />
+
+    <TextView
+        android:id="@+id/tv_number_subscribers"
+        style="@style/Back.TextStyle"
+        android:layout_width="296dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="45dp"
+        android:layout_marginEnd="50dp"
+        android:text="Укажите суммарное кол-во подписчиков всех соцсетей"
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/view_social" />
+
+    <ImageView
+        android:id="@+id/iv_help_nick"
+        android:layout_width="30dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="15dp"
+        android:scaleType="centerInside"
+        android:src="@drawable/ic_help"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_number_subscribers"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/tv_number_subscribers" />
+
+    <TextView
+        android:id="@+id/count"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="7/30"
+        app:layout_constraintEnd_toEndOf="@id/iv_help_nick"
+        app:layout_constraintStart_toStartOf="@id/iv_help_nick"
+        app:layout_constraintTop_toBottomOf="@id/iv_help_nick" />
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/et_brand_name"
+        style="@style/PrimaryBigEt"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="10dp"
+        android:hint="Кол-во"
+        android:inputType="text"
+        android:maxLines="1"
+        android:textSize="12sp"
+        app:layout_constraintStart_toStartOf="@+id/tv_number_subscribers"
+        app:layout_constraintTop_toBottomOf="@id/count" />
+
+    <TextView
+        android:id="@+id/tv_average_bill_brand"
+        style="@style/Back.TextStyle"
+        android:layout_width="296dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="45dp"
+        android:layout_marginEnd="50dp"
+        android:text="Средний чек Вашего бренда ( в рублях )?"
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/et_brand_name" />
+
+    <ImageView
+        android:id="@+id/iv_help_brand"
+        android:layout_width="30dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="15dp"
+        android:scaleType="centerInside"
+        android:src="@drawable/ic_help"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_average_bill_brand"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/tv_average_bill_brand" />
+
+    <TextView
+        android:id="@+id/count_brand"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="8/30"
+        app:layout_constraintEnd_toEndOf="@id/iv_help_brand"
+        app:layout_constraintStart_toStartOf="@id/iv_help_brand"
+        app:layout_constraintTop_toBottomOf="@id/iv_help_brand" />
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/et_brand_bill"
+        style="@style/PrimaryBigEt"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="10dp"
+        android:hint="Сумма"
+        android:inputType="text"
+        android:maxLines="1"
+        android:textSize="12sp"
+        app:layout_constraintStart_toStartOf="@+id/tv_links_social_network"
+        app:layout_constraintTop_toBottomOf="@id/count_brand" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        style="@style/PrimaryBigButton"
+        android:id="@+id/btn_next"
+        android:layout_marginBottom="16dp"
+        android:clickable="true"
+        android:enabled="true"
+        android:focusable="true"
+        android:text="Далее"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

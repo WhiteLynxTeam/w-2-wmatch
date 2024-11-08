@@ -39,5 +39,14 @@
         android:name="ru.w_2_wmatch.view.questionnaire.brand_position.BrandPositionFragment"
         android:label="fragment_brand_position"
         tools:layout="@layout/fragment_brand_position" />
+    <fragment
+        android:id="@+id/nickTelegramFragment2"
+        android:name="ru.w_2_wmatch.view.questionnaire.nick_telegram.NickTelegramFragment"
+        android:label="fragment_nick_telegram"
+        tools:layout="@layout/fragment_nick_telegram" >
+        <action
+            android:id="@+id/action_nickTelegramFragment2_to_brandPositionFragment"
+            app:destination="@id/brandPositionFragment" />
+    </fragment>
 
 </navigation>
