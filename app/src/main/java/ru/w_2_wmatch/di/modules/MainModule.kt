@@ -6,7 +6,9 @@ import ru.w_2_wmatch.view.MainActivity
 import ru.w_2_wmatch.view.auth.AuthFragment
 import ru.w_2_wmatch.view.intro.IntroFragment
 import ru.w_2_wmatch.view.questionnaire.QuestionnaireFragment
+import ru.w_2_wmatch.view.questionnaire.brand_position.BrandPositionFragment
 import ru.w_2_wmatch.view.questionnaire.nick_telegram.NickTelegramFragment
+import ru.w_2_wmatch.view.questionnaire.social_network_link.SocialNetworkLinkFragment
 
 @Module
 interface MainModule {
@@ -24,5 +26,11 @@ interface MainModule {
 
     @ContributesAndroidInjector
     fun bindNickTelegram(): NickTelegramFragment
+
+    @ContributesAndroidInjector
+    fun bindBrandPosition(): BrandPositionFragment
+
+    @ContributesAndroidInjector
+    fun bindSocialNetworkLink(): SocialNetworkLinkFragment
 
 }
