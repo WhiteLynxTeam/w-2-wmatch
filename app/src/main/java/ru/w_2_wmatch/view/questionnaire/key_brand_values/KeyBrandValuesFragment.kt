@@ -19,6 +19,10 @@ class KeyBrandValuesFragment : Fragment() {
     private var _binding: FragmentKeyBrandValuesBinding? = null
     private val binding get() = _binding!!
 
+    private val onTimeClickListener = View.OnClickListener { view ->
+        view.setBackgroundResource(R.drawable.bg_outline_brand_selected)
+    }
+
     private lateinit var viewModel: KeyBrandValuesViewModel
 
     override fun onAttach(context: Context) {
@@ -45,8 +49,47 @@ class KeyBrandValuesFragment : Fragment() {
             showPopupWindow(it)
         }
 
-        binding.value15.setOnClickListener {
-            binding.value15.setBackgroundResource(R.drawable.bg_outline_brand_selected)
+        with(binding) {
+            for (i in 1..37) {
+                value1.setOnClickListener(onTimeClickListener)
+                value2.setOnClickListener(onTimeClickListener)
+                value3.setOnClickListener(onTimeClickListener)
+                value4.setOnClickListener(onTimeClickListener)
+                value5.setOnClickListener(onTimeClickListener)
+                value6.setOnClickListener(onTimeClickListener)
+                value7.setOnClickListener(onTimeClickListener)
+                value8.setOnClickListener(onTimeClickListener)
+                value9.setOnClickListener(onTimeClickListener)
+                value10.setOnClickListener(onTimeClickListener)
+                value11.setOnClickListener(onTimeClickListener)
+                value12.setOnClickListener(onTimeClickListener)
+                value13.setOnClickListener(onTimeClickListener)
+                value14.setOnClickListener(onTimeClickListener)
+                value15.setOnClickListener(onTimeClickListener)
+                value16.setOnClickListener(onTimeClickListener)
+                value17.setOnClickListener(onTimeClickListener)
+                value18.setOnClickListener(onTimeClickListener)
+                value19.setOnClickListener(onTimeClickListener)
+                value20.setOnClickListener(onTimeClickListener)
+                value21.setOnClickListener(onTimeClickListener)
+                value22.setOnClickListener(onTimeClickListener)
+                value23.setOnClickListener(onTimeClickListener)
+                value24.setOnClickListener(onTimeClickListener)
+                value25.setOnClickListener(onTimeClickListener)
+                value26.setOnClickListener(onTimeClickListener)
+                value27.setOnClickListener(onTimeClickListener)
+                value28.setOnClickListener(onTimeClickListener)
+                value29.setOnClickListener(onTimeClickListener)
+                value30.setOnClickListener(onTimeClickListener)
+                value31.setOnClickListener(onTimeClickListener)
+                value32.setOnClickListener(onTimeClickListener)
+                value33.setOnClickListener(onTimeClickListener)
+                value34.setOnClickListener(onTimeClickListener)
+                value35.setOnClickListener(onTimeClickListener)
+                value36.setOnClickListener(onTimeClickListener)
+                value37.setOnClickListener(onTimeClickListener)
+            }
+
         }
     }
 
