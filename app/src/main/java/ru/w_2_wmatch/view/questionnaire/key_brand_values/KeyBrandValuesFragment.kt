@@ -6,7 +6,6 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Button
 import android.widget.LinearLayout
 import android.widget.PopupWindow
 import android.widget.TextView
@@ -111,9 +110,9 @@ class KeyBrandValuesFragment : Fragment() {
             LinearLayout.LayoutParams.WRAP_CONTENT,
             LinearLayout.LayoutParams.WRAP_CONTENT)
 
-        //закрываем окно через 2 секунды
+        //закрываем окно через 3 секунды
         lifecycleScope.launch {
-            delay(2000)
+            delay(3000)
             popupWindow.dismiss()
         }
 

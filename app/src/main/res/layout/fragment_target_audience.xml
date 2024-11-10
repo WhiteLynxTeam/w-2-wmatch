@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".view.questionnaire.target_audience.TargetAudienceFragment">
+
+    <TextView
+        android:id="@+id/tv_target_audience"
+        style="@style/Back.TextStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="25dp"
+        android:textSize="14sp"
+        android:text="Целевая аудитория"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <ImageView
+        android:id="@+id/iv_help_target_audience"
+        android:layout_width="30dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="25dp"
+        android:scaleType="centerInside"
+        android:src="@drawable/ic_help"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/tv_target_audience"
+        app:layout_constraintBottom_toBottomOf="@id/tv_target_audience"/>
+
+    <TextView
+        android:id="@+id/count_target_audience"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="9/30"
+        android:layout_marginTop="10dp"
+        app:layout_constraintStart_toStartOf="@id/iv_help_target_audience"
+        app:layout_constraintTop_toBottomOf="@id/iv_help_target_audience"
+        app:layout_constraintEnd_toEndOf="@id/iv_help_target_audience"/>
+
+    <TextView
+        android:id="@+id/age"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Возраст"
+        app:layout_constraintStart_toStartOf="@id/tv_target_audience"
+        app:layout_constraintTop_toBottomOf="@id/count_target_audience"/>
+
+    <com.google.android.material.progressindicator.LinearProgressIndicator
+        android:id="@+id/progress_woman"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        style="@style/Widget.Material3.CircularProgressIndicator.ExtraSmall"
+        android:layout_marginTop="20dp"
+        android:progress="40"
+        app:indicatorColor="@color/brand_orange"
+        app:layout_constraintStart_toStartOf="@id/tv_target_audience"
+        app:layout_constraintTop_toBottomOf="@id/age"
+        app:layout_constraintEnd_toEndOf="@id/count_target_audience"/>
+
+    <com.google.android.material.progressindicator.LinearProgressIndicator
+        android:id="@+id/progress_man"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        style="@style/Widget.Material3.CircularProgressIndicator.ExtraSmall"
+        android:layout_marginTop="20dp"
+        android:progress="60"
+        app:indicatorColor="@color/brand_blue"
+        app:layout_constraintStart_toStartOf="@id/tv_target_audience"
+        app:layout_constraintTop_toBottomOf="@id/progress_woman"
+        app:layout_constraintEnd_toEndOf="@id/progress_woman"/>
+
+    <androidx.constraintlayout.helper.widget.Flow
+        android:id="@+id/flow_percent"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        app:flow_horizontalStyle="spread_inside"
+        app:constraint_referenced_ids="percent_0,percent_20,percent_40,percent_60,percent_80,percent_100"
+        app:layout_constraintStart_toStartOf="@id/progress_man"
+        app:layout_constraintTop_toBottomOf="@id/progress_man"
+        app:layout_constraintEnd_toEndOf="@id/progress_man"/>
+
+    <TextView
+        android:id="@+id/percent_0"
+        style="@style/percent_of_progress"
+        android:textAlignment="textStart"
+        android:text="0"/>
+
+    <TextView
+        android:id="@+id/percent_20"
+        style="@style/percent_of_progress"
+        android:text="20"/>
+
+    <TextView
+        android:id="@+id/percent_40"
+        style="@style/percent_of_progress"
+        android:text="40"/>
+
+    <TextView
+        android:id="@+id/percent_60"
+        style="@style/percent_of_progress"
+        android:text="60"/>
+
+    <TextView
+        android:id="@+id/percent_80"
+        style="@style/percent_of_progress"
+        android:text="80"/>
+
+    <TextView
+        android:id="@+id/percent_100"
+        style="@style/percent_of_progress"
+        android:textAlignment="textEnd"
+        android:text="100"/>
+
+    <View
+        android:id="@+id/woman_indicator"
+        android:layout_width="10dp"
+        android:layout_height="10dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/bg_oval_for_tg"
+        app:layout_constraintStart_toStartOf="@id/tv_target_audience"
+        app:layout_constraintTop_toBottomOf="@id/flow_percent"/>
+
+    <TextView
+        android:id="@+id/tv_woman"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:textSize="12sp"
+        android:text="Женщины"
+        app:layout_constraintStart_toEndOf="@id/woman_indicator"
+        app:layout_constraintTop_toTopOf="@id/woman_indicator"
+        app:layout_constraintBottom_toBottomOf="@id/woman_indicator"/>
+
+    <View
+        android:id="@+id/man_indicator"
+        android:layout_width="10dp"
+        android:layout_height="10dp"
+        android:layout_marginStart="10dp"
+        android:background="@drawable/bg_oval_for_tg"
+        app:layout_constraintStart_toEndOf="@id/tv_woman"
+        app:layout_constraintTop_toTopOf="@id/woman_indicator"/>
+
+    <TextView
+        android:id="@+id/tv_man"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:textSize="12sp"
+        android:text="Мужчины"
+        app:layout_constraintStart_toEndOf="@id/man_indicator"
+        app:layout_constraintTop_toTopOf="@id/man_indicator"
+        app:layout_constraintBottom_toBottomOf="@id/man_indicator"/>
+
+    <TextView
+        android:id="@+id/gender"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Пол"
+        app:layout_constraintStart_toStartOf="@id/woman_indicator"
+        app:layout_constraintTop_toBottomOf="@id/woman_indicator"/>
+
+    <com.google.android.material.progressindicator.CircularProgressIndicator
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:progress="60"
+        app:layout_constraintStart_toStartOf="@id/gender"
+        app:layout_constraintTop_toBottomOf="@id/gender"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

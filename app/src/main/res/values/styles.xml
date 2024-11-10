@@ -62,4 +62,10 @@
         <item name="android:background">@drawable/bg_outline_brand</item>
     </style>
 
+    <style name="percent_of_progress">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textAlignment">center</item>
+    </style>
+
 </resources>
