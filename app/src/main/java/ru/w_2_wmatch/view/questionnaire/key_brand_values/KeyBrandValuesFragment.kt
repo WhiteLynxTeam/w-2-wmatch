@@ -1,6 +1,5 @@
-package ru.w_2_wmatch.view.questionnaire.nick_telegram
+package ru.w_2_wmatch.view.questionnaire.key_brand_values
 
-import android.animation.ObjectAnimator
 import android.annotation.SuppressLint
 import android.content.Context
 import android.os.Bundle
@@ -13,14 +12,14 @@ import android.widget.PopupWindow
 import androidx.fragment.app.Fragment
 import dagger.android.support.AndroidSupportInjection
 import ru.w_2_wmatch.R
-import ru.w_2_wmatch.databinding.FragmentNickTelegramBinding
+import ru.w_2_wmatch.databinding.FragmentKeyBrandValuesBinding
 
-class NickTelegramFragment : Fragment() {
+class KeyBrandValuesFragment : Fragment() {
 
-    private var _binding: FragmentNickTelegramBinding? = null
+    private var _binding: FragmentKeyBrandValuesBinding? = null
     private val binding get() = _binding!!
 
-    private lateinit var viewModel: NickTelegramViewModel
+    private lateinit var viewModel: KeyBrandValuesViewModel
 
     override fun onAttach(context: Context) {
         AndroidSupportInjection.inject(this)
@@ -31,30 +30,24 @@ class NickTelegramFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        _binding = FragmentNickTelegramBinding.inflate(inflater, container, false)
+        _binding = FragmentKeyBrandValuesBinding.inflate(inflater, container, false)
         return binding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        binding.ivHelpNick.setOnClickListener {
+        binding.ivHelpKeyValues.setOnClickListener {
             showPopupWindow(it)
         }
 
-        binding.ivHelpLink.setOnClickListener {
+        binding.ivHelpUniqBrand.setOnClickListener {
             showPopupWindow(it)
         }
 
-        binding.ivAdd.setOnClickListener {
-            animImageAdd(it)
+        binding.value15.setOnClickListener {
+            binding.value15.setBackgroundResource(R.drawable.bg_outline_brand_selected)
         }
-    }
-
-    private fun animImageAdd(view: View) {
-        val animator = ObjectAnimator.ofFloat(view, "rotation", 0f, 90f)
-        animator.duration = 500
-        animator.start()
     }
 
     @SuppressLint("InflateParams", "MissingInflatedId")
@@ -79,6 +72,7 @@ class NickTelegramFragment : Fragment() {
     }
 
     companion object {
-        fun newInstance() = NickTelegramFragment()
+        fun newInstance() = KeyBrandValuesFragment()
     }
+
 }

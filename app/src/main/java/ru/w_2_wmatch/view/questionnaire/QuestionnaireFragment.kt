@@ -9,6 +9,7 @@ import androidx.fragment.app.Fragment
 import dagger.android.support.AndroidSupportInjection
 import ru.w_2_wmatch.databinding.FragmentQuestionnaireBinding
 import ru.w_2_wmatch.view.base.BaseViewPagerAdapter
+import ru.w_2_wmatch.view.questionnaire.key_brand_values.KeyBrandValuesFragment
 import ru.w_2_wmatch.view.questionnaire.nick_telegram.NickTelegramFragment
 
 class QuestionnaireFragment : Fragment() {
@@ -41,7 +42,7 @@ class QuestionnaireFragment : Fragment() {
     private fun addViewPager(){
         binding.vpCatalog.adapter = BaseViewPagerAdapter(
             this, arrayOf(
-                NickTelegramFragment.newInstance()
+                KeyBrandValuesFragment.newInstance()
             )
         )
     }

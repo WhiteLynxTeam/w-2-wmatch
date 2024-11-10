@@ -7,6 +7,7 @@ import ru.w_2_wmatch.view.auth.AuthFragment
 import ru.w_2_wmatch.view.intro.IntroFragment
 import ru.w_2_wmatch.view.questionnaire.QuestionnaireFragment
 import ru.w_2_wmatch.view.questionnaire.brand_position.BrandPositionFragment
+import ru.w_2_wmatch.view.questionnaire.key_brand_values.KeyBrandValuesFragment
 import ru.w_2_wmatch.view.questionnaire.nick_telegram.NickTelegramFragment
 import ru.w_2_wmatch.view.questionnaire.social_network_link.SocialNetworkLinkFragment
 
@@ -32,5 +33,8 @@ interface MainModule {
 
     @ContributesAndroidInjector
     fun bindSocialNetworkLink(): SocialNetworkLinkFragment
+
+    @ContributesAndroidInjector
+    fun bindKeyBrandValuesFragment(): KeyBrandValuesFragment
 
 }

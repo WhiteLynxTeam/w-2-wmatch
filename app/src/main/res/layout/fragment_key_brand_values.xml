@@ -1,0 +1,294 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".view.questionnaire.key_brand_values.KeyBrandValuesFragment">
+
+    <TextView
+        android:id="@+id/tv_key_values"
+        style="@style/Back.TextStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="25dp"
+        android:textSize="14sp"
+        android:text="Выберите ключевые ценности бренда"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <ImageView
+        android:id="@+id/iv_help_key_values"
+        android:layout_width="30dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="25dp"
+        android:scaleType="centerInside"
+        android:src="@drawable/ic_help"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/tv_key_values"
+        app:layout_constraintBottom_toBottomOf="@id/tv_key_values"/>
+
+    <TextView
+        android:id="@+id/count_key_values"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="9/30"
+        android:layout_marginTop="10dp"
+        app:layout_constraintStart_toStartOf="@id/iv_help_key_values"
+        app:layout_constraintTop_toBottomOf="@id/iv_help_key_values"
+        app:layout_constraintEnd_toEndOf="@id/iv_help_key_values"/>
+
+    <androidx.constraintlayout.helper.widget.Flow
+        android:id="@+id/flow_key_values"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintHeight_percent="0.6"
+        app:constraint_referenced_ids="value_1,value_2,value_3,value_4,value_5,value_6,value_7,value_8,value_9,value_10,value_11,value_12,value_13,value_14,value_15,value_16,value_17,value_18,value_19,value_20,value_21,value_22,value_23,value_24,value_25,value_26,value_27,value_28,value_29,value_30,value_31,value_32,value_33,value_34,value_35,value_36,value_37"
+        app:flow_wrapMode="chain"
+        app:layout_constraintBottom_toTopOf="@+id/tv_uniq_of_brand"
+        app:layout_constraintEnd_toEndOf="@id/count_key_values"
+        app:layout_constraintStart_toStartOf="@id/tv_key_values"
+        app:layout_constraintTop_toBottomOf="@id/count_key_values" />
+
+    <TextView
+        android:id="@+id/value_1"
+        style="@style/key_brand_values"
+        android:text="Высокое качество"/>
+
+    <TextView
+        android:id="@+id/value_2"
+        style="@style/key_brand_values"
+        android:text="Свобода"/>
+
+    <TextView
+        android:id="@+id/value_3"
+        style="@style/key_brand_values"
+        android:text="Социальная значимость"/>
+
+    <TextView
+        android:id="@+id/value_4"
+        style="@style/key_brand_values"
+        android:text="Минимализм"/>
+
+    <TextView
+        android:id="@+id/value_5"
+        style="@style/key_brand_values"
+        android:text="Баланс"/>
+
+    <TextView
+        android:id="@+id/value_6"
+        style="@style/key_brand_values"
+        android:text="Креатив"/>
+
+    <TextView
+        android:id="@+id/value_7"
+        style="@style/key_brand_values"
+        android:text="Эстетика"/>
+
+    <TextView
+        android:id="@+id/value_8"
+        style="@style/key_brand_values"
+        android:text="Творчество"/>
+
+    <TextView
+        android:id="@+id/value_9"
+        style="@style/key_brand_values"
+        android:text="Доступность"/>
+
+    <TextView
+        android:id="@+id/value_10"
+        style="@style/key_brand_values"
+        android:text="Скорость"/>
+
+    <TextView
+        android:id="@+id/value_11"
+        style="@style/key_brand_values"
+        android:text="Природа"/>
+
+    <TextView
+        android:id="@+id/value_12"
+        style="@style/key_brand_values"
+        android:text="Любовь"/>
+
+    <TextView
+        android:id="@+id/value_13"
+        style="@style/key_brand_values"
+        android:text="Безопасность"/>
+
+    <TextView
+        android:id="@+id/value_14"
+        style="@style/key_brand_values"
+        android:text="Самобытность"/>
+
+    <TextView
+        android:id="@+id/value_15"
+        style="@style/key_brand_values"
+        android:text="Активность"/>
+
+    <TextView
+        android:id="@+id/value_16"
+        style="@style/key_brand_values"
+        android:text="Семья"/>
+
+    <TextView
+        android:id="@+id/value_17"
+        style="@style/key_brand_values"
+        android:text="Наследие"/>
+
+    <TextView
+        android:id="@+id/value_18"
+        style="@style/key_brand_values"
+        android:text="Smart"/>
+
+    <TextView
+        android:id="@+id/value_19"
+        style="@style/key_brand_values"
+        android:text="Комфорт"/>
+
+    <TextView
+        android:id="@+id/value_20"
+        style="@style/key_brand_values"
+        android:text="Изысканность"/>
+
+    <TextView
+        android:id="@+id/value_21"
+        style="@style/key_brand_values"
+        android:text="Забота о себе"/>
+
+    <TextView
+        android:id="@+id/value_22"
+        style="@style/key_brand_values"
+        android:text="Сексуальность"/>
+
+    <TextView
+        android:id="@+id/value_23"
+        style="@style/key_brand_values"
+        android:text="Эксклюзив"/>
+
+    <TextView
+        android:id="@+id/value_24"
+        style="@style/key_brand_values"
+        android:text="Жизнерадостность"/>
+
+    <TextView
+        android:id="@+id/value_25"
+        style="@style/key_brand_values"
+        android:text="Индивидуальный подход"/>
+
+    <TextView
+        android:id="@+id/value_26"
+        style="@style/key_brand_values"
+        android:text="Культура"/>
+
+    <TextView
+        android:id="@+id/value_27"
+        style="@style/key_brand_values"
+        android:text="Вдохновение"/>
+
+    <TextView
+        android:id="@+id/value_28"
+        style="@style/key_brand_values"
+        android:text="Экологичность"/>
+
+    <TextView
+        android:id="@+id/value_29"
+        style="@style/key_brand_values"
+        android:text="Инновационность"/>
+
+    <TextView
+        android:id="@+id/value_30"
+        style="@style/key_brand_values"
+        android:text="Стиль"/>
+
+    <TextView
+        android:id="@+id/value_31"
+        style="@style/key_brand_values"
+        android:text="Ручная работа"/>
+
+    <TextView
+        android:id="@+id/value_32"
+        style="@style/key_brand_values"
+        android:text="Премиум"/>
+
+    <TextView
+        android:id="@+id/value_33"
+        style="@style/key_brand_values"
+        android:text="Современность"/>
+
+    <TextView
+        android:id="@+id/value_34"
+        style="@style/key_brand_values"
+        android:text="Расслабление"/>
+
+    <TextView
+        android:id="@+id/value_35"
+        style="@style/key_brand_values"
+        android:text="Баланс"/>
+
+    <TextView
+        android:id="@+id/value_36"
+        style="@style/key_brand_values"
+        android:text="Удовольствие"/>
+
+    <TextView
+        android:id="@+id/value_37"
+        style="@style/key_brand_values"
+        android:text="Праздник"/>
+
+    <TextView
+        android:id="@+id/tv_uniq_of_brand"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:text="Расскажите, пожалуйста, в чем уникальность Вашего бренда одним предложением"
+        app:layout_constraintStart_toStartOf="@id/tv_key_values"
+        app:layout_constraintBottom_toTopOf="@id/count_uniq_brand"
+        app:layout_constraintEnd_toStartOf="@id/iv_help_uniq_brand"/>
+
+    <ImageView
+        android:id="@+id/iv_help_uniq_brand"
+        android:layout_width="30dp"
+        android:layout_height="0dp"
+        android:scaleType="centerInside"
+        android:src="@drawable/ic_help"
+        app:layout_constraintEnd_toEndOf="@id/iv_help_key_values"
+        app:layout_constraintTop_toTopOf="@id/tv_uniq_of_brand"
+        app:layout_constraintBottom_toBottomOf="@id/tv_uniq_of_brand"/>
+
+    <TextView
+        android:id="@+id/count_uniq_brand"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="10/30"
+        android:layout_marginBottom="10dp"
+        app:layout_constraintStart_toStartOf="@id/iv_help_uniq_brand"
+        app:layout_constraintBottom_toTopOf="@id/et_uniq_brand"
+        app:layout_constraintEnd_toEndOf="@id/iv_help_uniq_brand"/>
+
+    <com.google.android.material.textfield.TextInputEditText
+        style="@style/PrimaryBigEt"
+        android:id="@+id/et_uniq_brand"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginBottom="20dp"
+        android:hint="УТП"
+        android:inputType="text"
+        android:maxLines="1"
+        app:layout_constraintStart_toStartOf="@id/tv_key_values"
+        app:layout_constraintBottom_toTopOf="@+id/btn_next"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        style="@style/PrimaryBigButton"
+        android:id="@+id/btn_next"
+        android:layout_marginBottom="16dp"
+        android:clickable="true"
+        android:enabled="true"
+        android:focusable="true"
+        android:text="Далее"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

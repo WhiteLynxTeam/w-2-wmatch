@@ -50,4 +50,16 @@
         <item name="android:scaleType">centerInside</item>
     </style>
 
+    <style name="key_brand_values">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textAlignment">center</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:paddingStart">10dp</item>
+        <item name="android:paddingTop">6dp</item>
+        <item name="android:paddingEnd">10dp</item>
+        <item name="android:paddingBottom">7dp</item>
+        <item name="android:background">@drawable/bg_outline_brand</item>
+    </style>
+
 </resources>
