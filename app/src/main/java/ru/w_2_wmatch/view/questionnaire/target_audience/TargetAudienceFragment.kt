@@ -8,14 +8,13 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import dagger.android.support.AndroidSupportInjection
 import ru.w_2_wmatch.databinding.FragmentTargetAudienceBinding
-import ru.w_2_wmatch.view.questionnaire.QuestionnaireViewModel
 
 class TargetAudienceFragment : Fragment() {
 
     private var _binding: FragmentTargetAudienceBinding? = null
     private val binding get() = _binding!!
 
-    private lateinit var viewModel: QuestionnaireViewModel
+    private lateinit var viewModel: TargetAudienceViewModel
 
     override fun onAttach(context: Context) {
         AndroidSupportInjection.inject(this)

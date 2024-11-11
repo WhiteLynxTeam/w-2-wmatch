@@ -8,6 +8,7 @@
     <string name="decline">Нет</string>
     <string name="no">Нет</string>
     <string name="ok">Ок</string>
+    <string name="income_level">Уровень дохода  <font color="#FFFF9345">\u20bd</font></string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
