@@ -12,8 +12,7 @@
         android:layout_marginEnd="12dp"
         android:padding="12dp"
         android:textColor="@color/white"
-        android:text="В зависимости от выбранных ценностей алгоритм подберет релевантные бренды."
-        android:textSize="12sp"
+        android:textSize="14sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />

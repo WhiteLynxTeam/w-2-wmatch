@@ -10,6 +10,7 @@ import ru.w_2_wmatch.view.questionnaire.brand_position.BrandPositionFragment
 import ru.w_2_wmatch.view.questionnaire.key_brand_values.KeyBrandValuesFragment
 import ru.w_2_wmatch.view.questionnaire.nick_telegram.NickTelegramFragment
 import ru.w_2_wmatch.view.questionnaire.social_network_link.SocialNetworkLinkFragment
+import ru.w_2_wmatch.view.questionnaire.target_audience.TargetAudienceFragment
 
 @Module
 interface MainModule {
@@ -36,5 +37,8 @@ interface MainModule {
 
     @ContributesAndroidInjector
     fun bindKeyBrandValuesFragment(): KeyBrandValuesFragment
+
+    @ContributesAndroidInjector
+    fun bindTargetAudienceFragment(): TargetAudienceFragment
 
 }

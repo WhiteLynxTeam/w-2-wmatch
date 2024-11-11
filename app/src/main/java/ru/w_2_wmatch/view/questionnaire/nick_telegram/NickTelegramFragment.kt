@@ -7,11 +7,14 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Button
 import android.widget.LinearLayout
 import android.widget.PopupWindow
+import android.widget.TextView
 import androidx.fragment.app.Fragment
+import androidx.lifecycle.lifecycleScope
 import dagger.android.support.AndroidSupportInjection
+import kotlinx.coroutines.delay
+import kotlinx.coroutines.launch
 import ru.w_2_wmatch.R
 import ru.w_2_wmatch.databinding.FragmentNickTelegramBinding
 
@@ -39,11 +42,11 @@ class NickTelegramFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         binding.ivHelpNick.setOnClickListener {
-            showPopupWindow(it)
+            showPopupWindow(it, "Скопируйте свой ник в профиле Telegram, например: @mashaivanova")
         }
 
         binding.ivHelpLink.setOnClickListener {
-            showPopupWindow(it)
+            showPopupWindow(it, "Если вы ведёте открытый блог в  соцсетях, пожалуйста, оставьте ссылки  на все площадки.")
         }
 
         binding.ivAdd.setOnClickListener {
@@ -58,20 +61,23 @@ class NickTelegramFragment : Fragment() {
     }
 
     @SuppressLint("InflateParams", "MissingInflatedId")
-    private fun showPopupWindow(anchorView: View) {
+    private fun showPopupWindow(anchorView: View, text: String) {
         // Создаем инфлятор для наших popup-элементов
         val inflater = layoutInflater
-        val popupView = inflater.inflate(R.layout.help_info_builder, null)
+        val popupView = inflater.inflate(R.layout.help_info_key_values, null)
+
+        val string: TextView = popupView.findViewById(R.id.text)
+        string.text = text
 
         // Создаем PopupWindow
         val popupWindow = PopupWindow(popupView,
             LinearLayout.LayoutParams.WRAP_CONTENT,
             LinearLayout.LayoutParams.WRAP_CONTENT)
 
-        // Устанавливаем кнопку закрытия
-        val closeButton: Button = popupView.findViewById(R.id.btn_send)
-        closeButton.setOnClickListener {
-            popupWindow.dismiss() // Закрываем всплывающее окно
+        //закрываем окно через 3 секунды
+        lifecycleScope.launch {
+            delay(3000)
+            popupWindow.dismiss()
         }
 
         // Устанавливаем PopupWindow рядом с элементом
