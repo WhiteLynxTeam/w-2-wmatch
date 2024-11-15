@@ -22,7 +22,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="10dp"
-        android:background="@drawable/bg_primary_big_button"
+        android:background="@drawable/bg_primary_active_big_button"
         android:fontFamily="@font/raleway_regular"
         android:text="Отправить"
         android:textAllCaps="false"

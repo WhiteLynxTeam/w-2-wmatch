@@ -13,7 +13,7 @@
         android:layout_width="296dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="30dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="48dp"
         android:layout_marginEnd="50dp"
         android:text="Ссылка на актуальные соцсети  ( Instagram / VK / Telegram )"
         android:textSize="14sp"
@@ -183,7 +183,7 @@
         app:layout_constraintTop_toBottomOf="@id/count_brand" />
 
     <androidx.appcompat.widget.AppCompatButton
-        style="@style/PrimaryBigButton"
+        style="@style/PrimaryBigButtonActive"
         android:id="@+id/btn_next"
         android:layout_marginBottom="16dp"
         android:clickable="true"
