@@ -2,7 +2,6 @@ package ru.w_2_wmatch.view.questionnaire.nick_telegram
 
 import android.animation.ObjectAnimator
 import android.annotation.SuppressLint
-import android.content.Context
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -10,30 +9,27 @@ import android.view.ViewGroup
 import android.widget.LinearLayout
 import android.widget.PopupWindow
 import android.widget.TextView
-import androidx.fragment.app.Fragment
 import androidx.lifecycle.lifecycleScope
-import dagger.android.support.AndroidSupportInjection
+import androidx.navigation.fragment.findNavController
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 import ru.w_2_wmatch.R
 import ru.w_2_wmatch.databinding.FragmentNickTelegramBinding
+import ru.w_2_wmatch.view.base.BaseFragment
 
-class NickTelegramFragment : Fragment() {
+class NickTelegramFragment : BaseFragment() {
 
     private var _binding: FragmentNickTelegramBinding? = null
     private val binding get() = _binding!!
 
     private lateinit var viewModel: NickTelegramViewModel
 
-    override fun onAttach(context: Context) {
-        AndroidSupportInjection.inject(this)
-        super.onAttach(context)
-    }
-
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
+        listener?.onTitleTextChange(R.string.questionnaire)
+
         _binding = FragmentNickTelegramBinding.inflate(inflater, container, false)
         return binding.root
     }
@@ -51,6 +47,10 @@ class NickTelegramFragment : Fragment() {
 
         binding.ivAdd.setOnClickListener {
             animImageAdd(it)
+        }
+
+        binding.btnNext.setOnClickListener {
+            findNavController().navigate(R.id.action_nickTelegramFragment2_to_brandPositionFragment)
         }
     }
 
@@ -82,9 +82,5 @@ class NickTelegramFragment : Fragment() {
 
         // Устанавливаем PopupWindow рядом с элементом
         popupWindow.showAsDropDown(anchorView) // Отображение под элементом
-    }
-
-    companion object {
-        fun newInstance() = NickTelegramFragment()
     }
 }

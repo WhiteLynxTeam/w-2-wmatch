@@ -20,20 +20,18 @@
     <fragment
         android:id="@+id/authFragment"
         android:name="ru.w_2_wmatch.view.auth.AuthFragment"
-        android:label="AuthFragment" >
+        android:label="AuthFragment"
+        tools:layout="@layout/fragment_auth">
         <action
-            android:id="@+id/action_authFragment_to_questionnaireFragment"
-            app:destination="@id/questionnaireFragment" />
+            android:id="@+id/action_authFragment_to_nickTelegramFragment2"
+            app:destination="@id/nickTelegramFragment2" />
     </fragment>
-    <fragment
-        android:id="@+id/questionnaireFragment"
-        android:name="ru.w_2_wmatch.view.questionnaire.QuestionnaireFragment"
-        android:label="fragment_questionnaire"
-        tools:layout="@layout/fragment_questionnaire" />
+
     <fragment
         android:id="@+id/regFragment"
         android:name="ru.w_2_wmatch.view.reg.RegFragment"
-        android:label="RegFragment" />
+        android:label="RegFragment"
+        tools:layout="@layout/fragment_reg"/>
     <fragment
         android:id="@+id/brandPositionFragment"
         android:name="ru.w_2_wmatch.view.questionnaire.brand_position.BrandPositionFragment"

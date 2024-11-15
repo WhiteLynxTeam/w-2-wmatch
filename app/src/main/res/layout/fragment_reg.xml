@@ -6,35 +6,36 @@
     android:layout_height="match_parent"
     tools:context=".view.intro.IntroFragment">
 
-    <ImageView
-        android:id="@+id/btn_back"
-        style="@style/BackButton"
-        android:layout_marginStart="25dp"
-        android:layout_marginTop="3.5dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+    <!--    <ImageView-->
+    <!--        android:id="@+id/btn_back"-->
+    <!--        style="@style/BackButton"-->
+    <!--        android:layout_marginStart="25dp"-->
+    <!--        android:layout_marginTop="3.5dp"-->
+    <!--        app:layout_constraintStart_toStartOf="parent"-->
+    <!--        app:layout_constraintTop_toTopOf="parent" />-->
 
-    <TextView
-        android:id="@+id/tv_title"
-        style="@style/Back.TextStyle"
-        android:layout_width="wrap_content"
-        android:layout_height="0dp"
-        android:layout_marginStart="15dp"
-        android:text="Регистрация"
-        app:layout_constraintBottom_toBottomOf="@id/btn_back"
-        app:layout_constraintStart_toEndOf="@id/btn_back"
-        app:layout_constraintTop_toTopOf="@id/btn_back" />
+    <!--    <TextView-->
+    <!--        android:id="@+id/tv_title"-->
+    <!--        style="@style/Back.TextStyle"-->
+    <!--        android:layout_width="wrap_content"-->
+    <!--        android:layout_height="0dp"-->
+    <!--        android:layout_marginStart="15dp"-->
+    <!--        android:text="Регистрация"-->
+    <!--        app:layout_constraintBottom_toBottomOf="@id/btn_back"-->
+    <!--        app:layout_constraintStart_toEndOf="@id/btn_back"-->
+    <!--        app:layout_constraintTop_toTopOf="@id/btn_back" />-->
 
     <TextView
         android:id="@+id/tv_del_account"
         style="@style/Back.TextStyle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:textSize="14sp"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="48dp"
         android:text="Чтобы удалить аккаунт, подтвердите код\nстраны и введите номер телефона"
-        app:layout_constraintStart_toStartOf="@id/btn_back"
-        app:layout_constraintTop_toBottomOf="@id/btn_back" />
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
         android:id="@+id/iv_help"
@@ -43,13 +44,13 @@
         android:layout_marginEnd="25dp"
         android:scaleType="centerInside"
         android:src="@drawable/ic_help"
+        app:layout_constraintBottom_toBottomOf="@id/tv_del_account"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@id/tv_del_account"
-        app:layout_constraintBottom_toBottomOf="@id/tv_del_account"/>
+        app:layout_constraintTop_toTopOf="@id/tv_del_account" />
 
     <com.google.android.material.textfield.TextInputEditText
-        style="@style/PrimaryBigEt"
         android:id="@+id/et_fio"
+        style="@style/PrimaryBigEt"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_marginStart="30dp"
@@ -58,11 +59,11 @@
         android:inputType="text"
         android:maxLines="1"
         app:layout_constraintStart_toStartOf="@id/tv_del_account"
-        app:layout_constraintTop_toBottomOf="@id/tv_del_account"/>
+        app:layout_constraintTop_toBottomOf="@id/tv_del_account" />
 
     <com.google.android.material.textfield.TextInputEditText
-        style="@style/PrimaryBigEt"
         android:id="@+id/et_phone"
+        style="@style/PrimaryBigEt"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_marginStart="30dp"
@@ -71,11 +72,11 @@
         android:inputType="textPassword"
         android:maxLines="1"
         app:layout_constraintStart_toStartOf="@id/tv_del_account"
-        app:layout_constraintTop_toBottomOf="@id/et_fio"/>
+        app:layout_constraintTop_toBottomOf="@id/et_fio" />
 
     <com.google.android.material.textfield.TextInputEditText
-        style="@style/PrimaryBigEt"
         android:id="@+id/et_email"
+        style="@style/PrimaryBigEt"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_marginStart="30dp"
@@ -84,11 +85,11 @@
         android:inputType="text"
         android:maxLines="1"
         app:layout_constraintStart_toStartOf="@id/et_phone"
-        app:layout_constraintTop_toBottomOf="@id/et_phone"/>
+        app:layout_constraintTop_toBottomOf="@id/et_phone" />
 
     <com.google.android.material.textfield.TextInputEditText
-        style="@style/PrimaryBigEt"
         android:id="@+id/et_pass"
+        style="@style/PrimaryBigEt"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_marginStart="30dp"
@@ -97,11 +98,11 @@
         android:inputType="textPassword"
         android:maxLines="1"
         app:layout_constraintStart_toStartOf="@id/et_email"
-        app:layout_constraintTop_toBottomOf="@id/et_email"/>
+        app:layout_constraintTop_toBottomOf="@id/et_email" />
 
     <androidx.appcompat.widget.AppCompatButton
-        style="@style/PrimaryBigButton"
         android:id="@+id/btn_reg"
+        style="@style/PrimaryBigButtonActive"
         android:layout_marginTop="35dp"
         android:clickable="true"
         android:enabled="true"
@@ -117,24 +118,24 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="15dp"
-        android:textSize="12sp"
-        android:textColor="@color/text_stroke"
         android:text="У меня уже есть аккаунт"
-        app:layout_constraintStart_toStartOf="@id/btn_reg"
+        android:textColor="@color/text_stroke"
+        android:textSize="12sp"
         app:layout_constraintEnd_toEndOf="@id/btn_reg"
+        app:layout_constraintStart_toStartOf="@id/btn_reg"
         app:layout_constraintTop_toBottomOf="@id/btn_reg" />
 
     <TextView
-        style="@style/w2wmatch.TextStyle"
         android:id="@+id/tv_reg"
+        style="@style/w2wmatch.TextStyle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="12dp"
-        android:textSize="14sp"
-        android:textColor="@color/text_stroke"
         android:text="Войти"
-        app:layout_constraintStart_toStartOf="@id/btn_reg"
+        android:textColor="@color/text_stroke"
+        android:textSize="14sp"
         app:layout_constraintEnd_toEndOf="@id/btn_reg"
+        app:layout_constraintStart_toStartOf="@id/btn_reg"
         app:layout_constraintTop_toBottomOf="@id/tv_without_account" />
 
     <TextView
@@ -154,13 +155,12 @@
         android:id="@+id/icons"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        app:layout_constraintWidth_percent="0.5"
         android:layout_marginBottom="46dp"
         app:constraint_referenced_ids="ic_google,ic_vk,ic_telegramm,ic_apple"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        />
+        app:layout_constraintWidth_percent="0.5" />
 
     <ImageView
         android:id="@+id/ic_google"

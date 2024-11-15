@@ -12,6 +12,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="30dp"
+        android:layout_marginTop="48dp"
         android:textSize="14sp"
         android:text="Ваш ник в Telegram"
         app:layout_constraintStart_toStartOf="parent"
@@ -126,7 +127,7 @@
         app:layout_constraintBottom_toBottomOf="@id/oval"/>
 
     <androidx.appcompat.widget.AppCompatButton
-        style="@style/PrimaryBigButton"
+        style="@style/PrimaryBigButtonActive"
         android:id="@+id/btn_next"
         android:layout_marginBottom="16dp"
         android:clickable="true"

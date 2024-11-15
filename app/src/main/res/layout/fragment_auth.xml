@@ -6,35 +6,36 @@
     android:layout_height="match_parent"
     tools:context=".view.intro.IntroFragment">
 
-    <ImageView
-        android:id="@+id/btn_back"
-        style="@style/BackButton"
-        android:layout_marginStart="25dp"
-        android:layout_marginTop="3.5dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+<!--    <ImageView-->
+<!--        android:id="@+id/btn_back"-->
+<!--        style="@style/BackButton"-->
+<!--        android:layout_marginStart="25dp"-->
+<!--        android:layout_marginTop="3.5dp"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent" />-->
 
-    <TextView
-        android:id="@+id/tv_title"
-        style="@style/Back.TextStyle"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="15dp"
-        android:text="Вход"
-        app:layout_constraintBottom_toBottomOf="@id/btn_back"
-        app:layout_constraintStart_toEndOf="@id/btn_back"
-        app:layout_constraintTop_toTopOf="@id/btn_back" />
+<!--    <TextView-->
+<!--        android:id="@+id/tv_title"-->
+<!--        style="@style/Back.TextStyle"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginStart="15dp"-->
+<!--        android:text="Вход"-->
+<!--        app:layout_constraintBottom_toBottomOf="@id/btn_back"-->
+<!--        app:layout_constraintStart_toEndOf="@id/btn_back"-->
+<!--        app:layout_constraintTop_toTopOf="@id/btn_back" />-->
 
     <TextView
         android:id="@+id/tv_del_account"
         style="@style/Back.TextStyle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="48dp"
         android:textSize="14sp"
         android:text="Чтобы удалить аккаунт, подтвердите код\nстраны и введите номер телефона"
-        app:layout_constraintStart_toStartOf="@id/btn_back"
-        app:layout_constraintTop_toBottomOf="@id/btn_back" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
         android:id="@+id/iv_help"
@@ -85,7 +86,7 @@
         app:layout_constraintTop_toBottomOf="@id/et_pass" />
 
     <androidx.appcompat.widget.AppCompatButton
-        style="@style/PrimaryBigButton"
+        style="@style/PrimaryBigButtonActive"
         android:id="@+id/btn_enter"
         android:layout_marginTop="56dp"
         android:clickable="true"
