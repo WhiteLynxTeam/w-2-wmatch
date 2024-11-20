@@ -93,4 +93,7 @@ dependencies {
     kapt("androidx.room:room-compiler:2.6.1")
 
     implementation ("com.mikhaellopez:circularprogressbar:3.1.0")
+
+    /** Input Mask */
+    implementation("com.redmadrobot:input-mask-android:7.2.4")
 }

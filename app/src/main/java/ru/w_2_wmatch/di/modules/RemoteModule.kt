@@ -7,6 +7,7 @@ import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
+import ru.w_2_wmatch.data.api.TokenApi
 import ru.w_2_wmatch.data.api.UserApi
 import java.util.concurrent.TimeUnit
 import javax.inject.Singleton
@@ -38,14 +39,16 @@ class RemoteModule {
         .client(okHttpClient)
         .build()
 
-
     @Provides
     @Singleton
     fun provideAuthApi(retrofit: Retrofit): UserApi = retrofit.create(UserApi::class.java)
 
+    @Provides
+    @Singleton
+    fun provideTokenApi(retrofit: Retrofit): TokenApi = retrofit.create(TokenApi::class.java)
+
     companion object {
-        private const val HALF_MINUTE_FOR_SLOW_INTERNET = 30L
+        private const val HALF_MINUTE_FOR_SLOW_INTERNET = 75L
         const val BASE_URL = "https://w2w-backend.onrender.com/"
-//        const val BASE_URL = "https://w2w-backend.onrender.com/"
     }
 }
