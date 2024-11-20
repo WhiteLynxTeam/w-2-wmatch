@@ -11,8 +11,8 @@ import androidx.navigation.fragment.NavHostFragment
 import kotlinx.coroutines.launch
 import ru.w_2_wmatch.R
 import ru.w_2_wmatch.databinding.ActivityMainBinding
-import site.pnpl.igotit.utils.uiextensions.hide
-import site.pnpl.igotit.utils.uiextensions.show
+import ru.w_2_wmatch.utils.uiextensions.hide
+import ru.w_2_wmatch.utils.uiextensions.show
 
 class MainActivity : AppCompatActivity(), OnHeaderChangeListener {
     private lateinit var binding: ActivityMainBinding

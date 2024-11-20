@@ -1,0 +1,11 @@
+package ru.w_2_wmatch.data.api
+
+import retrofit2.http.Body
+import retrofit2.http.POST
+import ru.w_2_wmatch.data.dto.token.request.CreateTokenRequest
+import ru.w_2_wmatch.data.dto.token.response.CreateTokenResponse
+
+interface TokenApi {
+    @POST("auth/users/")
+    suspend fun get(@Body createTokenRequest: CreateTokenRequest): Result<CreateTokenResponse>
+}
