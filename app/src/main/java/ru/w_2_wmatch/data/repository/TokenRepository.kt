@@ -14,7 +14,7 @@ class TokenRepository(
     private val tokenStorage: TokenStorage,
 ) : ITokenRepository {
 
-    override suspend fun create(authUser: AuthUser): Result<Token> {
+    override suspend fun getToken(authUser: AuthUser): Result<Token> {
         val result = tokenApi.get(mapperAuthUserToCreateTokenRequest(authUser))
         return result.map { mapperCreateTokenRequestToToken(it) }
     }
