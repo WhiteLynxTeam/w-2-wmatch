@@ -11,6 +11,7 @@ import ru.w_2_wmatch.view.questionnaire.nick_telegram.NickTelegramFragment
 import ru.w_2_wmatch.view.questionnaire.social_network_link.SocialNetworkLinkFragment
 import ru.w_2_wmatch.view.questionnaire.target_audience.TargetAudienceFragment
 import ru.w_2_wmatch.view.reg.RegFragment
+import ru.w_2_wmatch.view.reg.choosing_to_fill_questionnaire.ChoosingToFillQuestionnaireFragment
 
 @Module
 interface MainModule {
@@ -41,4 +42,6 @@ interface MainModule {
     @ContributesAndroidInjector
     fun bindTargetAudienceFragment(): TargetAudienceFragment
 
+    @ContributesAndroidInjector
+    fun bindChoosingToFillQuestionnaireFragment(): ChoosingToFillQuestionnaireFragment
 }

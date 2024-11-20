@@ -1,19 +1,19 @@
-package ru.w_2_wmatch.view.reg
+package ru.w_2_wmatch.view.reg.choosing_to_fill_questionnaire
 
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.navigation.fragment.findNavController
 import ru.w_2_wmatch.R
-import ru.w_2_wmatch.databinding.FragmentRegBinding
+import ru.w_2_wmatch.databinding.FragmentChoosingToFillQuestionnaireBinding
 import ru.w_2_wmatch.view.base.BaseFragment
 
-class RegFragment : BaseFragment() {
-    private var _binding: FragmentRegBinding? = null
+class ChoosingToFillQuestionnaireFragment : BaseFragment() {
+
+    private var _binding: FragmentChoosingToFillQuestionnaireBinding? = null
     private val binding get() = _binding!!
 
-    private lateinit var viewModel: RegViewModel
+    private lateinit var viewModel: ChoosingToFillQuestionnaireViewModel
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -21,16 +21,12 @@ class RegFragment : BaseFragment() {
     ): View {
         listener?.onTitleTextChange(R.string.reg)
 
-        _binding = FragmentRegBinding.inflate(inflater, container, false)
+        _binding = FragmentChoosingToFillQuestionnaireBinding.inflate(inflater, container, false)
         return binding.root
     }
-
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        binding.btnReg.setOnClickListener {
-            findNavController().navigate(R.id.action_regFragment_to_choosingToFillQuestionnaireFragment)
-        }
     }
 }

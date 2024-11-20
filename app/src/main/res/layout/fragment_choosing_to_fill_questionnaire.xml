@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".view.reg.choosing_to_fill_questionnaire.ChoosingToFillQuestionnaireFragment">
+
+    <TextView
+        android:id="@+id/tv_questionnaire"
+        style="@style/Back.TextStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="48dp"
+        android:textSize="14sp"
+        android:text="Анкета"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <TextView
+        android:id="@+id/tv_description"
+        style="@style/Back.TextStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:textSize="10sp"
+        android:text="Для того, чтобы мы помогли Вам найти партнера, \nответьте на вопросы"
+        app:layout_constraintStart_toStartOf="@id/tv_questionnaire"
+        app:layout_constraintTop_toBottomOf="@id/tv_questionnaire"/>
+
+    <ImageView
+        android:id="@+id/iv_help_questionnaire"
+        android:layout_width="30dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="30dp"
+        android:scaleType="centerInside"
+        android:src="@drawable/ic_help"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/tv_description"
+        app:layout_constraintBottom_toBottomOf="@id/tv_description"/>
+
+    <TextView
+        android:id="@+id/tv_description_2"
+        style="@style/Back.TextStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:textSize="10sp"
+        android:textColor="@color/brand_blue"
+        android:text="Ответы займут 10-15 минут. Можете вернуться\nк завершению регистрации позже.\nЕсли переживаете, что забудете, оставьте свой номер\nтелефона,  мы напомним."
+        app:layout_constraintStart_toStartOf="@id/tv_questionnaire"
+        app:layout_constraintTop_toBottomOf="@id/tv_description"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        style="@style/PrimaryBigButtonActive"
+        android:id="@+id/btn_fill_questionnaire"
+        android:layout_marginTop="30dp"
+        android:clickable="true"
+        android:enabled="true"
+        android:focusable="true"
+        android:text="Заполнить анкету"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_description_2"/>
+
+    <TextView
+        android:id="@+id/tv_trial"
+        style="@style/Back.TextStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:textSize="14sp"
+        android:text="TRIAL (пробный период) на 72 часа"
+        app:layout_constraintStart_toStartOf="@id/tv_questionnaire"
+        app:layout_constraintTop_toBottomOf="@id/btn_fill_questionnaire"/>
+
+    <TextView
+        android:id="@+id/tv_description_3"
+        style="@style/Back.TextStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:textSize="10sp"
+        android:text="Алгоритмы не  будут  давать  вам точных  рекомендаций\nпо  выбору партнера, но  вы  сможете  ознакомиться\nс  функционалом  сервиса  бесплатно  на  72  часа."
+        app:layout_constraintStart_toStartOf="@id/tv_questionnaire"
+        app:layout_constraintTop_toBottomOf="@id/tv_trial"/>
+
+    <ImageView
+        android:id="@+id/iv_help_trial"
+        android:layout_width="30dp"
+        android:layout_height="0dp"
+        android:scaleType="centerInside"
+        android:src="@drawable/ic_help"
+        app:layout_constraintEnd_toEndOf="@id/iv_help_questionnaire"
+        app:layout_constraintTop_toTopOf="@id/tv_description_3"
+        app:layout_constraintBottom_toBottomOf="@id/tv_description_3"/>
+
+    <TextView
+        android:id="@+id/tv_description_4"
+        style="@style/Back.TextStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:textSize="10sp"
+        android:textColor="@color/brand_blue"
+        android:text="Если Вы не готовы заполнять анкету прямо сейчас, но хотели\nбы ознакомиться с возможностями приложения , активируйте\nпробный период . Позднее, мы напомним Вам об анкете."
+        app:layout_constraintStart_toStartOf="@id/tv_questionnaire"
+        app:layout_constraintTop_toBottomOf="@id/tv_description_3"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        style="@style/PrimaryBigButtonActive"
+        android:id="@+id/btn_without_questionnaire"
+        android:layout_marginTop="30dp"
+        android:clickable="true"
+        android:enabled="true"
+        android:focusable="true"
+        android:text="Активировать без анкеты"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_description_4"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

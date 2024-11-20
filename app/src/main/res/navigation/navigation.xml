@@ -31,7 +31,11 @@
         android:id="@+id/regFragment"
         android:name="ru.w_2_wmatch.view.reg.RegFragment"
         android:label="RegFragment"
-        tools:layout="@layout/fragment_reg"/>
+        tools:layout="@layout/fragment_reg">
+        <action
+            android:id="@+id/action_regFragment_to_choosingToFillQuestionnaireFragment"
+            app:destination="@id/choosingToFillQuestionnaireFragment" />
+    </fragment>
     <fragment
         android:id="@+id/brandPositionFragment"
         android:name="ru.w_2_wmatch.view.questionnaire.brand_position.BrandPositionFragment"
@@ -46,5 +50,10 @@
             android:id="@+id/action_nickTelegramFragment2_to_brandPositionFragment"
             app:destination="@id/brandPositionFragment" />
     </fragment>
+    <fragment
+        android:id="@+id/choosingToFillQuestionnaireFragment"
+        android:name="ru.w_2_wmatch.view.reg.choosing_to_fill_questionnaire.ChoosingToFillQuestionnaireFragment"
+        android:label="fragment_choosing_to_fill_questionnaire"
+        tools:layout="@layout/fragment_choosing_to_fill_questionnaire" />
 
 </navigation>
