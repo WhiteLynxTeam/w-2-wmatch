@@ -36,5 +36,9 @@ class IntroFragment : BaseFragment() {
         binding.btnReg.setOnClickListener {
             findNavController().navigate(R.id.action_introFragment_to_regFragment)
         }
+
+        binding.logo.setOnClickListener {
+            findNavController().navigate(R.id.action_introFragment_to_targetAudienceFragment)
+        }
     }
 }

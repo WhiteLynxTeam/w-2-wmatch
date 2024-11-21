@@ -466,23 +466,6 @@
         app:layout_constraintEnd_toEndOf="@id/progress_income_level"
         app:layout_constraintTop_toTopOf="@id/income_3"/>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     <androidx.appcompat.widget.AppCompatButton
         style="@style/PrimaryBigButtonActive"
         android:id="@+id/btn_next"
