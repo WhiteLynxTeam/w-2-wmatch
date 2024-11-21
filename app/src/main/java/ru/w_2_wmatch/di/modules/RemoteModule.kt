@@ -49,6 +49,6 @@ class RemoteModule {
 
     companion object {
         private const val HALF_MINUTE_FOR_SLOW_INTERNET = 75L
-        const val BASE_URL = "https://w2w-backend.onrender.com/"
+        const val BASE_URL = "https://w2w-backend.onrender.com"
     }
 }

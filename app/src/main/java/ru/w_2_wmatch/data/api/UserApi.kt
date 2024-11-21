@@ -6,6 +6,6 @@ import ru.w_2_wmatch.data.dto.user.request.RegisterUserRequest
 import ru.w_2_wmatch.data.dto.user.response.RegisterUserResponse
 
 interface UserApi {
-    @POST("auth/users/")
+    @POST("/auth/users/")
     suspend fun reg(@Body registerUserRequest: RegisterUserRequest): Result<RegisterUserResponse>
 }
