@@ -16,6 +16,9 @@
         <action
             android:id="@+id/action_introFragment_to_regFragment"
             app:destination="@id/regFragment" />
+        <action
+            android:id="@+id/action_introFragment_to_targetAudienceFragment"
+            app:destination="@id/targetAudienceFragment" />
     </fragment>
     <fragment
         android:id="@+id/authFragment"
@@ -55,5 +58,10 @@
         android:name="ru.w_2_wmatch.view.reg.choosing_to_fill_questionnaire.ChoosingToFillQuestionnaireFragment"
         android:label="fragment_choosing_to_fill_questionnaire"
         tools:layout="@layout/fragment_choosing_to_fill_questionnaire" />
+    <fragment
+        android:id="@+id/targetAudienceFragment"
+        android:name="ru.w_2_wmatch.view.questionnaire.target_audience.TargetAudienceFragment"
+        android:label="fragment_target_audience"
+        tools:layout="@layout/fragment_target_audience" />
 
 </navigation>
