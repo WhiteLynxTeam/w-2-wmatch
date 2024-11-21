@@ -8,7 +8,7 @@ class GetTokenApiUseCase(
     private val saveTokenPrefUseCase: SaveTokenPrefUseCase,
 ) {
     suspend operator fun invoke(authUser: AuthUser): Boolean {
-        val result = repository.create(authUser)
+        val result = repository.getToken(authUser)
 
         if (result.isSuccess) {
             val token = result.getOrNull()
