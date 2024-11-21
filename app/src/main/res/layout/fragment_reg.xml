@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".view.intro.IntroFragment">
+    tools:context=".view.reg.RegFragment">
 
     <!--    <ImageView-->
     <!--        android:id="@+id/btn_back"-->
@@ -69,6 +69,7 @@
         android:layout_marginStart="30dp"
         android:layout_marginTop="5dp"
         android:hint="Телефон"
+        android:inputType="text"
         android:maxLines="1"
         app:layout_constraintStart_toStartOf="@id/tv_del_account"
         app:layout_constraintTop_toBottomOf="@id/et_fio" />
