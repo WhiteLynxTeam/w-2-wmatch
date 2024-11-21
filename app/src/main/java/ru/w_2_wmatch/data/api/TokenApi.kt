@@ -6,6 +6,6 @@ import ru.w_2_wmatch.data.dto.token.request.CreateTokenRequest
 import ru.w_2_wmatch.data.dto.token.response.CreateTokenResponse
 
 interface TokenApi {
-    @POST("auth/users/")
+    @POST("/auth/jwt/create/")
     suspend fun get(@Body createTokenRequest: CreateTokenRequest): Result<CreateTokenResponse>
 }
