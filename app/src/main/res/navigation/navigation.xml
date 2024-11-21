@@ -26,8 +26,8 @@
         android:label="AuthFragment"
         tools:layout="@layout/fragment_auth">
         <action
-            android:id="@+id/action_authFragment_to_nickTelegramFragment2"
-            app:destination="@id/nickTelegramFragment2" />
+            android:id="@+id/action_authFragment_to_choosingToFillQuestionnaireFragment"
+            app:destination="@id/choosingToFillQuestionnaireFragment" />
     </fragment>
 
     <fragment

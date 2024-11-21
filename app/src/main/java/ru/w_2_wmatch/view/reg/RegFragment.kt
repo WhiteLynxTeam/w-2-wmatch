@@ -6,6 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.lifecycleScope
+import androidx.navigation.fragment.findNavController
 import com.google.android.material.textfield.TextInputEditText
 import com.redmadrobot.inputmask.MaskedTextChangedListener
 import kotlinx.coroutines.launch
@@ -48,6 +49,9 @@ class RegFragment : BaseFragment() {
                 /***Проверяем it на true и переходим на следующий фрагмент*/
                 if(it) {
                     showSnackbarLong("Пользователь зарегистрирован.")
+                    findNavController().navigate(R.id.action_regFragment_to_choosingToFillQuestionnaireFragment)
+                } else {
+                    showSnackbarLong("Ошибка регистрации.")
                 }
             }
         }
@@ -85,6 +89,6 @@ class RegFragment : BaseFragment() {
     }
 
     fun checkFields(elements: List<TextInputEditText>): Boolean {
-        return elements.any { it.text?.isNotEmpty() ?: false}
+        return elements.none { it.text?.isNotEmpty() ?: false}
     }
 }

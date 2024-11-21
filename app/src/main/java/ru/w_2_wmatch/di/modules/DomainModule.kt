@@ -6,6 +6,7 @@ import ru.w_2_wmatch.domain.irepository.ITokenRepository
 import ru.w_2_wmatch.domain.irepository.IUserRepository
 import ru.w_2_wmatch.domain.istorage.ITokenStorage
 import ru.w_2_wmatch.domain.usecases.GetTokenApiUseCase
+import ru.w_2_wmatch.domain.usecases.GetTokenPrefUseCase
 import ru.w_2_wmatch.domain.usecases.RegisterUseCase
 import ru.w_2_wmatch.domain.usecases.SaveTokenPrefUseCase
 import javax.inject.Singleton
@@ -14,7 +15,7 @@ import javax.inject.Singleton
 class DomainModule {
     @Singleton
     @Provides
-    fun provideRegisterUser(
+    fun provideRegisterUseCase(
         repository: IUserRepository,
     ): RegisterUseCase {
         return RegisterUseCase(repository = repository)
@@ -39,6 +40,14 @@ class DomainModule {
         storage: ITokenStorage
     ): SaveTokenPrefUseCase {
         return SaveTokenPrefUseCase(storage = storage)
+    }
+
+    @Singleton
+    @Provides
+    fun provideGetTokenPrefUseCase(
+        storage: ITokenStorage
+    ): GetTokenPrefUseCase {
+        return GetTokenPrefUseCase(storage = storage)
     }
 
 }

@@ -46,7 +46,9 @@ class AuthFragment : BaseFragment() {
             viewModel.isEntry.collect {
                 /***Проверяем it на true и переходим на следующий фрагмент*/
                 if(it) {
-                    findNavController().navigate(R.id.action_authFragment_to_nickTelegramFragment2)
+                    findNavController().navigate(R.id.action_authFragment_to_choosingToFillQuestionnaireFragment)
+                } else {
+                    showSnackbarLong("Ошибка авторизации.")
                 }
             }
         }
