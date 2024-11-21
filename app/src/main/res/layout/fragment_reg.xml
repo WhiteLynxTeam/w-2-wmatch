@@ -69,7 +69,6 @@
         android:layout_marginStart="30dp"
         android:layout_marginTop="5dp"
         android:hint="Телефон"
-        android:inputType="textPassword"
         android:maxLines="1"
         app:layout_constraintStart_toStartOf="@id/tv_del_account"
         app:layout_constraintTop_toBottomOf="@id/et_fio" />
