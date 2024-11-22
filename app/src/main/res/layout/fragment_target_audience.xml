@@ -12,7 +12,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="25dp"
-        android:layout_marginTop="48dp"
+        android:layout_marginTop="30dp"
         android:textSize="14sp"
         android:text="Целевая аудитория"
         app:layout_constraintStart_toStartOf="parent"
@@ -47,24 +47,41 @@
         app:layout_constraintStart_toStartOf="@id/tv_target_audience"
         app:layout_constraintTop_toBottomOf="@id/count_target_audience"/>
 
-    <com.google.android.material.progressindicator.LinearProgressIndicator
+    <TextView
+        android:id="@+id/progress_age_woman_value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0"
+        android:visibility="gone"
+        app:layout_constraintStart_toStartOf="@id/progress_age_woman"
+        app:layout_constraintEnd_toEndOf="@id/progress_age_woman"
+        app:layout_constraintBottom_toTopOf="@id/progress_age_woman"
+        />
+
+    <SeekBar
         android:id="@+id/progress_age_woman"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="10dp"
+        android:paddingStart="0dp"
+        android:paddingEnd="0dp"
         android:progress="40"
-        app:indicatorColor="@color/brand_orange"
+        android:progressTint="@color/brand_orange"
+        android:thumbTint="@color/brand_orange"
         app:layout_constraintStart_toStartOf="@id/tv_target_audience"
         app:layout_constraintTop_toBottomOf="@id/age"
         app:layout_constraintEnd_toEndOf="@id/count_target_audience"/>
 
-    <com.google.android.material.progressindicator.LinearProgressIndicator
+    <SeekBar
         android:id="@+id/progress_age_man"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="10dp"
+        android:paddingStart="0dp"
+        android:paddingEnd="0dp"
         android:progress="60"
-        app:indicatorColor="@color/brand_blue"
+        android:progressTint="@color/brand_blue"
+        android:thumbTint="@color/brand_blue"
         app:layout_constraintStart_toStartOf="@id/tv_target_audience"
         app:layout_constraintTop_toBottomOf="@id/progress_age_woman"
         app:layout_constraintEnd_toEndOf="@id/progress_age_woman"/>
@@ -157,31 +174,32 @@
         android:id="@+id/gender"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="10dp"
         android:text="Пол"
         app:layout_constraintStart_toStartOf="@id/woman_indicator"
         app:layout_constraintTop_toBottomOf="@id/woman_indicator"/>
 
-    <com.mikhaellopez.circularprogressbar.CircularProgressBar
+    <me.tankery.lib.circularseekbar.CircularSeekBar
         android:id="@+id/progress_gender_man"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        app:layout_constraintWidth_percent="0.3"
-        android:layout_marginTop="10dp"
-        app:cpb_background_progressbar_color="@color/white"
-        app:cpb_progressbar_color="@color/brand_blue"
-        app:cpb_progress_max="100"
-        app:cpb_progress="60"
+        android:layout_centerInParent="true"
         android:scaleX="-1"
-        app:cpb_progressbar_width="2dp"
+        app:cs_circle_color="@color/white"
+        app:cs_circle_progress_color="@color/brand_blue"
+        app:cs_max="100"
+        app:cs_pointer_color="@color/brand_blue"
+        app:cs_pointer_stroke_width="12dp"
+        app:cs_progress="60"
         app:layout_constraintStart_toStartOf="@id/gender"
-        app:layout_constraintTop_toBottomOf="@id/gender"/>
+        app:layout_constraintTop_toBottomOf="@id/gender"
+        app:layout_constraintWidth_percent="0.3" />
 
     <TextView
         android:id="@+id/percent_gender_man"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="60%"
+        android:text="60 %"
         app:layout_constraintStart_toStartOf="@id/progress_gender_man"
         app:layout_constraintBottom_toBottomOf="@id/progress_gender_man"
         app:layout_constraintEnd_toEndOf="@id/progress_gender_man"
@@ -197,18 +215,19 @@
         app:layout_constraintStart_toEndOf="@id/progress_gender_man"
         app:layout_constraintBottom_toBottomOf="@id/progress_gender_man"/>
 
-    <com.mikhaellopez.circularprogressbar.CircularProgressBar
+    <me.tankery.lib.circularseekbar.CircularSeekBar
         android:id="@+id/progress_gender_woman"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         app:layout_constraintWidth_percent="0.3"
         android:layout_marginStart="20dp"
-        app:cpb_background_progressbar_color="@color/white"
-        app:cpb_progressbar_color="@color/brand_orange"
-        app:cpb_progress_max="100"
-        app:cpb_progress="40"
+        app:cs_circle_color="@color/white"
+        app:cs_circle_progress_color="@color/brand_orange"
+        app:cs_pointer_color="@color/brand_orange"
+        app:cs_pointer_stroke_width="12dp"
+        app:cs_progress="60"
+        app:cs_max="100"
         android:scaleX="-1"
-        app:cpb_progressbar_width="2dp"
         app:layout_constraintStart_toEndOf="@id/tv_gender_man"
         app:layout_constraintBottom_toBottomOf="@id/progress_gender_man"/>
 
@@ -216,7 +235,7 @@
         android:id="@+id/percent_gender_woman"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="40%"
+        android:text="40 %"
         app:layout_constraintStart_toStartOf="@id/progress_gender_woman"
         app:layout_constraintTop_toTopOf="@id/progress_gender_woman"
         app:layout_constraintEnd_toEndOf="@id/progress_gender_woman"
@@ -236,51 +255,63 @@
         android:id="@+id/tv_geo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="0dp"
         android:text="ГЕО"
         app:layout_constraintStart_toStartOf="@id/gender"
         app:layout_constraintTop_toBottomOf="@id/tv_gender_man"/>
 
-    <com.google.android.material.progressindicator.LinearProgressIndicator
+    <SeekBar
         android:id="@+id/progress_geo_moscow"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="10dp"
+        android:paddingStart="0dp"
+        android:paddingEnd="0dp"
         android:progress="30"
-        app:indicatorColor="@color/text_main"
+        android:progressTint="@color/text_main"
+        android:thumbTint="@color/text_main"
         app:layout_constraintStart_toStartOf="@id/tv_geo"
         app:layout_constraintTop_toBottomOf="@id/tv_geo"
         app:layout_constraintEnd_toEndOf="@id/count_target_audience"/>
 
-    <com.google.android.material.progressindicator.LinearProgressIndicator
+    <SeekBar
         android:id="@+id/progress_geo_spb"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="10dp"
+        android:paddingStart="0dp"
+        android:paddingEnd="0dp"
         android:progress="20"
-        app:indicatorColor="@color/text_body"
+        android:progressTint="@color/text_body"
+        android:thumbTint="@color/text_body"
         app:layout_constraintStart_toStartOf="@id/tv_geo"
         app:layout_constraintTop_toBottomOf="@id/progress_geo_moscow"
         app:layout_constraintEnd_toEndOf="@id/count_target_audience"/>
 
-    <com.google.android.material.progressindicator.LinearProgressIndicator
+    <SeekBar
         android:id="@+id/progress_geo_other_city"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="10dp"
+        android:paddingStart="0dp"
+        android:paddingEnd="0dp"
         android:progress="10"
-        app:indicatorColor="@color/brand_blue"
+        android:progressTint="@color/brand_blue"
+        android:thumbTint="@color/brand_blue"
         app:layout_constraintStart_toStartOf="@id/tv_geo"
         app:layout_constraintTop_toBottomOf="@id/progress_geo_spb"
         app:layout_constraintEnd_toEndOf="@id/count_target_audience"/>
 
-    <com.google.android.material.progressindicator.LinearProgressIndicator
+    <SeekBar
         android:id="@+id/progress_geo_online_sales"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="10dp"
+        android:paddingStart="0dp"
+        android:paddingEnd="0dp"
         android:progress="70"
-        app:indicatorColor="@color/brand_orange"
+        android:progressTint="@color/brand_orange"
+        android:thumbTint="@color/brand_orange"
         app:layout_constraintStart_toStartOf="@id/tv_geo"
         app:layout_constraintTop_toBottomOf="@id/progress_geo_other_city"
         app:layout_constraintEnd_toEndOf="@id/count_target_audience"/>
@@ -378,7 +409,7 @@
         android:id="@+id/online_sales_indicator"
         android:layout_width="10dp"
         android:layout_height="10dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="10dp"
         android:backgroundTint="@color/brand_orange"
         android:background="@drawable/bg_oval_for_indicator"
         app:layout_constraintStart_toStartOf="@id/moscow_indicator"
@@ -399,18 +430,21 @@
         android:id="@+id/tv_income_level"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="10dp"
         android:text="@string/income_level"
         app:layout_constraintStart_toStartOf="@id/online_sales_indicator"
         app:layout_constraintTop_toBottomOf="@id/online_sales_indicator"/>
 
-    <com.google.android.material.progressindicator.LinearProgressIndicator
+    <SeekBar
         android:id="@+id/progress_income_level"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="10dp"
+        android:paddingStart="0dp"
+        android:paddingEnd="0dp"
         android:progress="50"
-        app:indicatorColor="@color/brand_orange"
+        android:progressTint="@color/brand_orange"
+        android:thumbTint="@color/brand_orange"
         app:layout_constraintStart_toStartOf="@id/tv_income_level"
         app:layout_constraintTop_toBottomOf="@id/tv_income_level"
         app:layout_constraintEnd_toEndOf="@id/count_target_audience"/>
@@ -436,7 +470,7 @@
         android:id="@+id/income_3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="10dp"
         android:text="500.000"
         app:layout_constraintTop_toBottomOf="@id/progress_income_level"
         app:layout_constraintStart_toStartOf="@id/progress_income_level"
@@ -462,7 +496,7 @@
     <androidx.appcompat.widget.AppCompatButton
         style="@style/PrimaryBigButtonActive"
         android:id="@+id/btn_next"
-        android:layout_marginBottom="16dp"
+        android:layout_marginBottom="12dp"
         android:clickable="true"
         android:enabled="true"
         android:focusable="true"

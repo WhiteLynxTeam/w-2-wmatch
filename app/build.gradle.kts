@@ -92,7 +92,8 @@ dependencies {
     implementation("androidx.room:room-ktx:2.6.1")
     kapt("androidx.room:room-compiler:2.6.1")
 
-    implementation ("com.mikhaellopez:circularprogressbar:3.1.0")
+    /** CircularSeekBar */
+    implementation ("me.tankery.lib:circularSeekBar:1.4.2")
 
     /** Input Mask */
     implementation("com.redmadrobot:input-mask-android:7.2.4")
