@@ -24,7 +24,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
-        android:text="Ваши данные приняты и сохранены!\n\n Теперь ваши шансы на совместный Метч увеличились!"
+        android:text="Ваши данные приняты и сохранены!\n\nТеперь ваши шансы на совместный Метч увеличились!"
         android:textSize="10sp"
         app:layout_constraintStart_toStartOf="@id/tv_questionnaire"
         app:layout_constraintTop_toBottomOf="@id/tv_questionnaire" />
