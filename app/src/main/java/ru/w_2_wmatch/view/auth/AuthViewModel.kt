@@ -8,10 +8,9 @@ import kotlinx.coroutines.flow.SharedFlow
 import kotlinx.coroutines.flow.asSharedFlow
 import kotlinx.coroutines.launch
 import ru.w_2_wmatch.domain.models.AuthUser
-import ru.w_2_wmatch.domain.models.User
-import ru.w_2_wmatch.domain.usecases.GetTokenApiUseCase
+import ru.w_2_wmatch.domain.usecases.AuthUseCase
 
-class AuthViewModel(private val getTokenApiUseCase: GetTokenApiUseCase) : ViewModel() {
+class AuthViewModel(private val authUseCase: AuthUseCase) : ViewModel() {
 
     private var _isEntry = MutableSharedFlow<Boolean>()
     val isEntry: SharedFlow<Boolean>
@@ -19,17 +18,18 @@ class AuthViewModel(private val getTokenApiUseCase: GetTokenApiUseCase) : ViewMo
 
     fun auth(authUser: AuthUser) {
         viewModelScope.launch {
-            _isEntry.emit(getTokenApiUseCase(authUser))
+            _isEntry.emit(authUseCase(authUser))
         }
     }
+
     class Factory(
-        private val getTokenApiUseCase: GetTokenApiUseCase
+        private val authUseCase: AuthUseCase
     ) : ViewModelProvider.Factory {
 
         override fun <T : ViewModel> create(modelClass: Class<T>): T {
             if (modelClass.isAssignableFrom(AuthViewModel::class.java)) {
                 return AuthViewModel(
-                    getTokenApiUseCase = getTokenApiUseCase,
+                    authUseCase = authUseCase,
                 ) as T
             }
             throw IllegalArgumentException("Unknown ViewModel class")

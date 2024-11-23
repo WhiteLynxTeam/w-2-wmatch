@@ -21,7 +21,7 @@ class UserRepository(
             fullname = user.fullname,
             email = user.email,
             phone = user.phone,
-            password = user.password,
+            password = user.password ?: "",
         )
     }
 }

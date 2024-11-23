@@ -3,6 +3,7 @@ package ru.w_2_wmatch.data.repository
 import androidx.room.util.recursiveFetchLongSparseArray
 import ru.w_2_wmatch.data.api.TokenApi
 import ru.w_2_wmatch.data.dto.token.request.CreateTokenRequest
+import ru.w_2_wmatch.data.dto.token.request.RefreshTokenRequest
 import ru.w_2_wmatch.data.dto.token.response.CreateTokenResponse
 import ru.w_2_wmatch.data.storage.TokenStorage
 import ru.w_2_wmatch.domain.irepository.ITokenRepository
@@ -16,6 +17,11 @@ class TokenRepository(
 
     override suspend fun getToken(authUser: AuthUser): Result<Token> {
         val result = tokenApi.get(mapperAuthUserToCreateTokenRequest(authUser))
+        return result.map { mapperCreateTokenRequestToToken(it) }
+    }
+
+    override suspend fun refreshToken(refreshToken: String): Result<Token> {
+        val result = tokenApi.refresh(RefreshTokenRequest(refresh = refreshToken))
         return result.map { mapperCreateTokenRequestToToken(it) }
     }
 

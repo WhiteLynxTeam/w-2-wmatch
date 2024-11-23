@@ -7,6 +7,6 @@ class SaveTokenPrefUseCase(
     private val storage: ITokenStorage
 ) {
     operator fun invoke(token: Token) {
-        storage.saveAll(token)
+        storage.saveAllTokens(token)
     }
 }

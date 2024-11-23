@@ -5,4 +5,5 @@ import ru.w_2_wmatch.domain.models.Token
 
 interface ITokenRepository {
     suspend fun getToken(authUser: AuthUser): Result<Token>
+    suspend fun refreshToken(refreshToken: String): Result<Token>
 }
