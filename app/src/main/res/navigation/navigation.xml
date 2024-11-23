@@ -19,6 +19,9 @@
         <action
             android:id="@+id/action_introFragment_to_targetAudienceFragment"
             app:destination="@id/targetAudienceFragment" />
+        <action
+            android:id="@+id/action_introFragment_to_choosingToFillQuestionnaireFragment"
+            app:destination="@id/choosingToFillQuestionnaireFragment" />
     </fragment>
     <fragment
         android:id="@+id/authFragment"
