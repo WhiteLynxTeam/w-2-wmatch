@@ -10,11 +10,12 @@ import androidx.navigation.fragment.findNavController
 import kotlinx.coroutines.launch
 import ru.w_2_wmatch.R
 import ru.w_2_wmatch.databinding.FragmentAuthBinding
+import ru.w_2_wmatch.domain.AppState
 import ru.w_2_wmatch.domain.models.AuthUser
-import ru.w_2_wmatch.domain.models.User
+import ru.w_2_wmatch.utils.uiextensions.hide
+import ru.w_2_wmatch.utils.uiextensions.show
 import ru.w_2_wmatch.utils.uiextensions.showSnackbarLong
 import ru.w_2_wmatch.view.base.BaseFragment
-import ru.w_2_wmatch.view.reg.RegViewModel
 import javax.inject.Inject
 
 class AuthFragment : BaseFragment() {
@@ -43,22 +44,46 @@ class AuthFragment : BaseFragment() {
             ViewModelProvider(this, vmFactory)[AuthViewModel::class.java]
 
         viewLifecycleOwner.lifecycleScope.launch {
-            viewModel.isEntry.collect {
-                /***Проверяем it на true и переходим на следующий фрагмент*/
-                if(it) {
-                    findNavController().navigate(R.id.action_authFragment_to_choosingToFillQuestionnaireFragment)
-                } else {
-                    showSnackbarLong("Ошибка авторизации.")
+            viewModel.appStateFlow.collect {
+                when (it) {
+                    is AppState.Error -> {
+                        println("AuthFragment начало AppState.Error")
+                        binding.progressBar.hide()
+                    }
+
+                    AppState.Loading -> {
+                        println("AuthFragment начало AppState.Loading")
+                        binding.progressBar.show()
+                    }
+
+                    is AppState.Success<*> -> {
+                        println("AuthFragment начало AppState.Success")
+                        binding.progressBar.hide()
+                        if(it.data as Boolean) {
+                            findNavController().navigate(R.id.action_authFragment_to_choosingToFillQuestionnaireFragment)
+                        } else {
+                            showSnackbarLong("Ошибка авторизации.")
+                        }
+                    }
+
+                    AppState.None -> {
+                        println("AuthFragment начало AppState.None")
+                        binding.progressBar.hide()
+                    }
                 }
             }
+        }
+
+        binding.tvReg.setOnClickListener {
+            findNavController().navigate(R.id.action_authFragment_to_regFragment)
         }
 
         binding.btnEnter.setOnClickListener {
             viewModel.auth(
                 AuthUser(
-                login = binding.etEmail.text.toString(),
-                password = binding.etPass.text.toString(),
-            )
+                    login = binding.etEmail.text.toString(),
+                    password = binding.etPass.text.toString(),
+                )
             )
         }
     }

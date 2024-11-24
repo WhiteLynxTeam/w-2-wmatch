@@ -31,6 +31,9 @@
         <action
             android:id="@+id/action_authFragment_to_choosingToFillQuestionnaireFragment"
             app:destination="@id/choosingToFillQuestionnaireFragment" />
+        <action
+            android:id="@+id/action_authFragment_to_regFragment"
+            app:destination="@id/regFragment" />
     </fragment>
 
     <fragment
@@ -41,6 +44,9 @@
         <action
             android:id="@+id/action_regFragment_to_choosingToFillQuestionnaireFragment"
             app:destination="@id/choosingToFillQuestionnaireFragment" />
+        <action
+            android:id="@+id/action_regFragment_to_authFragment"
+            app:destination="@id/authFragment" />
     </fragment>
     <fragment
         android:id="@+id/brandPositionFragment"

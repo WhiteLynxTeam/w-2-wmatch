@@ -12,8 +12,11 @@ import com.redmadrobot.inputmask.MaskedTextChangedListener
 import kotlinx.coroutines.launch
 import ru.w_2_wmatch.R
 import ru.w_2_wmatch.databinding.FragmentRegBinding
+import ru.w_2_wmatch.domain.AppState
 import ru.w_2_wmatch.domain.models.User
 import ru.w_2_wmatch.utils.isEmailValid
+import ru.w_2_wmatch.utils.uiextensions.hide
+import ru.w_2_wmatch.utils.uiextensions.show
 import ru.w_2_wmatch.utils.uiextensions.showSnackbarLong
 import ru.w_2_wmatch.view.base.BaseFragment
 import javax.inject.Inject
@@ -45,16 +48,37 @@ class RegFragment : BaseFragment() {
             ViewModelProvider(this, vmFactory)[RegViewModel::class.java]
 
         viewLifecycleOwner.lifecycleScope.launch {
-            viewModel.isEntry.collect {
-                /***Проверяем it на true и переходим на следующий фрагмент*/
-                if(it) {
-                    showSnackbarLong("Пользователь зарегистрирован.")
-                    findNavController().navigate(R.id.action_regFragment_to_choosingToFillQuestionnaireFragment)
-                } else {
-                    showSnackbarLong("Ошибка регистрации.")
+            viewModel.appStateFlow.collect {
+                when (it) {
+                    is AppState.Error -> {
+                        binding.progressBar.hide()
+                    }
+
+                    AppState.Loading -> {
+                        binding.progressBar.show()
+                    }
+
+                    is AppState.Success<*> -> {
+                        binding.progressBar.hide()
+                        if(it.data as Boolean) {
+                            showSnackbarLong("Пользователь зарегистрирован.")
+                            findNavController().navigate(R.id.action_regFragment_to_choosingToFillQuestionnaireFragment)
+                        } else {
+                            showSnackbarLong("Ошибка регистрации.")
+                        }
+                    }
+
+                    AppState.None -> {
+                        binding.progressBar.hide()
+                    }
                 }
             }
         }
+
+        binding.tvEnter.setOnClickListener {
+            findNavController().navigate(R.id.action_regFragment_to_authFragment)
+        }
+
         binding.btnReg.setOnClickListener {
             if (!binding.etEmail.text.toString().isEmailValid()) {
                 showSnackbarLong("Введите корректный адрес email")
