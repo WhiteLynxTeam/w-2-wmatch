@@ -11,6 +11,7 @@ import kotlinx.coroutines.launch
 import ru.w_2_wmatch.R
 import ru.w_2_wmatch.databinding.FragmentIntroBinding
 import ru.w_2_wmatch.utils.uiextensions.gone
+import ru.w_2_wmatch.utils.uiextensions.show
 import ru.w_2_wmatch.view.base.BaseFragment
 import javax.inject.Inject
 
@@ -46,17 +47,21 @@ class IntroFragment : BaseFragment() {
             viewModel.introStateFlow.collect {
                 when (it) {
                     IntroState.Auth -> {
+                        binding.progressBar.gone()
                     }
 
                     IntroState.Enter -> {
 //                        findNavController().navigate(R.id.action_introFragment_to_choosingToFillQuestionnaireFragment)
+                        binding.progressBar.gone()
                         binding.btnReg.gone()
                     }
 
                     IntroState.Error -> {
+                        binding.progressBar.gone()
                     }
 
                     IntroState.Loading -> {
+                        binding.progressBar.show()
                     }
                 }
             }

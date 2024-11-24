@@ -6,25 +6,6 @@
     android:layout_height="match_parent"
     tools:context=".view.reg.RegFragment">
 
-    <!--    <ImageView-->
-    <!--        android:id="@+id/btn_back"-->
-    <!--        style="@style/BackButton"-->
-    <!--        android:layout_marginStart="25dp"-->
-    <!--        android:layout_marginTop="3.5dp"-->
-    <!--        app:layout_constraintStart_toStartOf="parent"-->
-    <!--        app:layout_constraintTop_toTopOf="parent" />-->
-
-    <!--    <TextView-->
-    <!--        android:id="@+id/tv_title"-->
-    <!--        style="@style/Back.TextStyle"-->
-    <!--        android:layout_width="wrap_content"-->
-    <!--        android:layout_height="0dp"-->
-    <!--        android:layout_marginStart="15dp"-->
-    <!--        android:text="Регистрация"-->
-    <!--        app:layout_constraintBottom_toBottomOf="@id/btn_back"-->
-    <!--        app:layout_constraintStart_toEndOf="@id/btn_back"-->
-    <!--        app:layout_constraintTop_toTopOf="@id/btn_back" />-->
-
     <TextView
         android:id="@+id/tv_del_account"
         style="@style/Back.TextStyle"
@@ -113,6 +94,20 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/et_pass" />
 
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="40dp"
+        style="?android:attr/progressBarStyleSmall"
+        android:indeterminate="true"
+        android:indeterminateTint="@color/white"
+        android:elevation="5dp"
+        android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="@id/btn_reg"
+        app:layout_constraintTop_toTopOf="@id/btn_reg"
+        app:layout_constraintBottom_toBottomOf="@id/btn_reg"/>
+
     <TextView
         android:id="@+id/tv_without_account"
         android:layout_width="wrap_content"
@@ -126,7 +121,7 @@
         app:layout_constraintTop_toBottomOf="@id/btn_reg" />
 
     <TextView
-        android:id="@+id/tv_reg"
+        android:id="@+id/tv_enter"
         style="@style/w2wmatch.TextStyle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
