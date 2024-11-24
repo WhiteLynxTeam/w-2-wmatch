@@ -1,0 +1,1031 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/gray_figma_bg"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".view.main.mane_page.ManePageFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <!--Подписка BUSINESS-->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/subscription_business_group"
+            style="@style/banner_business"
+            android:layout_height="80dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="5dp"
+            app:layout_constraintEnd_toStartOf="@+id/tv_q_and_a"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/iv_ruble"
+                style="@style/style_ic_ruble"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/ic_ruble"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tv_businnes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="13dp"
+                android:fontFamily="@font/raleway_regular"
+                android:text="Подписка BUSINESS"
+                android:textSize="14sp"
+                app:layout_constraintStart_toEndOf="@+id/iv_ruble"
+                app:layout_constraintTop_toTopOf="@+id/iv_ruble" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="Познакомьтесь со всеми тарифами"
+                android:textSize="12sp"
+                app:layout_constraintStart_toStartOf="@id/tv_businnes"
+                app:layout_constraintTop_toBottomOf="@+id/tv_businnes" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <!--Q&A-->
+        <TextView
+            android:id="@+id/tv_q_and_a"
+            style="@style/questions_and_answers"
+            android:layout_width="82dp"
+            android:layout_height="80dp"
+            android:gravity="center"
+            android:text="Q&amp;A"
+            app:layout_constraintBottom_toBottomOf="@id/subscription_business_group"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/subscription_business_group" />
+
+        <!--Комьюнити-->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/community_group"
+            style="@style/left_radius_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/subscription_business_group">
+
+            <TextView
+                android:id="@+id/tv_community"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Комьюнити"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="@id/community_group"
+                app:layout_constraintTop_toTopOf="@id/community_group" />
+
+            <!--Переделать на recyclerView , orientation horizontal-->
+            <HorizontalScrollView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_community">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:id="@+id/img_1"
+                        android:layout_width="201dp"
+                        android:layout_height="363dp"
+                        android:layout_marginStart="4dp"
+                        android:src="@drawable/img_communiti1"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <ImageView
+                        android:id="@+id/img_2"
+                        android:layout_width="201dp"
+                        android:layout_height="363dp"
+                        android:layout_marginStart="5dp"
+                        android:src="@drawable/img_communiti1"
+                        app:layout_constraintStart_toEndOf="@id/img_1"
+                        app:layout_constraintTop_toTopOf="@id/img_1" />
+
+                    <ImageView
+                        android:id="@+id/img_3"
+                        android:layout_width="201dp"
+                        android:layout_height="363dp"
+                        android:layout_marginStart="5dp"
+                        android:src="@drawable/img_communiti1"
+                        app:layout_constraintStart_toEndOf="@id/img_2"
+                        app:layout_constraintTop_toTopOf="@id/img_1" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </HorizontalScrollView>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <!--Создайте первую коллабу-->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/first_collabs_group"
+            style="@style/left_radius_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="5dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/community_group">
+
+            <TextView
+                android:id="@+id/tv_create_collab"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/raleway_regular"
+                android:text="Создайте первую коллабу"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/iv_help_key_collab"
+                android:layout_width="30dp"
+                android:layout_height="0dp"
+                android:layout_marginEnd="25dp"
+                android:scaleType="centerInside"
+                android:src="@drawable/ic_help"
+                app:layout_constraintBottom_toBottomOf="@id/tv_create_collab"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/tv_create_collab" />
+
+            <View
+                android:id="@+id/view_my_merch"
+                style="@style/left_radius_banner"
+                android:layout_width="wrap_content"
+                android:layout_height="80dp"
+                android:layout_marginTop="15dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_create_collab" />
+
+            <ImageView
+                android:id="@+id/iv_ic_merch"
+                style="@style/style_ic_ruble"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="15dp"
+                android:src="@drawable/ic_merch_orange"
+                app:layout_constraintBottom_toBottomOf="@+id/view_my_merch"
+                app:layout_constraintStart_toStartOf="@+id/view_my_merch"
+                app:layout_constraintTop_toTopOf="@+id/view_my_merch" />
+
+            <TextView
+                android:id="@+id/tv_your_merch"
+                android:layout_width="262dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="13dp"
+                android:fontFamily="@font/raleway_regular"
+                android:text="Найдите свой Метч"
+                android:textSize="14sp"
+                app:layout_constraintStart_toEndOf="@+id/iv_ic_merch"
+                app:layout_constraintTop_toTopOf="@+id/iv_ic_merch" />
+
+            <TextView
+                android:layout_width="262dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="7dp"
+                android:text="Познакомьтесь с будущими партнерами"
+                android:textSize="12sp"
+                app:layout_constraintStart_toStartOf="@id/tv_your_merch"
+                app:layout_constraintTop_toBottomOf="@+id/tv_your_merch" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <!--Моя статистика-->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/statistics_group"
+            style="@style/left_radius_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/first_collabs_group">
+
+            <TextView
+                android:id="@+id/tv_statistics"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Моя статистика"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/iv_help_key_statistics"
+                android:layout_width="30dp"
+                android:layout_height="0dp"
+                android:layout_marginEnd="25dp"
+                android:scaleType="centerInside"
+                android:src="@drawable/ic_help"
+                app:layout_constraintBottom_toBottomOf="@id/tv_statistics"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/tv_statistics" />
+
+            <TextView
+                android:id="@+id/tv_period"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:text="За выбранный период"
+                android:textSize="12sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_statistics" />
+
+            <TextView
+                android:id="@+id/tv_progress_100"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="35dp"
+                android:text="100"
+                android:textSize="10sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_period" />
+
+            <TextView
+                android:id="@+id/tv_progress_50"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="50"
+                android:textSize="10sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_progress_100" />
+
+            <TextView
+                android:id="@+id/tv_progress_25"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="25"
+                android:textSize="10sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_progress_50" />
+
+            <TextView
+                android:id="@+id/tv_progress_0"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="0"
+                android:textSize="10sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_progress_25" />
+
+            <ProgressBar
+                android:id="@+id/pb_1"
+                style="@android:style/Widget.ProgressBar.Horizontal"
+                android:layout_width="1dp"
+                android:layout_height="100dp"
+                android:layout_marginStart="75dp"
+                android:max="100"
+                android:progress="75"
+                android:progressDrawable="@drawable/progress_scale_drawable"
+                android:progressTint="@color/text_stroke"
+                app:layout_constraintBottom_toBottomOf="@+id/tv_progress_0"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <ProgressBar
+                android:id="@+id/pb_2"
+                style="@android:style/Widget.ProgressBar.Horizontal"
+                android:layout_width="1dp"
+                android:layout_height="100dp"
+                android:layout_marginStart="5dp"
+                android:max="100"
+                android:progress="50"
+                android:progressDrawable="@drawable/progress_scale_drawable"
+                android:progressTint="@color/brand_blue"
+                app:layout_constraintBottom_toBottomOf="@+id/tv_progress_0"
+                app:layout_constraintStart_toEndOf="@+id/pb_1" />
+
+            <ProgressBar
+                android:id="@+id/pb_3"
+                style="@android:style/Widget.ProgressBar.Horizontal"
+                android:layout_width="1dp"
+                android:layout_height="100dp"
+                android:layout_marginStart="5dp"
+                android:max="100"
+                android:progress="95"
+                android:progressDrawable="@drawable/progress_scale_drawable"
+                android:progressTint="@color/brand_orange"
+                app:layout_constraintBottom_toBottomOf="@+id/tv_progress_0"
+                app:layout_constraintStart_toEndOf="@+id/pb_2" />
+
+            <ProgressBar
+                android:id="@+id/pb_4"
+                style="@android:style/Widget.ProgressBar.Horizontal"
+                android:layout_width="1dp"
+                android:layout_height="100dp"
+                android:layout_marginStart="60dp"
+                android:max="100"
+                android:progress="75"
+                android:progressDrawable="@drawable/progress_scale_drawable"
+                android:progressTint="@color/text_stroke"
+                app:layout_constraintBottom_toBottomOf="@+id/tv_progress_0"
+                app:layout_constraintStart_toEndOf="@+id/pb_3" />
+
+            <ProgressBar
+                android:id="@+id/pb_5"
+                style="@android:style/Widget.ProgressBar.Horizontal"
+                android:layout_width="1dp"
+                android:layout_height="100dp"
+                android:layout_marginStart="5dp"
+                android:max="100"
+                android:progress="50"
+                android:progressDrawable="@drawable/progress_scale_drawable"
+                android:progressTint="@color/brand_blue"
+                app:layout_constraintBottom_toBottomOf="@+id/tv_progress_0"
+                app:layout_constraintStart_toEndOf="@+id/pb_4" />
+
+            <ProgressBar
+                android:id="@+id/pb_6"
+                style="@android:style/Widget.ProgressBar.Horizontal"
+                android:layout_width="1dp"
+                android:layout_height="100dp"
+                android:layout_marginStart="5dp"
+                android:max="100"
+                android:progress="95"
+                android:progressDrawable="@drawable/progress_scale_drawable"
+                android:progressTint="@color/brand_orange"
+                app:layout_constraintBottom_toBottomOf="@+id/tv_progress_0"
+                app:layout_constraintStart_toEndOf="@+id/pb_5" />
+
+            <ProgressBar
+                android:id="@+id/pb_7"
+                style="@android:style/Widget.ProgressBar.Horizontal"
+                android:layout_width="1dp"
+                android:layout_height="100dp"
+                android:layout_marginStart="60dp"
+                android:max="100"
+                android:progress="75"
+                android:progressDrawable="@drawable/progress_scale_drawable"
+                android:progressTint="@color/text_stroke"
+                app:layout_constraintBottom_toBottomOf="@+id/tv_progress_0"
+                app:layout_constraintStart_toEndOf="@+id/pb_6" />
+
+            <ProgressBar
+                android:id="@+id/pb_8"
+                style="@android:style/Widget.ProgressBar.Horizontal"
+                android:layout_width="1dp"
+                android:layout_height="100dp"
+                android:layout_marginStart="5dp"
+                android:max="100"
+                android:progress="50"
+                android:progressDrawable="@drawable/progress_scale_drawable"
+                android:progressTint="@color/brand_blue"
+                app:layout_constraintBottom_toBottomOf="@+id/tv_progress_0"
+                app:layout_constraintStart_toEndOf="@+id/pb_7" />
+
+            <ProgressBar
+                android:id="@+id/pb_9"
+                style="@android:style/Widget.ProgressBar.Horizontal"
+                android:layout_width="1dp"
+                android:layout_height="100dp"
+                android:layout_marginStart="5dp"
+                android:max="100"
+                android:progress="95"
+                android:progressDrawable="@drawable/progress_scale_drawable"
+                android:progressTint="@color/brand_orange"
+                app:layout_constraintBottom_toBottomOf="@+id/tv_progress_0"
+                app:layout_constraintStart_toEndOf="@+id/pb_8" />
+
+            <ProgressBar
+                android:id="@+id/pb_10"
+                style="@android:style/Widget.ProgressBar.Horizontal"
+                android:layout_width="1dp"
+                android:layout_height="100dp"
+                android:layout_marginStart="60dp"
+                android:max="100"
+                android:progress="75"
+                android:progressDrawable="@drawable/progress_scale_drawable"
+                android:progressTint="@color/text_stroke"
+                app:layout_constraintBottom_toBottomOf="@+id/tv_progress_0"
+                app:layout_constraintStart_toEndOf="@+id/pb_9" />
+
+            <ProgressBar
+                android:id="@+id/pb_11"
+                style="@android:style/Widget.ProgressBar.Horizontal"
+                android:layout_width="1dp"
+                android:layout_height="100dp"
+                android:layout_marginStart="5dp"
+                android:max="100"
+                android:progress="50"
+                android:progressDrawable="@drawable/progress_scale_drawable"
+                android:progressTint="@color/brand_blue"
+                app:layout_constraintBottom_toBottomOf="@+id/tv_progress_0"
+                app:layout_constraintStart_toEndOf="@+id/pb_10" />
+
+            <ProgressBar
+                android:id="@+id/pb_12"
+                style="@android:style/Widget.ProgressBar.Horizontal"
+                android:layout_width="1dp"
+                android:layout_height="100dp"
+                android:layout_marginStart="5dp"
+                android:max="100"
+                android:progress="95"
+                android:progressDrawable="@drawable/progress_scale_drawable"
+                android:progressTint="@color/brand_orange"
+                app:layout_constraintBottom_toBottomOf="@+id/tv_progress_0"
+                app:layout_constraintStart_toEndOf="@+id/pb_11" />
+
+            <TextView
+                android:id="@+id/date_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp"
+                android:fontFamily="@font/raleway_regular"
+                android:text="10 - 17 сент."
+                android:textSize="10sp"
+                app:layout_constraintEnd_toEndOf="@+id/pb_2"
+                app:layout_constraintStart_toStartOf="@+id/pb_2"
+                app:layout_constraintTop_toBottomOf="@+id/pb_2" />
+
+            <TextView
+                android:id="@+id/date_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp"
+                android:fontFamily="@font/raleway_regular"
+                android:text="18 - 25 сент."
+                android:textSize="10sp"
+                app:layout_constraintEnd_toEndOf="@+id/pb_5"
+                app:layout_constraintStart_toStartOf="@+id/pb_5"
+                app:layout_constraintTop_toBottomOf="@+id/pb_2" />
+
+            <TextView
+                android:id="@+id/date_3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp"
+                android:fontFamily="@font/raleway_regular"
+                android:text="25 - 2 окт."
+                android:textSize="10sp"
+                app:layout_constraintEnd_toEndOf="@+id/pb_8"
+                app:layout_constraintStart_toStartOf="@+id/pb_8"
+                app:layout_constraintTop_toBottomOf="@+id/pb_2" />
+
+            <TextView
+                android:id="@+id/date_4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp"
+                android:fontFamily="@font/raleway_regular"
+                android:text="2 - 9 сент."
+                android:textSize="10sp"
+                app:layout_constraintEnd_toEndOf="@+id/pb_11"
+                app:layout_constraintStart_toStartOf="@+id/pb_11"
+                app:layout_constraintTop_toBottomOf="@+id/pb_2" />
+
+            <View
+                android:id="@+id/like_indicator"
+                android:layout_width="8dp"
+                android:layout_height="8dp"
+                android:layout_marginTop="27dp"
+                android:background="@drawable/bg_oval_for_indicator"
+                android:backgroundTint="@color/brand_blue"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/date_1" />
+
+            <TextView
+                android:id="@+id/tv_like_bar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:text="Лайки"
+                android:textSize="10sp"
+                app:layout_constraintBottom_toBottomOf="@id/like_indicator"
+                app:layout_constraintStart_toEndOf="@id/like_indicator"
+                app:layout_constraintTop_toTopOf="@id/like_indicator" />
+
+            <View
+                android:id="@+id/merch_indicator"
+                android:layout_width="8dp"
+                android:layout_height="8dp"
+                android:layout_marginStart="13dp"
+                android:layout_marginTop="27dp"
+                android:background="@drawable/bg_oval_for_indicator"
+                android:backgroundTint="@color/text_main"
+                app:layout_constraintStart_toEndOf="@id/tv_like_bar"
+                app:layout_constraintTop_toBottomOf="@id/date_1" />
+
+            <TextView
+                android:id="@+id/tv_merch_bar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:text="Метчи"
+                android:textSize="10sp"
+                app:layout_constraintBottom_toBottomOf="@id/merch_indicator"
+                app:layout_constraintStart_toEndOf="@id/merch_indicator"
+                app:layout_constraintTop_toTopOf="@id/merch_indicator" />
+
+            <View
+                android:id="@+id/collabs_indicator"
+                android:layout_width="8dp"
+                android:layout_height="8dp"
+                android:layout_marginStart="13dp"
+                android:layout_marginTop="27dp"
+                android:background="@drawable/bg_oval_for_indicator"
+                android:backgroundTint="@color/brand_orange"
+                app:layout_constraintStart_toEndOf="@id/tv_merch_bar"
+                app:layout_constraintTop_toBottomOf="@id/date_1" />
+
+            <TextView
+                android:id="@+id/tv_collabs_bar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:text="Коллабы"
+                android:textSize="10sp"
+                app:layout_constraintBottom_toBottomOf="@id/collabs_indicator"
+                app:layout_constraintStart_toEndOf="@id/collabs_indicator"
+                app:layout_constraintTop_toTopOf="@id/collabs_indicator" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <!--Увеличте свой шанс на Метч-->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/chance_merch_group"
+            style="@style/left_radius_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="5dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/statistics_group">
+
+            <TextView
+                android:id="@+id/tv_chance_for_merch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/raleway_regular"
+                android:text="Увеличьте свой шанс на Метч"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/iv_help_key_chance_merch"
+                android:layout_width="30dp"
+                android:layout_height="0dp"
+                android:layout_marginEnd="25dp"
+                android:scaleType="centerInside"
+                android:src="@drawable/ic_help"
+                app:layout_constraintBottom_toBottomOf="@id/tv_chance_for_merch"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/tv_chance_for_merch" />
+
+            <View
+                android:id="@+id/view_lk_brand"
+                style="@style/left_radius_banner"
+                android:layout_width="wrap_content"
+                android:layout_height="80dp"
+                android:layout_marginTop="15dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_chance_for_merch" />
+
+            <ImageView
+                android:id="@+id/iv_ic_brand"
+                style="@style/style_ic_ruble"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="15dp"
+                android:src="@drawable/ic_education_orange"
+                app:layout_constraintBottom_toBottomOf="@+id/view_lk_brand"
+                app:layout_constraintStart_toStartOf="@+id/view_lk_brand"
+                app:layout_constraintTop_toTopOf="@+id/view_lk_brand" />
+
+            <TextView
+                android:id="@+id/tv_lk_brand"
+                android:layout_width="262dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="13dp"
+                android:fontFamily="@font/raleway_regular"
+                android:text="Личный кабинет бренда"
+                android:textSize="14sp"
+                app:layout_constraintStart_toEndOf="@+id/iv_ic_brand"
+                app:layout_constraintTop_toTopOf="@+id/iv_ic_brand" />
+
+            <TextView
+                android:layout_width="262dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="Заполните оставшуюся часть анкеты и увеличьте свои шансы на создание коллаб"
+                android:textSize="10sp"
+                app:layout_constraintStart_toStartOf="@id/tv_lk_brand"
+                app:layout_constraintTop_toBottomOf="@+id/tv_lk_brand" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <!--Медиа-->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/media_group"
+            style="@style/left_radius_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/chance_merch_group">
+
+            <TextView
+                android:id="@+id/tv_media"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Медиа"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="@id/media_group"
+                app:layout_constraintTop_toTopOf="@id/media_group" />
+
+            <!--Переделать на recyclerView , orientation horizontal-->
+            <HorizontalScrollView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_media">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:id="@+id/img_media_1"
+                        android:layout_width="201dp"
+                        android:layout_height="363dp"
+                        android:layout_marginStart="4dp"
+                        android:src="@drawable/img_media1"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/tv_media_name_1"
+                        android:layout_width="126dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dp"
+                        android:fontFamily="@font/raleway_regular"
+                        android:text="The Wellnus &amp; Sarro"
+                        android:textSize="12sp"
+                        app:layout_constraintStart_toStartOf="@+id/img_media_1"
+                        app:layout_constraintTop_toBottomOf="@+id/img_media_1" />
+
+                    <TextView
+                        android:id="@+id/tv_media_description_1"
+                        android:layout_width="126dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:fontFamily="@font/raleway_regular"
+                        android:paddingBottom="9dp"
+                        android:text="Познакомьтесь будущими партнерам"
+                        android:textSize="10sp"
+                        app:layout_constraintStart_toStartOf="@+id/tv_media_name_1"
+                        app:layout_constraintTop_toBottomOf="@+id/tv_media_name_1" />
+
+                    <ImageView
+                        android:id="@+id/img_media_2"
+                        android:layout_width="201dp"
+                        android:layout_height="363dp"
+                        android:layout_marginStart="5dp"
+                        android:src="@drawable/img_media2"
+                        app:layout_constraintStart_toEndOf="@id/img_media_1"
+                        app:layout_constraintTop_toTopOf="@id/img_media_1" />
+
+                    <TextView
+                        android:id="@+id/tv_media_name_2"
+                        android:layout_width="126dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dp"
+                        android:fontFamily="@font/raleway_regular"
+                        android:text="The Wellnus &amp; Sarro"
+                        android:textSize="12sp"
+                        app:layout_constraintStart_toStartOf="@+id/img_media_2"
+                        app:layout_constraintTop_toBottomOf="@+id/img_media_1" />
+
+                    <TextView
+                        android:id="@+id/tv_media_description_2"
+                        android:layout_width="126dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:fontFamily="@font/raleway_regular"
+                        android:paddingBottom="9dp"
+                        android:text="Познакомьтесь будущими партнерам"
+                        android:textSize="10sp"
+                        app:layout_constraintStart_toStartOf="@+id/tv_media_name_2"
+                        app:layout_constraintTop_toBottomOf="@+id/tv_media_name_1" />
+
+                    <ImageView
+                        android:id="@+id/img_media_3"
+                        android:layout_width="201dp"
+                        android:layout_height="363dp"
+                        android:layout_marginStart="5dp"
+                        android:src="@drawable/img_communiti1"
+                        app:layout_constraintStart_toEndOf="@id/img_media_2"
+                        app:layout_constraintTop_toTopOf="@id/img_media_1" />
+
+                    <TextView
+                        android:id="@+id/tv_media_name_3"
+                        android:layout_width="126dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dp"
+                        android:fontFamily="@font/raleway_regular"
+                        android:text="The Wellnus &amp; Sarro"
+                        android:textSize="12sp"
+                        app:layout_constraintStart_toStartOf="@+id/img_media_3"
+                        app:layout_constraintTop_toBottomOf="@+id/img_media_1" />
+
+                    <TextView
+                        android:id="@+id/tv_media_description_3"
+                        android:layout_width="126dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:fontFamily="@font/raleway_regular"
+                        android:paddingBottom="9dp"
+                        android:text="Познакомьтесь будущими партнерам"
+                        android:textSize="10sp"
+                        app:layout_constraintStart_toStartOf="@+id/tv_media_name_3"
+                        app:layout_constraintTop_toBottomOf="@+id/tv_media_name_1" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </HorizontalScrollView>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <!--Хочу на экспресс - консультацию-->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/express_consultation_group"
+            style="@style/left_radius_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="5dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/media_group">
+
+            <TextView
+                android:id="@+id/tv_express_consultation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/raleway_regular"
+                android:text="Хочу на экспресс - консультацию"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/iv_help_key_express_consultation"
+                android:layout_width="30dp"
+                android:layout_height="0dp"
+                android:layout_marginEnd="25dp"
+                android:scaleType="centerInside"
+                android:src="@drawable/ic_help"
+                app:layout_constraintBottom_toBottomOf="@id/tv_express_consultation"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@id/tv_express_consultation" />
+
+            <View
+                android:id="@+id/view_support_w2w"
+                style="@style/left_radius_banner"
+                android:layout_width="wrap_content"
+                android:layout_height="80dp"
+                android:layout_marginTop="15dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_express_consultation" />
+
+            <ImageView
+                android:id="@+id/iv_ic_support"
+                style="@style/style_ic_ruble"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="15dp"
+                android:src="@drawable/ic_support_orange"
+                app:layout_constraintBottom_toBottomOf="@+id/view_support_w2w"
+                app:layout_constraintStart_toStartOf="@+id/view_support_w2w"
+                app:layout_constraintTop_toTopOf="@+id/view_support_w2w" />
+
+            <TextView
+                android:id="@+id/tv_support"
+                android:layout_width="262dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="13dp"
+                android:fontFamily="@font/raleway_regular"
+                android:text="Чат поддержки W2W метч"
+                android:textSize="14sp"
+                app:layout_constraintStart_toEndOf="@+id/iv_ic_support"
+                app:layout_constraintTop_toTopOf="@+id/iv_ic_support" />
+
+            <TextView
+                android:layout_width="262dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="Вы получите  всю нужную информацию в чате поддержки"
+                android:textSize="10sp"
+                app:layout_constraintStart_toStartOf="@id/tv_support"
+                app:layout_constraintTop_toBottomOf="@+id/tv_support" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <!--Новости-->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/news_group"
+            style="@style/left_radius_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/express_consultation_group">
+
+            <TextView
+                android:id="@+id/tv_news"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Новости"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="@id/news_group"
+                app:layout_constraintTop_toTopOf="@id/news_group" />
+
+            <!--Переделать на recyclerView , orientation horizontal-->
+            <HorizontalScrollView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_news">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:id="@+id/img_news_1"
+                        android:layout_width="215dp"
+                        android:layout_height="163dp"
+                        android:layout_marginStart="4dp"
+                        android:src="@drawable/img_news1"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/tv_news_name_1"
+                        android:layout_width="205dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dp"
+                        android:fontFamily="@font/raleway_regular"
+                        android:text="The Wellnus &amp; Sarro"
+                        android:textSize="12sp"
+                        app:layout_constraintStart_toStartOf="@+id/img_news_1"
+                        app:layout_constraintTop_toBottomOf="@+id/img_news_1" />
+
+                    <TextView
+                        android:id="@+id/tv_news_description_1"
+                        android:layout_width="205dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:fontFamily="@font/raleway_regular"
+                        android:paddingBottom="9dp"
+                        android:text="Познакомьтесь будущими партнерам"
+                        android:textSize="10sp"
+                        app:layout_constraintStart_toStartOf="@+id/tv_news_name_1"
+                        app:layout_constraintTop_toBottomOf="@+id/tv_news_name_1" />
+
+                    <ImageView
+                        android:id="@+id/img_news_2"
+                        android:layout_width="215dp"
+                        android:layout_height="163dp"
+                        android:layout_marginStart="5dp"
+                        android:src="@drawable/img_news1"
+                        app:layout_constraintStart_toEndOf="@id/img_news_1"
+                        app:layout_constraintTop_toTopOf="@id/img_news_1" />
+
+                    <TextView
+                        android:id="@+id/tv_news_name_2"
+                        android:layout_width="205dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dp"
+                        android:fontFamily="@font/raleway_regular"
+                        android:text="The Wellnus &amp; Sarro"
+                        android:textSize="12sp"
+                        app:layout_constraintStart_toStartOf="@+id/img_news_2"
+                        app:layout_constraintTop_toBottomOf="@+id/img_news_1" />
+
+                    <TextView
+                        android:id="@+id/tv_news_description_2"
+                        android:layout_width="205dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:fontFamily="@font/raleway_regular"
+                        android:paddingBottom="9dp"
+                        android:text="Познакомьтесь будущими партнерам"
+                        android:textSize="10sp"
+                        app:layout_constraintStart_toStartOf="@+id/tv_news_name_2"
+                        app:layout_constraintTop_toBottomOf="@+id/tv_news_name_1" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </HorizontalScrollView>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <!--Обучение-->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/education_group"
+            style="@style/left_radius_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="144dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/news_group">
+
+            <TextView
+                android:id="@+id/tv_education"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Обучение"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="@id/education_group"
+                app:layout_constraintTop_toTopOf="@id/education_group" />
+
+            <!--Переделать на recyclerView , orientation horizontal-->
+            <HorizontalScrollView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_education">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:id="@+id/img_education_1"
+                        android:layout_width="215dp"
+                        android:layout_height="163dp"
+                        android:layout_marginStart="4dp"
+                        android:src="@drawable/img_education1"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/tv_education_name_1"
+                        android:layout_width="205dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dp"
+                        android:fontFamily="@font/raleway_regular"
+                        android:text="The Wellnus &amp; Sarro"
+                        android:textSize="12sp"
+                        app:layout_constraintStart_toStartOf="@+id/img_education_1"
+                        app:layout_constraintTop_toBottomOf="@+id/img_education_1" />
+
+                    <TextView
+                        android:id="@+id/tv_education_description_1"
+                        android:layout_width="205dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:fontFamily="@font/raleway_regular"
+                        android:paddingBottom="9dp"
+                        android:text="Познакомьтесь будущими партнерам"
+                        android:textSize="10sp"
+                        app:layout_constraintStart_toStartOf="@+id/tv_education_name_1"
+                        app:layout_constraintTop_toBottomOf="@+id/tv_education_name_1" />
+
+                    <ImageView
+                        android:id="@+id/img_education_2"
+                        android:layout_width="215dp"
+                        android:layout_height="163dp"
+                        android:layout_marginStart="5dp"
+                        android:src="@drawable/img_education1"
+                        app:layout_constraintStart_toEndOf="@id/img_education_1"
+                        app:layout_constraintTop_toTopOf="@id/img_education_1" />
+
+                    <TextView
+                        android:id="@+id/tv_education_name_2"
+                        android:layout_width="205dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dp"
+                        android:fontFamily="@font/raleway_regular"
+                        android:text="The Wellnus &amp; Sarro"
+                        android:textSize="12sp"
+                        app:layout_constraintStart_toStartOf="@+id/img_education_2"
+                        app:layout_constraintTop_toBottomOf="@+id/img_education_1" />
+
+                    <TextView
+                        android:id="@+id/tv_education_description_2"
+                        android:layout_width="205dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:fontFamily="@font/raleway_regular"
+                        android:paddingBottom="9dp"
+                        android:text="Познакомьтесь будущими партнерам"
+                        android:textSize="10sp"
+                        app:layout_constraintStart_toStartOf="@+id/tv_education_name_2"
+                        app:layout_constraintTop_toBottomOf="@+id/tv_education_name_1" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </HorizontalScrollView>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.core.widget.NestedScrollView>
