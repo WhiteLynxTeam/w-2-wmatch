@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/merch"
+        android:icon="@drawable/ic_merch"
+        android:title="@string/merch"
+        app:showAsAction="withText" />
+    <item
+        android:id="@+id/collabs"
+        android:icon="@drawable/ic_collabs"
+        android:title="@string/collabs"
+        app:showAsAction="withText" />
+    <item
+        android:id="@+id/w2w"
+        android:icon="@drawable/ic_w2w"
+        android:title="Главная"
+        app:showAsAction="withText" />
+    <item
+        android:id="@+id/education"
+        android:icon="@drawable/ic_education"
+        android:title="@string/education"
+        app:showAsAction="withText" />
+    <item
+        android:id="@+id/chat"
+        android:icon="@drawable/ic_chat"
+        android:title="@string/chat"
+        app:showAsAction="withText" />
+
+</menu>

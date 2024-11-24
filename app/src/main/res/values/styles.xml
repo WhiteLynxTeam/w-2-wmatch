@@ -54,7 +54,7 @@
     </style>
 
     <style name="SocialNetworks">
-        <item name="android:background"> @drawable/bg_social_networks </item>
+        <item name="android:background">@drawable/bg_social_networks</item>
         <item name="android:backgroundTint">@color/white</item>
         <item name="android:scaleType">centerInside</item>
     </style>
@@ -75,6 +75,51 @@
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:textAlignment">center</item>
+    </style>
+
+    <style name="banner_business">
+        <item name="android:backgroundTint">@color/brand_lightblue</item>
+        <item name="android:background">@drawable/bg_banner_business</item>
+        <item name="android:paddingStart">30dp</item>
+        <item name="android:paddingTop">20dp</item>
+        <item name="android:paddingBottom">20dp</item>
+        <item name="android:paddingEnd">20dp</item>
+    </style>
+
+    <style name="questions_and_answers">
+        <item name="android:backgroundTint">@color/white</item>
+        <item name="android:background">@drawable/bg_q_and_a</item>
+        <item name="android:paddingStart">30dp</item>
+        <item name="android:paddingTop">23dp</item>
+        <item name="android:paddingBottom">23dp</item>
+        <item name="android:paddingEnd">23dp</item>
+    </style>
+
+    <style name="style_ic_ruble">
+        <item name="android:paddingStart">10dp</item>
+        <item name="android:paddingTop">10dp</item>
+        <item name="android:paddingEnd">10dp</item>
+        <item name="android:paddingBottom">10dp</item>
+        <item name="android:backgroundTint">@color/white</item>
+        <item name="android:background">@drawable/bg_ruble</item>
+    </style>
+
+    <style name="left_radius_view">
+        <item name="android:backgroundTint">@color/white</item>
+        <item name="android:background">@drawable/bg_community_view</item>
+        <item name="android:paddingStart">30dp</item>
+        <item name="android:paddingTop">20dp</item>
+        <item name="android:paddingBottom">20dp</item>
+    </style>
+
+    <style name="left_radius_banner">
+        <item name="android:backgroundTint">@color/brand_lightblue</item>
+        <item name="android:background">@drawable/bg_q_and_a</item>
+        <item name="android:paddingStart">15dp</item>
+        <item name="android:paddingTop">20dp</item>
+        <item name="android:paddingBottom">20dp</item>
+        <item name="android:paddingEnd">15dp</item>
+
     </style>
 
 </resources>
