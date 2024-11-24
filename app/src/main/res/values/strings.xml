@@ -14,4 +14,11 @@
     <string name="income_level">Уровень дохода  <font color="#FFFF9345">\u20bd</font></string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <!--NavigationBottomBar-->
+    <string name="merch">Мэтч</string>
+    <string name="chat">Чат</string>
+    <string name="collabs">Коллаба</string>
+    <string name="education">Обучение</string>
+
 </resources>
