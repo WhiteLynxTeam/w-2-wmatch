@@ -1,0 +1,311 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".view.questionnaire.offline_space.OfflineSpaceFragment">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/btn_next">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/tv_offline_space"
+                style="@style/Back.TextStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="48dp"
+                android:text="У Вас есть оффлайн пространство?"
+                android:textSize="14sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/iv_help_offline"
+                android:layout_width="30dp"
+                android:layout_height="0dp"
+                android:layout_marginEnd="15dp"
+                android:scaleType="centerInside"
+                android:src="@drawable/ic_help"
+                app:layout_constraintBottom_toBottomOf="@+id/tv_offline_space"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/tv_offline_space" />
+
+            <TextView
+                android:id="@+id/count_offline"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="19/30"
+                app:layout_constraintEnd_toEndOf="@id/iv_help_offline"
+                app:layout_constraintTop_toBottomOf="@id/iv_help_offline" />
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/et_enter_address"
+                style="@style/PrimaryBigEt"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="10dp"
+                android:hint="Введите адрес"
+                android:inputType="text"
+                android:maxLines="1"
+                android:textSize="12sp"
+                app:layout_constraintStart_toStartOf="@+id/tv_offline_space"
+                app:layout_constraintTop_toBottomOf="@id/count_offline" />
+
+            <TextView
+                android:id="@+id/tv_problems"
+                style="@style/Back.TextStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:text="У Вас есть оффлайн пространство?"
+                android:textSize="14sp"
+                app:layout_constraintStart_toStartOf="@id/tv_offline_space"
+                app:layout_constraintTop_toBottomOf="@id/et_enter_address"/>
+
+            <ImageView
+                android:id="@+id/iv_help_problems"
+                android:layout_width="30dp"
+                android:layout_height="0dp"
+                android:scaleType="centerInside"
+                android:src="@drawable/ic_help"
+                app:layout_constraintBottom_toBottomOf="@+id/tv_problems"
+                app:layout_constraintEnd_toEndOf="@id/iv_help_offline"
+                app:layout_constraintTop_toTopOf="@+id/tv_problems" />
+
+            <TextView
+                android:id="@+id/count_problems"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="20/30"
+                app:layout_constraintEnd_toEndOf="@id/iv_help_problems"
+                app:layout_constraintTop_toBottomOf="@id/iv_help_problems" />
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/et_problems"
+                style="@style/PrimaryBigEt"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="10dp"
+                android:hint="Проблема"
+                android:inputType="text"
+                android:maxLines="1"
+                android:textSize="12sp"
+                app:layout_constraintStart_toStartOf="@+id/tv_offline_space"
+                app:layout_constraintTop_toBottomOf="@id/count_problems" />
+
+            <TextView
+                android:id="@+id/tv_business_categories"
+                style="@style/Back.TextStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:text="С бизнесом из какой категории Вам было бы интересно сделать коллаборацию?"
+                android:textSize="14sp"
+                app:layout_constraintStart_toStartOf="@id/tv_offline_space"
+                app:layout_constraintTop_toBottomOf="@id/et_problems"
+                app:layout_constraintEnd_toStartOf="@id/iv_help_business_categories"/>
+
+            <ImageView
+                android:id="@+id/iv_help_business_categories"
+                android:layout_width="30dp"
+                android:layout_height="0dp"
+                android:scaleType="centerInside"
+                android:src="@drawable/ic_help"
+                app:layout_constraintBottom_toBottomOf="@+id/tv_business_categories"
+                app:layout_constraintEnd_toStartOf="@+id/iv_pen_business_categories"
+                app:layout_constraintTop_toTopOf="@+id/tv_business_categories" />
+
+            <ImageView
+                android:id="@+id/iv_pen_business_categories"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_a_pen"
+                app:layout_constraintTop_toTopOf="@id/tv_business_categories"
+                app:layout_constraintBottom_toBottomOf="@id/tv_business_categories"
+                app:layout_constraintEnd_toEndOf="@id/iv_help_offline"/>
+
+            <TextView
+                android:id="@+id/count_business_categories"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="21/30"
+                app:layout_constraintEnd_toEndOf="@id/iv_pen_business_categories"
+                app:layout_constraintTop_toBottomOf="@id/iv_help_business_categories" />
+
+            <androidx.constraintlayout.helper.widget.Flow
+                android:id="@+id/flow_business_categories"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                app:layout_constraintHeight_percent="0.15"
+                android:layout_marginTop="20dp"
+                app:flow_verticalStyle="spread"
+                app:constraint_referenced_ids="horeca,kids,home_design,fashion,health_beauty,wellness_sport,education_art,influencer,charity,services,other"
+                app:flow_wrapMode="chain"
+                app:layout_constraintStart_toStartOf="@id/tv_offline_space"
+                app:layout_constraintTop_toBottomOf="@id/count_business_categories"
+                app:layout_constraintEnd_toEndOf="@id/iv_help_offline"/>
+
+            <TextView
+                android:id="@+id/horeca"
+                style="@style/key_brand_values"
+                android:text="HoReca"/>
+
+            <TextView
+                android:id="@+id/kids"
+                style="@style/key_brand_values"
+                android:text="Kids"/>
+
+            <TextView
+                android:id="@+id/home_design"
+                style="@style/key_brand_values"
+                android:text="Home \u0026 Design"/>
+
+            <TextView
+                android:id="@+id/fashion"
+                style="@style/key_brand_values"
+                android:text="Fashion"/>
+
+            <TextView
+                android:id="@+id/health_beauty"
+                style="@style/key_brand_values"
+                android:text="Health \u0026 Beaty"/>
+
+            <TextView
+                android:id="@+id/wellness_sport"
+                style="@style/key_brand_values"
+                android:text="Wellness \u0026 Sport"/>
+
+            <TextView
+                android:id="@+id/education_art"
+                style="@style/key_brand_values"
+                android:text="Education \u0026 Art"/>
+
+            <TextView
+                android:id="@+id/influencer"
+                style="@style/key_brand_values"
+                android:text="Influencers"/>
+
+            <TextView
+                android:id="@+id/charity"
+                style="@style/key_brand_values"
+                android:text="Charity"/>
+
+            <TextView
+                android:id="@+id/services"
+                style="@style/key_brand_values"
+                android:text="Services"/>
+
+            <TextView
+                android:id="@+id/other"
+                style="@style/key_brand_values"
+                android:text="Другое"/>
+
+            <TextView
+                android:id="@+id/tv_community"
+                style="@style/Back.TextStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:text="Состоите ли Вы в каком-то комьюнити / сообществе предпринимателей?"
+                android:textSize="14sp"
+                app:layout_constraintStart_toStartOf="@id/tv_offline_space"
+                app:layout_constraintTop_toBottomOf="@id/flow_business_categories"
+                app:layout_constraintEnd_toStartOf="@id/iv_help_community"/>
+
+            <ImageView
+                android:id="@+id/iv_help_community"
+                android:layout_width="30dp"
+                android:layout_height="0dp"
+                android:scaleType="centerInside"
+                android:src="@drawable/ic_help"
+                app:layout_constraintBottom_toBottomOf="@+id/tv_community"
+                app:layout_constraintEnd_toEndOf="@id/iv_help_offline"
+                app:layout_constraintTop_toTopOf="@+id/tv_community" />
+
+            <TextView
+                android:id="@+id/count_community"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="22/30"
+                app:layout_constraintEnd_toEndOf="@id/iv_help_offline"
+                app:layout_constraintTop_toBottomOf="@id/iv_help_community" />
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/et_community"
+                style="@style/PrimaryBigEt"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="10dp"
+                android:hint="Название или ссылка на сообщество"
+                android:inputType="text"
+                android:maxLines="1"
+                android:textSize="12sp"
+                app:layout_constraintStart_toStartOf="@+id/tv_offline_space"
+                app:layout_constraintTop_toBottomOf="@id/count_community" />
+
+            <TextView
+                android:id="@+id/tv_add"
+                style="@style/Back.TextStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Добавить?"
+                app:layout_constraintTop_toTopOf="@id/oval"
+                app:layout_constraintEnd_toEndOf="@id/iv_help_offline"/>
+
+            <View
+                android:id="@+id/oval"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:layout_marginTop="12dp"
+                android:background="@drawable/bg_oval_for_tg"
+                app:layout_constraintStart_toStartOf="@id/tv_offline_space"
+                app:layout_constraintTop_toBottomOf="@id/et_community" />
+
+            <ImageView
+                android:id="@+id/iv_add"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:src="@drawable/baseline_add_24"
+                app:layout_constraintStart_toStartOf="@id/oval"
+                app:layout_constraintTop_toTopOf="@id/oval"
+                app:layout_constraintEnd_toEndOf="@id/oval"
+                app:layout_constraintBottom_toBottomOf="@id/oval"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+    <androidx.appcompat.widget.AppCompatButton
+        style="@style/PrimaryBigButtonActive"
+        android:id="@+id/btn_next"
+        android:layout_marginBottom="12dp"
+        android:clickable="true"
+        android:enabled="true"
+        android:focusable="true"
+        android:text="Далее"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

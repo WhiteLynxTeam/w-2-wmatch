@@ -6,8 +6,10 @@ import ru.w_2_wmatch.view.activity.MainActivity
 import ru.w_2_wmatch.view.auth.AuthFragment
 import ru.w_2_wmatch.view.intro.IntroFragment
 import ru.w_2_wmatch.view.questionnaire.brand_position.BrandPositionFragment
+import ru.w_2_wmatch.view.questionnaire.brands_mission.BrandsMissionFragment
 import ru.w_2_wmatch.view.questionnaire.key_brand_values.KeyBrandValuesFragment
 import ru.w_2_wmatch.view.questionnaire.nick_telegram.NickTelegramFragment
+import ru.w_2_wmatch.view.questionnaire.offline_space.OfflineSpaceFragment
 import ru.w_2_wmatch.view.questionnaire.social_network_link.SocialNetworkLinkFragment
 import ru.w_2_wmatch.view.questionnaire.target_audience.TargetAudienceFragment
 import ru.w_2_wmatch.view.reg.RegFragment
@@ -44,4 +46,10 @@ interface MainModule {
 
     @ContributesAndroidInjector
     fun bindChoosingToFillQuestionnaireFragment(): ChoosingToFillQuestionnaireFragment
+
+    @ContributesAndroidInjector
+    fun bindBrandsMissionFragment(): BrandsMissionFragment
+
+    @ContributesAndroidInjector
+    fun bindOfflineSpaceFragment(): OfflineSpaceFragment
 }

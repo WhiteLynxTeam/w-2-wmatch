@@ -84,7 +84,4 @@ class NickTelegramFragment : Fragment() {
         popupWindow.showAsDropDown(anchorView) // Отображение под элементом
     }
 
-    companion object {
-        fun newInstance() = NickTelegramFragment()
-    }
 }

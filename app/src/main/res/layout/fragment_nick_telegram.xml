@@ -34,7 +34,7 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:text="1/30"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="10dp"
         app:layout_constraintStart_toStartOf="@id/iv_help_nick"
         app:layout_constraintTop_toBottomOf="@id/iv_help_nick"
         app:layout_constraintEnd_toEndOf="@id/iv_help_nick"/>
@@ -67,10 +67,9 @@
         android:id="@+id/iv_help_link"
         android:layout_width="30dp"
         android:layout_height="0dp"
-        android:layout_marginEnd="25dp"
         android:scaleType="centerInside"
         android:src="@drawable/ic_help"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/iv_help_nick"
         app:layout_constraintTop_toTopOf="@id/tv_link"
         app:layout_constraintBottom_toBottomOf="@id/tv_link"/>
 
@@ -79,7 +78,7 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:text="2/30"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="10dp"
         app:layout_constraintStart_toStartOf="@id/iv_help_link"
         app:layout_constraintTop_toBottomOf="@id/iv_help_link"
         app:layout_constraintEnd_toEndOf="@id/iv_help_link"/>
@@ -102,15 +101,14 @@
         style="@style/Back.TextStyle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="25dp"
         android:text="Добавить?"
         app:layout_constraintTop_toTopOf="@id/oval"
-        app:layout_constraintEnd_toEndOf="@id/et_link"/>
+        app:layout_constraintEnd_toEndOf="@id/iv_help_nick"/>
 
     <View
         android:id="@+id/oval"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
         android:layout_marginTop="12dp"
         android:background="@drawable/bg_oval_for_tg"
         app:layout_constraintStart_toStartOf="@id/et_link"
@@ -125,6 +123,50 @@
         app:layout_constraintTop_toTopOf="@id/oval"
         app:layout_constraintEnd_toEndOf="@id/oval"
         app:layout_constraintBottom_toBottomOf="@id/oval"/>
+
+    <TextView
+        android:id="@+id/tv_geo"
+        style="@style/Back.TextStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:textSize="14sp"
+        android:text="ГЕО"
+        app:layout_constraintStart_toStartOf="@id/tv_nick"
+        app:layout_constraintTop_toBottomOf="@id/iv_add"/>
+
+    <ImageView
+        android:id="@+id/iv_help_geo"
+        android:layout_width="30dp"
+        android:layout_height="0dp"
+        android:scaleType="centerInside"
+        android:src="@drawable/ic_help"
+        app:layout_constraintEnd_toEndOf="@id/iv_help_nick"
+        app:layout_constraintTop_toTopOf="@id/tv_geo"
+        app:layout_constraintBottom_toBottomOf="@id/tv_geo"/>
+
+    <TextView
+        android:id="@+id/count_geo"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="1/30"
+        android:layout_marginTop="10dp"
+        app:layout_constraintStart_toStartOf="@id/iv_help_geo"
+        app:layout_constraintTop_toBottomOf="@id/iv_help_geo"
+        app:layout_constraintEnd_toEndOf="@id/iv_help_geo"/>
+
+    <com.google.android.material.textfield.TextInputEditText
+        style="@style/PrimaryBigEt"
+        android:id="@+id/et_geo"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="10dp"
+        android:hint="Город"
+        android:inputType="text"
+        android:maxLines="1"
+        app:layout_constraintStart_toStartOf="@id/tv_link"
+        app:layout_constraintTop_toBottomOf="@id/count_geo"/>
 
     <androidx.appcompat.widget.AppCompatButton
         style="@style/PrimaryBigButtonActive"
