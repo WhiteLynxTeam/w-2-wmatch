@@ -43,7 +43,7 @@
         android:id="@+id/flow_key_values"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        app:layout_constraintHeight_percent="0.6"
+        app:layout_constraintHeight_percent="0.5"
         app:constraint_referenced_ids="value_1,value_2,value_3,value_4,value_5,value_6,value_7,value_8,value_9,value_10,value_11,value_12,value_13,value_14,value_15,value_16,value_17,value_18,value_19,value_20,value_21,value_22,value_23,value_24,value_25,value_26,value_27,value_28,value_29,value_30,value_31,value_32,value_33,value_34,value_35,value_36,value_37"
         app:flow_wrapMode="chain"
         app:layout_constraintBottom_toTopOf="@+id/tv_uniq_of_brand"
@@ -59,7 +59,10 @@
     <TextView
         android:id="@+id/value_2"
         style="@style/key_brand_values"
-        android:text="Свобода"/>
+        android:layout_width="71dp"
+        android:layout_height="30dp"
+        android:text="Свобода"
+        tools:layout_editor_absoluteX="152dp" />
 
     <TextView
         android:id="@+id/value_3"
@@ -240,9 +243,10 @@
         android:id="@+id/tv_uniq_of_brand"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="10dp"
+        android:layout_marginTop="10dp"
         android:text="Расскажите, пожалуйста, в чем уникальность Вашего бренда одним предложением"
         app:layout_constraintStart_toStartOf="@id/tv_key_values"
+        app:layout_constraintTop_toBottomOf="@+id/flow_key_values"
         app:layout_constraintBottom_toTopOf="@id/count_uniq_brand"
         app:layout_constraintEnd_toStartOf="@id/iv_help_uniq_brand"/>
 

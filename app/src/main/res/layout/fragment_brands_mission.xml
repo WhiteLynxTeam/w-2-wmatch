@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".view.questionnaire.brands_mission.BrandsMissionFragment">
+
+    <TextView
+        android:id="@+id/tv_brand_mission"
+        style="@style/Back.TextStyle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="48dp"
+        android:text="В чем заключается миссия Вашего бренда?"
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/iv_help_brand"
+        android:layout_width="30dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="15dp"
+        android:scaleType="centerInside"
+        android:src="@drawable/ic_help"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_brand_mission"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/tv_brand_mission" />
+
+    <TextView
+        android:id="@+id/count_brand"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="15/30"
+        app:layout_constraintEnd_toEndOf="@id/iv_help_brand"
+        app:layout_constraintTop_toBottomOf="@id/iv_help_brand" />
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/et_mission"
+        style="@style/PrimaryBigEt"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="10dp"
+        android:hint="Миссия"
+        android:inputType="text"
+        android:maxLines="1"
+        android:textSize="12sp"
+        app:layout_constraintStart_toStartOf="@+id/tv_brand_mission"
+        app:layout_constraintTop_toBottomOf="@id/count_brand" />
+
+    <TextView
+        android:id="@+id/tv_formats"
+        style="@style/Back.TextStyle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:text="Интересующие форматы для коллабораций"
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="@id/tv_brand_mission"
+        app:layout_constraintTop_toBottomOf="@id/et_mission"
+        app:layout_constraintEnd_toStartOf="@id/iv_help_formats"/>
+
+    <ImageView
+        android:id="@+id/iv_help_formats"
+        android:layout_width="30dp"
+        android:layout_height="0dp"
+        android:scaleType="centerInside"
+        android:src="@drawable/ic_help"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_formats"
+        app:layout_constraintEnd_toStartOf="@+id/iv_pen_formats"
+        app:layout_constraintTop_toTopOf="@+id/tv_formats" />
+
+    <ImageView
+        android:id="@+id/iv_pen_formats"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_a_pen"
+        app:layout_constraintTop_toTopOf="@id/tv_formats"
+        app:layout_constraintBottom_toBottomOf="@id/tv_formats"
+        app:layout_constraintEnd_toEndOf="@id/iv_help_brand"/>
+
+    <TextView
+        android:id="@+id/count_formats"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="16/30"
+        app:layout_constraintEnd_toEndOf="@id/iv_pen_formats"
+        app:layout_constraintTop_toBottomOf="@id/iv_help_formats" />
+
+    <androidx.constraintlayout.helper.widget.Flow
+        android:id="@+id/flow_formats"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintHeight_percent="0.1"
+        android:layout_marginTop="20dp"
+        app:flow_verticalStyle="spread"
+        app:constraint_referenced_ids="formats_product,formats_content,formats_event,formats_cross_promo,formats_services,formats_other"
+        app:flow_wrapMode="chain"
+        app:layout_constraintStart_toStartOf="@id/tv_brand_mission"
+        app:layout_constraintTop_toBottomOf="@id/count_formats"
+        app:layout_constraintEnd_toEndOf="@id/iv_help_brand"/>
+
+    <TextView
+        android:id="@+id/formats_product"
+        style="@style/key_brand_values"
+        android:text="Продукт"/>
+
+    <TextView
+        android:id="@+id/formats_content"
+        style="@style/key_brand_values"
+        android:text="Контент"/>
+
+    <TextView
+        android:id="@+id/formats_event"
+        style="@style/key_brand_values"
+        android:text="Мероприятие"/>
+
+    <TextView
+        android:id="@+id/formats_cross_promo"
+        style="@style/key_brand_values"
+        android:text="Кросс промо"/>
+
+    <TextView
+        android:id="@+id/formats_services"
+        style="@style/key_brand_values"
+        android:text="Services"/>
+
+    <TextView
+        android:id="@+id/formats_other"
+        style="@style/key_brand_values"
+        android:text="Другое"/>
+
+    <TextView
+        android:id="@+id/tv_business_objectives"
+        style="@style/Back.TextStyle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Опишите Ваши бизнес-задачи для коллабораций"
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="@id/tv_brand_mission"
+        app:layout_constraintTop_toBottomOf="@id/flow_formats"
+        app:layout_constraintEnd_toStartOf="@id/iv_help_business"/>
+
+    <ImageView
+        android:id="@+id/iv_help_business"
+        android:layout_width="30dp"
+        android:layout_height="0dp"
+        android:scaleType="centerInside"
+        android:src="@drawable/ic_help"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_business_objectives"
+        app:layout_constraintEnd_toStartOf="@+id/iv_pen_business"
+        app:layout_constraintTop_toTopOf="@+id/tv_business_objectives" />
+
+    <ImageView
+        android:id="@+id/iv_pen_business"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_a_pen"
+        app:layout_constraintTop_toTopOf="@id/tv_business_objectives"
+        app:layout_constraintBottom_toBottomOf="@id/tv_business_objectives"
+        app:layout_constraintEnd_toEndOf="@id/iv_help_brand"/>
+
+    <TextView
+        android:id="@+id/count_business"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="17/30"
+        app:layout_constraintEnd_toEndOf="@id/iv_pen_business"
+        app:layout_constraintTop_toBottomOf="@id/iv_help_business" />
+
+    <androidx.constraintlayout.helper.widget.Flow
+        android:id="@+id/flow_business_objectives"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintHeight_percent="0.1"
+        android:layout_marginTop="20dp"
+        app:flow_verticalStyle="spread"
+        app:constraint_referenced_ids="business_sales,business_coverage,business_subscribes,business_caste_sharing,business_new_product,business_services,business_other"
+        app:flow_wrapMode="chain"
+        app:layout_constraintStart_toStartOf="@id/tv_brand_mission"
+        app:layout_constraintTop_toBottomOf="@id/count_business"
+        app:layout_constraintEnd_toEndOf="@id/iv_help_brand"/>
+
+    <TextView
+        android:id="@+id/business_sales"
+        style="@style/key_brand_values"
+        android:text="Продажи"/>
+
+    <TextView
+        android:id="@+id/business_coverage"
+        style="@style/key_brand_values"
+        android:text="Охваты"/>
+
+    <TextView
+        android:id="@+id/business_subscribes"
+        style="@style/key_brand_values"
+        android:text="Подписчики"/>
+
+    <TextView
+        android:id="@+id/business_caste_sharing"
+        style="@style/key_brand_values"
+        android:text="Шеринг кастов"/>
+
+    <TextView
+        android:id="@+id/business_new_product"
+        style="@style/key_brand_values"
+        android:text="Новый продукт"/>
+
+    <TextView
+        android:id="@+id/business_services"
+        style="@style/key_brand_values"
+        android:text="Services"/>
+
+    <TextView
+        android:id="@+id/business_other"
+        style="@style/key_brand_values"
+        android:text="Другое"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn_next"
+        style="@style/PrimaryBigButtonActive"
+        android:layout_marginBottom="16dp"
+        android:clickable="true"
+        android:enabled="true"
+        android:focusable="true"
+        android:text="Далее"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
