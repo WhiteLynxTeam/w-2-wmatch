@@ -53,17 +53,13 @@
         app:layout_constraintTop_toBottomOf="@id/tv_description"/>
 
     <androidx.appcompat.widget.AppCompatButton
-        style="@style/PrimaryBigButtonActive"
         android:id="@+id/btn_fill_questionnaire"
-        android:layout_marginTop="30dp"
-        android:clickable="true"
-        android:enabled="true"
-        android:focusable="true"
+        style="@style/btn_poiretone_font"
+        android:layout_marginTop="28dp"
         android:text="Заполнить анкету"
-        android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tv_description_2"/>
+        app:layout_constraintTop_toBottomOf="@id/tv_description_2" />
 
     <TextView
         android:id="@+id/tv_trial"
@@ -110,14 +106,10 @@
         app:layout_constraintTop_toBottomOf="@id/tv_description_3"/>
 
     <androidx.appcompat.widget.AppCompatButton
-        style="@style/PrimaryBigButtonActive"
         android:id="@+id/btn_without_questionnaire"
+        style="@style/btn_poiretone_font"
         android:layout_marginTop="30dp"
-        android:clickable="true"
-        android:enabled="true"
-        android:focusable="true"
         android:text="Активировать без анкеты"
-        android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/tv_description_4"/>

@@ -22,6 +22,9 @@
         <action
             android:id="@+id/action_introFragment_to_choosingToFillQuestionnaireFragment"
             app:destination="@id/choosingToFillQuestionnaireFragment" />
+        <action
+            android:id="@+id/action_introFragment_to_nickTelegramFragment2"
+            app:destination="@id/nickTelegramFragment2" />
     </fragment>
     <fragment
         android:id="@+id/authFragment"

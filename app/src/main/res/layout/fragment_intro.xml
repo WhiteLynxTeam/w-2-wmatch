@@ -32,26 +32,19 @@
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/btn_reg"
         style="@style/PrimaryBigButtonNotActive"
-        android:clickable="true"
-        android:focusable="true"
         android:text="@string/reg"
-        android:textAllCaps="false"
-        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"/>
+        app:layout_constraintTop_toTopOf="parent" />
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/btn_enter"
         style="@style/PrimaryBigButtonActive"
         android:layout_marginTop="5dp"
-        android:clickable="true"
-        android:focusable="true"
         android:text="@string/enter"
-        android:textSize="16sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/btn_reg"
+        app:layout_constraintStart_toStartOf="@id/btn_reg"
         app:layout_constraintTop_toBottomOf="@id/btn_reg" />
 
     <ProgressBar
