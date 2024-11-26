@@ -69,11 +69,20 @@
         android:id="@+id/choosingToFillQuestionnaireFragment"
         android:name="ru.w_2_wmatch.view.reg.choosing_to_fill_questionnaire.ChoosingToFillQuestionnaireFragment"
         android:label="fragment_choosing_to_fill_questionnaire"
-        tools:layout="@layout/fragment_choosing_to_fill_questionnaire" />
+        tools:layout="@layout/fragment_choosing_to_fill_questionnaire" >
+        <action
+            android:id="@+id/action_choosingToFillQuestionnaireFragment_to_manePageFragment"
+            app:destination="@id/manePageFragment" />
+    </fragment>
     <fragment
         android:id="@+id/targetAudienceFragment"
         android:name="ru.w_2_wmatch.view.questionnaire.target_audience.TargetAudienceFragment"
         android:label="fragment_target_audience"
         tools:layout="@layout/fragment_target_audience" />
+    <fragment
+        android:id="@+id/manePageFragment"
+        android:name="ru.w_2_wmatch.view.main.mane_page.ManePageFragment"
+        android:label="fragment_mane_page"
+        tools:layout="@layout/fragment_mane_page" />
 
 </navigation>

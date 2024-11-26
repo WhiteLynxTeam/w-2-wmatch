@@ -1,5 +1,6 @@
 package ru.w_2_wmatch.view.activity
 
+import android.content.pm.ActivityInfo
 import android.content.res.Resources
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
@@ -8,6 +9,7 @@ import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.lifecycleScope
 import androidx.lifecycle.repeatOnLifecycle
 import androidx.navigation.fragment.NavHostFragment
+import androidx.navigation.ui.setupWithNavController
 import kotlinx.coroutines.launch
 import ru.w_2_wmatch.R
 import ru.w_2_wmatch.databinding.ActivityMainBinding
@@ -25,37 +27,88 @@ class MainActivity : AppCompatActivity(), OnHeaderChangeListener {
         R.id.introFragment,
     )
 
+    private val fragmentsWithoutToolbars = listOf(
+        R.id.introFragment,
+        R.id.authFragment,
+        R.id.regFragment,
+        R.id.choosingToFillQuestionnaireFragment
+    )
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        requestedOrientation = ActivityInfo.SCREEN_ORIENTATION_PORTRAIT
         AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
 
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        initShowOrHideHeader()
+        binding.bottomNavigation.setupWithNavController(navController)
+
+        initShowOrHide()
 
         binding.btnBack.setOnClickListener {
             onBackClick()
         }
     }
 
-    private fun initShowOrHideHeader() {
+    private fun initShowOrHide() {
         lifecycleScope.launch {
             repeatOnLifecycle(Lifecycle.State.STARTED) {
                 navController.addOnDestinationChangedListener { _, destination, _ ->
                     with(binding) {
-                        if (fragmentsWithoutHeader.contains(destination.id)) {
-                            btnBack.hide()
-                            backTitle.hide()
+                        if (fragmentsWithoutToolbars.contains(destination.id)) {
+                            bottomNavigation.hide()
                         } else {
-                            btnBack.show()
-                            backTitle.show()
+                            bottomNavigation.show()
                         }
 
+//                        if (fragmentsWithoutHeader.contains(destination.id)) {
+//                            btnBack.hide()
+//                            backTitle.hide()
+//                            notification.hide()
+//                            avatar.hide()
+//                        } else {
+//                            btnBack.show()
+//                            backTitle.show()
+//                            notification.show()
+//                            avatar.show()
+//                        }
                     }
                 }
             }
         }
+    }
+
+    override fun hideBackArrow() {
+        binding.btnBack.hide()
+    }
+
+    override fun showBackArrow() {
+        binding.btnBack.show()
+    }
+
+    override fun hideBackTitle() {
+        binding.backTitle.hide()
+    }
+
+    override fun showBackTitle() {
+        binding.backTitle.show()
+    }
+
+    override fun hideAvatar() {
+        binding.avatar.hide()
+    }
+
+    override fun showAvatar() {
+        binding.avatar.show()
+    }
+
+    override fun hideNotification() {
+        binding.notification.hide()
+    }
+
+    override fun showNotification() {
+        binding.notification.show()
     }
 
     override fun onTitleTextChange(newText: String) {
