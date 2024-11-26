@@ -35,6 +35,10 @@ class RegFragment : BaseFragment() {
         savedInstanceState: Bundle?
     ): View {
         listener?.onTitleTextChange(R.string.reg)
+        listener?.hideBackArrow()
+        listener?.showBackTitle()
+        listener?.hideAvatar()
+        listener?.hideNotification()
 
         _binding = FragmentRegBinding.inflate(inflater, container, false)
         return binding.root

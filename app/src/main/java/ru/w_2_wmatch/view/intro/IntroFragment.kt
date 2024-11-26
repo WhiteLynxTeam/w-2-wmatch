@@ -29,6 +29,10 @@ class IntroFragment : BaseFragment() {
         savedInstanceState: Bundle?
     ): View {
         listener?.onTitleTextChange("")
+        listener?.hideBackArrow()
+        listener?.hideBackTitle()
+        listener?.hideAvatar()
+        listener?.hideNotification()
 
         _binding = FragmentIntroBinding.inflate(inflater, container, false)
         return binding.root
