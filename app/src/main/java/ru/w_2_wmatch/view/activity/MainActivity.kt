@@ -26,15 +26,6 @@ class MainActivity : AppCompatActivity(), OnHeaderChangeListener {
     private val fragmentsWithoutHeader = listOf(
         R.id.introFragment,
     )
-    private val fragmentsWithoutBack = listOf(
-        R.id.introFragment,
-    )
-    private val fragmentsWithoutAvatar = listOf(
-        R.id.introFragment,
-    )
-    private val fragmentsWithoutNotification = listOf(
-        R.id.introFragment,
-    )
 
     private val fragmentsWithoutToolbars = listOf(
         R.id.introFragment,

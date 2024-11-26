@@ -28,11 +28,13 @@ class IntroFragment : BaseFragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        listener?.onTitleTextChange("")
-        listener?.hideBackArrow()
-        listener?.hideBackTitle()
-        listener?.hideAvatar()
-        listener?.hideNotification()
+        listener?.apply {
+            onTitleTextChange("")
+            hideBackArrow()
+            hideBackTitle()
+            hideAvatar()
+            hideNotification()
+        }
 
         _binding = FragmentIntroBinding.inflate(inflater, container, false)
         return binding.root

@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.navigation.fragment.findNavController
 import ru.w_2_wmatch.R
 import ru.w_2_wmatch.databinding.FragmentChoosingToFillQuestionnaireBinding
 import ru.w_2_wmatch.view.base.BaseFragment
@@ -19,7 +20,13 @@ class ChoosingToFillQuestionnaireFragment : BaseFragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        listener?.onTitleTextChange(R.string.reg)
+        listener?.apply {
+            onTitleTextChange(R.string.reg)
+            hideBackArrow()
+            showBackTitle()
+            hideAvatar()
+            hideNotification()
+        }
 
         _binding = FragmentChoosingToFillQuestionnaireBinding.inflate(inflater, container, false)
         return binding.root
@@ -27,6 +34,10 @@ class ChoosingToFillQuestionnaireFragment : BaseFragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
+        binding.btnWithoutQuestionnaire.setOnClickListener {
+            findNavController().navigate(R.id.action_choosingToFillQuestionnaireFragment_to_manePageFragment)
+        }
 
     }
 }

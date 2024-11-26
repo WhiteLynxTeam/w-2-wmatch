@@ -31,11 +31,13 @@ class AuthFragment : BaseFragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        listener?.hideBackArrow()
-        listener?.showBackTitle()
-        listener?.onTitleTextChange(R.string.enter)
-        listener?.showAvatar()
-        listener?.showNotification()
+        listener?.apply {
+            onTitleTextChange(R.string.enter)
+            hideBackArrow()
+            showBackTitle()
+            hideAvatar()
+            hideNotification()
+        }
 
         _binding = FragmentAuthBinding.inflate(inflater, container, false)
         return binding.root
