@@ -6,11 +6,10 @@
     android:layout_height="match_parent"
     tools:context=".view.questionnaire.brand_position.BrandPositionFragment">
 
-
     <TextView
         android:id="@+id/tv_brand_position"
         style="@style/Back.TextStyle"
-        android:layout_width="296dp"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="30dp"
         android:layout_marginTop="48dp"
@@ -18,7 +17,8 @@
         android:text="Название Вашего бренда и должность"
         android:textSize="14sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/iv_help_nick"/>
 
     <ImageView
         android:id="@+id/iv_help_nick"
@@ -329,11 +329,7 @@
         style="@style/PrimaryBigButtonActive"
         android:id="@+id/btn_next"
         android:layout_marginBottom="16dp"
-        android:clickable="true"
-        android:enabled="true"
-        android:focusable="true"
         android:text="Далее"
-        android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintBottom_toBottomOf="parent" />

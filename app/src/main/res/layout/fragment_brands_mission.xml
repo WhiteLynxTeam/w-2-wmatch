@@ -227,13 +227,10 @@
         android:id="@+id/btn_next"
         style="@style/PrimaryBigButtonActive"
         android:layout_marginBottom="16dp"
-        android:clickable="true"
-        android:enabled="true"
-        android:focusable="true"
+        android:layout_marginEnd="30dp"
         android:text="Далее"
-        android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="@id/tv_brand_mission" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

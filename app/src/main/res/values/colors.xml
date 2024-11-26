@@ -13,6 +13,7 @@
     <color name="text_stroke">#FFADB5C5</color>
     <color name="text_main">#FF1B3972</color>
     <color name="text_main2">#FF123E96</color>
+    <color name="text_main3">#334E81</color>
     <!-- colorPrimaryVariant -->
     <color name="text_body">#FF5E76A5</color>
     <color name="text_main_light">#FFAEB5C4</color>

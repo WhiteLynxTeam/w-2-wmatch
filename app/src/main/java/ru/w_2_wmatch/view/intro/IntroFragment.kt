@@ -80,7 +80,7 @@ class IntroFragment : BaseFragment() {
         }
 
         binding.logo.setOnClickListener {
-            findNavController().navigate(R.id.action_introFragment_to_targetAudienceFragment)
+            findNavController().navigate(R.id.action_introFragment_to_nickTelegramFragment2)
         }
     }
 }
