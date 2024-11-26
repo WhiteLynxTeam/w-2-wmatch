@@ -58,21 +58,13 @@ class MainActivity : AppCompatActivity(), OnHeaderChangeListener {
                     with(binding) {
                         if (fragmentsWithoutToolbars.contains(destination.id)) {
                             bottomNavigation.hide()
+                            fabActive.hide()
+                            fabNoactive.hide()
                         } else {
                             bottomNavigation.show()
+                            fabActive.show()
+//                            fabNoactive.show()
                         }
-
-//                        if (fragmentsWithoutHeader.contains(destination.id)) {
-//                            btnBack.hide()
-//                            backTitle.hide()
-//                            notification.hide()
-//                            avatar.hide()
-//                        } else {
-//                            btnBack.show()
-//                            backTitle.show()
-//                            notification.show()
-//                            avatar.show()
-//                        }
                     }
                 }
             }

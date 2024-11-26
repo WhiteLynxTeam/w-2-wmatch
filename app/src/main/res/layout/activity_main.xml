@@ -73,17 +73,54 @@
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bottom_navigation"
+        style="@style/W2WBottomNavigationView"
         android:layout_width="0dp"
-        android:layout_height="86dp"
+        android:layout_height="154dp"
         android:clickable="false"
         android:focusable="true"
-        android:paddingTop="16dp"
-        android:paddingBottom="5dp"
+        android:paddingTop="57dp"
+        android:paddingBottom="34dp"
         app:itemActiveIndicatorStyle="@android:color/transparent"
         app:labelVisibilityMode="labeled"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:menu="@menu/navigation_menu" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab_active"
+        android:layout_width="72dp"
+        android:layout_height="72dp"
+        android:layout_marginBottom="61dp"
+        android:clickable="false"
+        android:focusable="false"
+        android:visibility="visible"
+        app:elevation="10dp"
+        app:fabCustomSize="72dp"
+        app:maxImageSize="72dp"
+        android:backgroundTint="@color/brand_orange"
+        app:tint="@color/white"
+        app:layout_constraintBottom_toBottomOf="@+id/bottom_navigation"
+        app:layout_constraintEnd_toEndOf="@+id/bottom_navigation"
+        app:layout_constraintStart_toStartOf="@+id/bottom_navigation"
+        app:srcCompat="@drawable/ic_brand_active"/>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab_noactive"
+        android:layout_width="72dp"
+        android:layout_height="72dp"
+        android:layout_marginBottom="61dp"
+        android:clickable="false"
+        android:focusable="false"
+        android:visibility="gone"
+        app:elevation="10dp"
+        app:fabCustomSize="72dp"
+        app:maxImageSize="72dp"
+        android:backgroundTint="@color/white"
+        app:tint="@color/text_main"
+        app:layout_constraintBottom_toBottomOf="@+id/bottom_navigation"
+        app:layout_constraintEnd_toEndOf="@+id/bottom_navigation"
+        app:layout_constraintStart_toStartOf="@+id/bottom_navigation"
+        app:srcCompat="@drawable/ic_brand_noactive"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
