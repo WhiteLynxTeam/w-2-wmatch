@@ -18,7 +18,7 @@
     <!--NavigationBottomBar-->
     <string name="merch">Мэтч</string>
     <string name="chat">Чат</string>
-    <string name="collabs">Коллаба</string>
+    <string name="collabs">Коллабы</string>
     <string name="education">Обучение</string>
 
 </resources>

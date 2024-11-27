@@ -25,6 +25,9 @@
         <action
             android:id="@+id/action_introFragment_to_nickTelegramFragment2"
             app:destination="@id/nickTelegramFragment2" />
+        <action
+            android:id="@+id/action_introFragment_to_matchPageFragment"
+            app:destination="@id/matchPageFragment" />
     </fragment>
     <fragment
         android:id="@+id/authFragment"
@@ -79,6 +82,11 @@
         android:name="ru.w_2_wmatch.view.questionnaire.target_audience.TargetAudienceFragment"
         android:label="fragment_target_audience"
         tools:layout="@layout/fragment_target_audience" />
+    <fragment
+        android:id="@+id/matchPageFragment"
+        android:name="ru.w_2_wmatch.view.main.match_page.MatchPageFragment"
+        android:label="fragment_match_page"
+        tools:layout="@layout/fragment_match_page" />
     <fragment
         android:id="@+id/manePageFragment"
         android:name="ru.w_2_wmatch.view.main.mane_page.ManePageFragment"

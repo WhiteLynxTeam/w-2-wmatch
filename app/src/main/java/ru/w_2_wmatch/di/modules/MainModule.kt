@@ -5,6 +5,7 @@ import dagger.android.ContributesAndroidInjector
 import ru.w_2_wmatch.view.activity.MainActivity
 import ru.w_2_wmatch.view.auth.AuthFragment
 import ru.w_2_wmatch.view.intro.IntroFragment
+import ru.w_2_wmatch.view.main.match_page.MatchPageFragment
 import ru.w_2_wmatch.view.main.mane_page.ManePageFragment
 import ru.w_2_wmatch.view.questionnaire.brand_position.BrandPositionFragment
 import ru.w_2_wmatch.view.questionnaire.brands_mission.BrandsMissionFragment
@@ -53,6 +54,9 @@ interface MainModule {
 
     @ContributesAndroidInjector
     fun bindOfflineSpaceFragment(): OfflineSpaceFragment
+
+    @ContributesAndroidInjector
+    fun bindMatchPageFragment(): MatchPageFragment
 
     @ContributesAndroidInjector
     fun bindManePageFragment(): ManePageFragment

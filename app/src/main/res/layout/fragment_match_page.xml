@@ -1,0 +1,287 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray_figma_bg"
+    tools:context=".view.main.match_page.MatchPageFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".view.main.match_page.MatchPageFragment">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/like_section"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:background="@drawable/bg_community_view"
+            android:backgroundTint="@color/white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/tv_like"
+                style="@style/Back.TextStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="20dp"
+                android:text="Вас лайкнули"
+                android:textSize="14sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/iv_help_like"
+                android:layout_width="30dp"
+                android:layout_height="0dp"
+                android:layout_marginEnd="15dp"
+                android:scaleType="centerInside"
+                android:src="@drawable/ic_help"
+                app:layout_constraintBottom_toBottomOf="@+id/tv_like"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/tv_like" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rc_like"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:clipToPadding="false"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                app:layout_constraintEnd_toEndOf="@id/iv_help_like"
+                app:layout_constraintStart_toStartOf="@id/tv_like"
+                app:layout_constraintTop_toBottomOf="@id/tv_like"
+                tools:listitem="@layout/item_liked_users" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/recommended_brands_section"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/bg_community_view"
+            android:backgroundTint="@color/white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/like_section">
+
+            <TextView
+                android:id="@+id/tv_recommended_brands"
+                style="@style/Back.TextStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="20dp"
+                android:text="Рекомендованные бренды"
+                android:textSize="14sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/iv_help_recommended_brands"
+                android:layout_width="30dp"
+                android:layout_height="0dp"
+                android:layout_marginEnd="15dp"
+                android:scaleType="centerInside"
+                android:src="@drawable/ic_help"
+                app:layout_constraintBottom_toBottomOf="@+id/tv_recommended_brands"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/tv_recommended_brands" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rc_recommended_brands"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:clipToPadding="false"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                app:layout_constraintEnd_toEndOf="@id/iv_help_recommended_brands"
+                app:layout_constraintStart_toStartOf="@id/tv_recommended_brands"
+                app:layout_constraintTop_toBottomOf="@id/tv_recommended_brands"
+                tools:listitem="@layout/item_recommended_brands" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/my_likes_section"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/bg_community_view"
+            android:backgroundTint="@color/white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/recommended_brands_section">
+
+            <TextView
+                android:id="@+id/tv_my_likes"
+                style="@style/Back.TextStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="20dp"
+                android:text="Мои лайки"
+                android:textSize="14sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/iv_help_my_likes"
+                android:layout_width="30dp"
+                android:layout_height="0dp"
+                android:layout_marginEnd="15dp"
+                android:scaleType="centerInside"
+                android:src="@drawable/ic_help"
+                app:layout_constraintBottom_toBottomOf="@+id/tv_my_likes"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/tv_my_likes" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rc_my_likes"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:clipToPadding="false"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                app:layout_constraintEnd_toEndOf="@id/iv_help_my_likes"
+                app:layout_constraintStart_toStartOf="@id/tv_my_likes"
+                app:layout_constraintTop_toBottomOf="@id/tv_my_likes"
+                tools:listitem="@layout/item_my_like" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/my_matches_section"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/bg_community_view"
+            android:backgroundTint="@color/white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/my_likes_section">
+
+            <TextView
+                android:id="@+id/tv_my_matches"
+                style="@style/Back.TextStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="20dp"
+                android:text="Мои метчи"
+                android:textSize="14sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/iv_help_my_matches"
+                android:layout_width="30dp"
+                android:layout_height="0dp"
+                android:layout_marginEnd="15dp"
+                android:scaleType="centerInside"
+                android:src="@drawable/ic_help"
+                app:layout_constraintBottom_toBottomOf="@+id/tv_my_matches"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/tv_my_matches" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rc_my_matches"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:clipToPadding="false"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                app:layout_constraintEnd_toEndOf="@id/iv_help_my_matches"
+                app:layout_constraintStart_toStartOf="@id/tv_my_matches"
+                app:layout_constraintTop_toBottomOf="@id/tv_my_matches"
+                tools:listitem="@layout/item_my_like" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/collab_section"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/bg_community_view"
+            android:backgroundTint="@color/white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/my_matches_section">
+
+            <TextView
+                android:id="@+id/tv_collab"
+                style="@style/Back.TextStyle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="20dp"
+                android:text="Рассказать о Вашей коллабе"
+                android:textSize="14sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/iv_help_collab"
+                android:layout_width="30dp"
+                android:layout_height="0dp"
+                android:layout_marginEnd="15dp"
+                android:scaleType="centerInside"
+                android:src="@drawable/ic_help"
+                app:layout_constraintBottom_toBottomOf="@+id/tv_collab"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/tv_collab" />
+
+            <View
+                android:id="@+id/bg_collab"
+                android:layout_width="0dp"
+                android:layout_height="275dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="20dp"
+                android:background="@drawable/bg_ruble"
+                android:backgroundTint="@color/gray_figma_bg"
+                app:layout_constraintEnd_toStartOf="@id/iv_help_collab"
+                app:layout_constraintStart_toStartOf="@id/tv_collab"
+                app:layout_constraintTop_toBottomOf="@id/tv_collab"
+                app:layout_constraintBottom_toBottomOf="parent"/>
+
+            <TextView
+                android:id="@+id/collab_title"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginBottom="20dp"
+                android:fontFamily="@font/raleway_medium"
+                android:text="Ваша\nколлаба"
+                android:textColor="@color/text_stroke"
+                android:textSize="28sp"
+                app:layout_constraintBottom_toBottomOf="@id/bg_collab"
+                app:layout_constraintStart_toStartOf="@id/tv_collab"
+                app:layout_constraintTop_toTopOf="@id/bg_collab" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/raleway_regular"
+                android:text="Уже сейчас начните\nсотрудничать\nс брендами и создайте Ваш\nпервый совместный проект"
+                android:textColor="@color/text_stroke"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="@id/collab_title"
+                app:layout_constraintTop_toBottomOf="@id/collab_title" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.core.widget.NestedScrollView>
