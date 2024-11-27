@@ -9,27 +9,27 @@ import android.view.ViewGroup
 import ru.w_2_wmatch.R
 import ru.w_2_wmatch.databinding.FragmentIntroBinding
 import ru.w_2_wmatch.databinding.FragmentManePageBinding
+import ru.w_2_wmatch.view.base.BaseFragment
+import ru.w_2_wmatch.view.reg.choosing_to_fill_questionnaire.ChoosingToFillQuestionnaireViewModel
 
-class ManePageFragment : Fragment() {
+class ManePageFragment : BaseFragment() {
     private var _binding: FragmentManePageBinding? = null
     private val binding get() = _binding!!
 
-    companion object {
-        fun newInstance() = ManePageFragment()
-    }
-
-    private val viewModel: ManePageViewModel by viewModels()
-
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-
-        // TODO: Use the ViewModel
-    }
+    private lateinit var viewModel: ManePageViewModel
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
+        listener?.apply {
+            onTitleTextChange("Привет")
+            hideBackArrow()
+            showBackTitle()
+            showAvatar()
+            showNotification()
+        }
+
         _binding = FragmentManePageBinding.inflate(inflater, container, false)
         return binding.root
     }

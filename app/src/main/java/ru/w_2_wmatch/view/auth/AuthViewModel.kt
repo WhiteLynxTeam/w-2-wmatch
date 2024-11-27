@@ -17,7 +17,12 @@ class AuthViewModel(private val authUseCase: AuthUseCase) : ViewModel() {
     fun auth(authUser: AuthUser) {
         viewModelScope.launch {
             _appStateFlow.emit(AppState.Loading)
-            _appStateFlow.emit(AppState.Success(authUseCase(authUser)))
+            /***Временно во время разработки, если пустые поля пропускаем пользователя дальше*/
+            if (authUser.login.isEmpty() and authUser.password.isEmpty()) {
+                _appStateFlow.emit(AppState.Success(true))
+            } else {
+                _appStateFlow.emit(AppState.Success(authUseCase(authUser)))
+            }
         }
     }
 

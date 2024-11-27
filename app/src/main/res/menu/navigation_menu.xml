@@ -14,8 +14,7 @@
         app:showAsAction="withText" />
     <item
         android:id="@+id/w2w"
-        android:icon="@drawable/ic_w2w"
-        android:title="Главная"
+        android:title=""
         app:showAsAction="withText" />
     <item
         android:id="@+id/education"

@@ -34,7 +34,13 @@ class RegFragment : BaseFragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        listener?.onTitleTextChange(R.string.reg)
+        listener?.apply {
+            onTitleTextChange(R.string.reg)
+            hideBackArrow()
+            showBackTitle()
+            hideAvatar()
+            hideNotification()
+        }
 
         _binding = FragmentRegBinding.inflate(inflater, container, false)
         return binding.root
