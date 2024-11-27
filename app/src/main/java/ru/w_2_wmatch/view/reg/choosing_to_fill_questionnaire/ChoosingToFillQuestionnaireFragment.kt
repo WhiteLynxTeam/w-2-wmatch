@@ -35,6 +35,10 @@ class ChoosingToFillQuestionnaireFragment : BaseFragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        binding.btnFillQuestionnaire.setOnClickListener {
+            findNavController().navigate(R.id.action_choosingToFillQuestionnaireFragment_to_nickTelegramFragment2)
+        }
+
         binding.btnWithoutQuestionnaire.setOnClickListener {
             findNavController().navigate(R.id.action_choosingToFillQuestionnaireFragment_to_manePageFragment)
         }
