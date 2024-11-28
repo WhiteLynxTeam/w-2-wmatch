@@ -67,7 +67,7 @@ class MainActivity : AppCompatActivity(), OnHeaderChangeListener {
                             fabNoactive.hide()
                         } else {
                             bottomNavigation.show()
-                            fabActive.show()
+                            fabNoactive.show()
 //                            fabNoactive.show()
                         }
                     }
