@@ -23,8 +23,8 @@
             android:id="@+id/action_introFragment_to_choosingToFillQuestionnaireFragment"
             app:destination="@id/choosingToFillQuestionnaireFragment" />
         <action
-            android:id="@+id/action_introFragment_to_nickTelegramFragment2"
-            app:destination="@id/nickTelegramFragment2" />
+            android:id="@+id/action_introFragment_to_nickTelegramFragment"
+            app:destination="@id/nickTelegramFragment" />
         <action
             android:id="@+id/action_introFragment_to_matchPageFragment"
             app:destination="@id/matchPageFragment" />
@@ -58,14 +58,18 @@
         android:id="@+id/brandPositionFragment"
         android:name="ru.w_2_wmatch.view.questionnaire.brand_position.BrandPositionFragment"
         android:label="fragment_brand_position"
-        tools:layout="@layout/fragment_brand_position" />
+        tools:layout="@layout/fragment_brand_position" >
+        <action
+            android:id="@+id/action_brandPositionFragment_to_socialNetworkLinkFragment"
+            app:destination="@id/socialNetworkLinkFragment" />
+    </fragment>
     <fragment
-        android:id="@+id/nickTelegramFragment2"
+        android:id="@+id/nickTelegramFragment"
         android:name="ru.w_2_wmatch.view.questionnaire.nick_telegram.NickTelegramFragment"
         android:label="fragment_nick_telegram"
         tools:layout="@layout/fragment_nick_telegram" >
         <action
-            android:id="@+id/action_nickTelegramFragment2_to_brandPositionFragment"
+            android:id="@+id/action_nickTelegramFragment_to_brandPositionFragment"
             app:destination="@id/brandPositionFragment" />
     </fragment>
     <fragment
@@ -76,6 +80,9 @@
         <action
             android:id="@+id/action_choosingToFillQuestionnaireFragment_to_manePageFragment"
             app:destination="@id/manePageFragment" />
+        <action
+            android:id="@+id/action_choosingToFillQuestionnaireFragment_to_nickTelegramFragment"
+            app:destination="@id/nickTelegramFragment" />
     </fragment>
     <fragment
         android:id="@+id/targetAudienceFragment"
@@ -91,6 +98,37 @@
         android:id="@+id/manePageFragment"
         android:name="ru.w_2_wmatch.view.main.mane_page.ManePageFragment"
         android:label="fragment_mane_page"
-        tools:layout="@layout/fragment_mane_page" />
+        tools:layout="@layout/fragment_mane_page" >
+        <action
+            android:id="@+id/action_manePageFragment_to_matchPageFragment"
+            app:destination="@id/matchPageFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/socialNetworkLinkFragment"
+        android:name="ru.w_2_wmatch.view.questionnaire.social_network_link.SocialNetworkLinkFragment"
+        android:label="fragment_social_network_link"
+        tools:layout="@layout/fragment_social_network_link" >
+        <action
+            android:id="@+id/action_socialNetworkLinkFragment_to_keyBrandValuesFragment"
+            app:destination="@id/keyBrandValuesFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/keyBrandValuesFragment"
+        android:name="ru.w_2_wmatch.view.questionnaire.key_brand_values.KeyBrandValuesFragment"
+        android:label="fragment_key_brand_values"
+        tools:layout="@layout/fragment_key_brand_values" >
+        <action
+            android:id="@+id/action_keyBrandValuesFragment_to_gotoProfilePart1Fragment"
+            app:destination="@id/gotoProfilePart1Fragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/gotoProfilePart1Fragment"
+        android:name="ru.w_2_wmatch.view.questionnaire.gotoprofile.part1.GotoProfilePart1Fragment"
+        android:label="GotoProfilePart1Fragment"
+        tools:layout="@layout/fragment_goto_profile_part1">
+        <action
+            android:id="@+id/action_gotoProfilePart1Fragment_to_manePageFragment"
+            app:destination="@id/manePageFragment" />
+    </fragment>
 
 </navigation>

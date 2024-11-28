@@ -28,10 +28,15 @@ class MainActivity : AppCompatActivity(), OnHeaderChangeListener {
     )
 
     private val fragmentsWithoutToolbars = listOf(
+        R.id.brandPositionFragment,
+        R.id.choosingToFillQuestionnaireFragment,
+        R.id.keyBrandValuesFragment,
+        R.id.nickTelegramFragment,
+        R.id.socialNetworkLinkFragment,
+        R.id.gotoProfilePart1Fragment,
         R.id.introFragment,
         R.id.authFragment,
         R.id.regFragment,
-        R.id.choosingToFillQuestionnaireFragment
     )
 
     override fun onCreate(savedInstanceState: Bundle?) {

@@ -1,0 +1,25 @@
+package ru.w_2_wmatch.domain.models
+
+data class Brand(
+    var tg_nickname: String? = null,
+    var city_id: Int = -1,
+    var city_name: String? = null,
+    val blogs_list: List<String>? = null,
+    var name_brand: String? = null,
+    var position_in_brand: String? = null,
+    var category: Category? = null,
+    var inst_url: String? = null,
+    var vk_url: String? = null,
+    var tg_url: String? = null,
+    var wb_url: String? = null,
+    var lamoda_url: String? = null,
+    var site_url: String? = null,
+    var subs_count: Int = -1,
+    var avg_bill: Int = -1,
+    var tags: List<Tag>? = null,
+    var uniqueness: String? = null,
+    var logo: String? = null,
+    var photo: String? = null,
+    val product_photos_match: List<String>? = null,
+    val product_photos_card: List<String>? = null,
+)

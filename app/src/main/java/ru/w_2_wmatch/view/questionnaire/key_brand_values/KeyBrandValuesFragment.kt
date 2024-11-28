@@ -9,6 +9,7 @@ import android.widget.LinearLayout
 import android.widget.PopupWindow
 import android.widget.TextView
 import androidx.lifecycle.lifecycleScope
+import androidx.navigation.fragment.findNavController
 import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 import ru.w_2_wmatch.R
@@ -30,7 +31,13 @@ class KeyBrandValuesFragment : BaseFragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        listener?.onTitleTextChange(R.string.questionnaire)
+        listener?.apply {
+            onTitleTextChange(R.string.questionnaire)
+            hideBackArrow()
+            showBackTitle()
+            hideAvatar()
+            hideNotification()
+        }
 
         _binding = FragmentKeyBrandValuesBinding.inflate(inflater, container, false)
         return binding.root
@@ -38,6 +45,10 @@ class KeyBrandValuesFragment : BaseFragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
+        binding.btnNext.setOnClickListener {
+            findNavController().navigate(R.id.action_keyBrandValuesFragment_to_gotoProfilePart1Fragment)
+        }
 
         binding.ivHelpKeyValues.setOnClickListener {
             showPopupWindow(

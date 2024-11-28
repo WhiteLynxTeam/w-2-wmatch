@@ -9,6 +9,7 @@ import ru.w_2_wmatch.view.main.match_page.MatchPageFragment
 import ru.w_2_wmatch.view.main.mane_page.ManePageFragment
 import ru.w_2_wmatch.view.questionnaire.brand_position.BrandPositionFragment
 import ru.w_2_wmatch.view.questionnaire.brands_mission.BrandsMissionFragment
+import ru.w_2_wmatch.view.questionnaire.gotoprofile.part1.GotoProfilePart1Fragment
 import ru.w_2_wmatch.view.questionnaire.key_brand_values.KeyBrandValuesFragment
 import ru.w_2_wmatch.view.questionnaire.nick_telegram.NickTelegramFragment
 import ru.w_2_wmatch.view.questionnaire.offline_space.OfflineSpaceFragment
@@ -54,6 +55,9 @@ interface MainModule {
 
     @ContributesAndroidInjector
     fun bindOfflineSpaceFragment(): OfflineSpaceFragment
+
+    @ContributesAndroidInjector
+    fun bindGotoProfilePart1Fragment(): GotoProfilePart1Fragment
 
     @ContributesAndroidInjector
     fun bindMatchPageFragment(): MatchPageFragment
