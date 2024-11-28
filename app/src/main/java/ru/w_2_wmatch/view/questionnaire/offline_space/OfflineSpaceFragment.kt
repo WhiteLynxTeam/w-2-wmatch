@@ -20,7 +20,13 @@ class OfflineSpaceFragment : BaseFragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        listener?.onTitleTextChange(R.string.questionnaire)
+        listener?.apply {
+            onTitleTextChange(R.string.questionnaire)
+            hideBackArrow()
+            showBackTitle()
+            hideAvatar()
+            hideNotification()
+        }
 
         _binding = FragmentOfflineSpaceBinding.inflate(inflater, container, false)
         return binding.root

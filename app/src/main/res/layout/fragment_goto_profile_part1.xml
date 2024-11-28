@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".view.reg.choosing_to_fill_questionnaire.ChoosingToFillQuestionnaireFragment">
+    tools:context=".view.questionnaire.gotoprofile.part1.GotoProfilePart1Fragment">
 
     <TextView
         android:id="@+id/tv_questionnaire"
@@ -21,19 +21,22 @@
     <TextView
         android:id="@+id/tv_description"
         style="@style/Back.TextStyle"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
-        android:text="Ваши данные приняты и сохранены!\n\nТеперь ваши шансы на совместный Метч увеличились!"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="50dp"
+        android:text="Ваши данные приняты и сохранены!\n\nЧтобы увеличить шансы на Метч, рекомендуем зайти в Профиль, чтобы заполнить оставшуюся информацию о Вашем бренде.\n\nЭто поможет будущим партнерам по коллабе узнать Вас лучше"
         android:textSize="10sp"
-        app:layout_constraintStart_toStartOf="@id/tv_questionnaire"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@id/tv_questionnaire" />
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/btn_fill_questionnaire"
         style="@style/PrimaryBigButtonActive"
         android:layout_marginTop="45dp"
-        android:text="Заполнить анкету"
+        android:text="Перейти в Профиль"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/tv_description" />

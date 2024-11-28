@@ -86,7 +86,7 @@ class IntroFragment : BaseFragment() {
         }
 
         binding.logo.setOnClickListener {
-//            findNavController().navigate(R.id.action_introFragment_to_nickTelegramFragment2)
+            findNavController().navigate(R.id.action_introFragment_to_matchPageFragment)
         }
     }
 }

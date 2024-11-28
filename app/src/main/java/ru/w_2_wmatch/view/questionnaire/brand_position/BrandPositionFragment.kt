@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.navigation.fragment.findNavController
 import ru.w_2_wmatch.R
 import ru.w_2_wmatch.databinding.FragmentBrandPositionBinding
 import ru.w_2_wmatch.view.auth.AuthViewModel
@@ -27,6 +28,10 @@ class BrandPositionFragment : BaseFragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
+        binding.btnNext.setOnClickListener {
+            findNavController().navigate(R.id.action_brandPositionFragment_to_socialNetworkLinkFragment)
+        }
     }
 
 }

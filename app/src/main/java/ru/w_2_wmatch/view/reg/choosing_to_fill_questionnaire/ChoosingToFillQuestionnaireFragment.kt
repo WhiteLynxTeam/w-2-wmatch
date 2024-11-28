@@ -36,7 +36,7 @@ class ChoosingToFillQuestionnaireFragment : BaseFragment() {
         super.onViewCreated(view, savedInstanceState)
 
         binding.btnFillQuestionnaire.setOnClickListener {
-            findNavController().navigate(R.id.action_choosingToFillQuestionnaireFragment_to_nickTelegramFragment2)
+            findNavController().navigate(R.id.action_choosingToFillQuestionnaireFragment_to_nickTelegramFragment)
         }
 
         binding.btnWithoutQuestionnaire.setOnClickListener {

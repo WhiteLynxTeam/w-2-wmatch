@@ -1,26 +1,24 @@
-package ru.w_2_wmatch.view.questionnaire.social_network_link
+package ru.w_2_wmatch.view.questionnaire.gotoprofile.part2
 
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.navigation.fragment.findNavController
 import ru.w_2_wmatch.R
-import ru.w_2_wmatch.databinding.FragmentSocialNetworkLinkBinding
-import ru.w_2_wmatch.view.auth.AuthViewModel
+import ru.w_2_wmatch.databinding.FragmentGotoProfilePart2Binding
 import ru.w_2_wmatch.view.base.BaseFragment
 
-class SocialNetworkLinkFragment : BaseFragment() {
+class GotoProfilePart2Fragment : BaseFragment() {
 
-    private var _binding: FragmentSocialNetworkLinkBinding? = null
+    private var _binding: FragmentGotoProfilePart2Binding? = null
     private val binding get() = _binding!!
 
-    private lateinit var viewModel: AuthViewModel
+    private lateinit var viewModel: GotoProfilePart2ViewModel
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View{
+    ): View {
         listener?.apply {
             onTitleTextChange(R.string.questionnaire)
             hideBackArrow()
@@ -29,15 +27,15 @@ class SocialNetworkLinkFragment : BaseFragment() {
             hideNotification()
         }
 
-        _binding = FragmentSocialNetworkLinkBinding.inflate(inflater,container,false)
+        _binding = FragmentGotoProfilePart2Binding.inflate(inflater, container, false)
         return binding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        binding.btnNext.setOnClickListener {
-            findNavController().navigate(R.id.action_socialNetworkLinkFragment_to_keyBrandValuesFragment)
+        binding.btnFillQuestionnaire.setOnClickListener {
         }
     }
+
 }
