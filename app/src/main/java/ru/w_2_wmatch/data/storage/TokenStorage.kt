@@ -3,9 +3,8 @@ package ru.w_2_wmatch.data.storage
 import android.content.SharedPreferences
 import ru.w_2_wmatch.domain.istorage.ITokenStorage
 import ru.w_2_wmatch.domain.models.Token
-import javax.inject.Inject
 
-class TokenStorage @Inject constructor(
+class TokenStorage(
     private val sharedPreferences: SharedPreferences
 
 ) : ITokenStorage {

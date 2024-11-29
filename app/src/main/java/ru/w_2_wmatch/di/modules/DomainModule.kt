@@ -4,12 +4,14 @@ import dagger.Module
 import dagger.Provides
 import ru.w_2_wmatch.domain.irepository.ITokenRepository
 import ru.w_2_wmatch.domain.irepository.IUserRepository
+import ru.w_2_wmatch.domain.istorage.IBrandStorage
 import ru.w_2_wmatch.domain.istorage.ITokenStorage
 import ru.w_2_wmatch.domain.usecases.AuthUseCase
-import ru.w_2_wmatch.domain.usecases.GetTokenApiUseCase
 import ru.w_2_wmatch.domain.usecases.GetRefreshTokenPrefUseCase
+import ru.w_2_wmatch.domain.usecases.GetTokenApiUseCase
 import ru.w_2_wmatch.domain.usecases.RefreshTokenApiUseCase
 import ru.w_2_wmatch.domain.usecases.RegisterUseCase
+import ru.w_2_wmatch.domain.usecases.SaveBrandPrefUseCase
 import ru.w_2_wmatch.domain.usecases.SaveTokenPrefUseCase
 import javax.inject.Singleton
 
@@ -68,7 +70,17 @@ class DomainModule {
         return RefreshTokenApiUseCase(
             repository = repository,
             saveTokenPrefUseCase = saveTokenPrefUseCase,
-            )
+        )
+    }
+
+    @Singleton
+    @Provides
+    fun provideSaveBrandPrefUseCase(
+        storage: IBrandStorage
+    ): SaveBrandPrefUseCase {
+        return SaveBrandPrefUseCase(
+            storage = storage,
+        )
     }
 
 }

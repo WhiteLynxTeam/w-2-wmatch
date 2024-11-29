@@ -1,25 +1,34 @@
 package ru.w_2_wmatch.data.storage
 
 import android.content.SharedPreferences
+import com.google.gson.Gson
 import ru.w_2_wmatch.domain.istorage.IBrandStorage
 import ru.w_2_wmatch.domain.models.Brand
-import javax.inject.Inject
 
-class BrandStorage @Inject constructor(
-    private val sharedPreferences: SharedPreferences
+class BrandStorage (
+    private val sharedPreferences: SharedPreferences,
+    private val gson: Gson
 ) : IBrandStorage {
     override fun save(brand: Brand) {
-        sharedPreferences.edit().putString(TG_NICKNAME, brand.tg_nickname).apply()
-        sharedPreferences.edit().putInt(CITY_ID, brand.city_id).apply()
-        sharedPreferences.edit().putString(CITY_NAME, brand.city_name).apply()
-        sharedPreferences.edit().putString(NAME_BRAND, brand.name_brand).apply()
-        sharedPreferences.edit().putString(POSITION_IN_BRAND, brand.position_in_brand).apply()
-        sharedPreferences.edit().putString(SITE_URL, brand.site_url).apply()
-        sharedPreferences.edit().putString(INST_URL, brand.inst_url).apply()
-        sharedPreferences.edit().putString(VK_URL, brand.vk_url).apply()
-        sharedPreferences.edit().putString(TG_URL, brand.tg_url).apply()
-        sharedPreferences.edit().putString(WB_URL, brand.wb_url).apply()
-        sharedPreferences.edit().putString(LAMODA_URL, brand.lamoda_url).apply()
+        if (!brand.tg_nickname.isNullOrEmpty()) sharedPreferences.edit().putString(TG_NICKNAME, brand.tg_nickname).apply()
+        if (brand.city_id != -1) sharedPreferences.edit().putInt(CITY_ID, brand.city_id).apply()
+        if (!brand.city_name.isNullOrEmpty()) sharedPreferences.edit().putString(CITY_NAME, brand.city_name).apply()
+        if (!brand.name_brand.isNullOrEmpty()) sharedPreferences.edit().putString(NAME_BRAND, brand.name_brand).apply()
+        if (!brand.position_in_brand.isNullOrEmpty()) sharedPreferences.edit().putString(POSITION_IN_BRAND, brand.position_in_brand).apply()
+        if (!brand.site_url.isNullOrEmpty()) sharedPreferences.edit().putString(SITE_URL, brand.site_url).apply()
+        if (!brand.inst_url.isNullOrEmpty()) sharedPreferences.edit().putString(INST_URL, brand.inst_url).apply()
+        if (!brand.vk_url.isNullOrEmpty()) sharedPreferences.edit().putString(VK_URL, brand.vk_url).apply()
+        if (!brand.tg_url.isNullOrEmpty()) sharedPreferences.edit().putString(TG_URL, brand.tg_url).apply()
+        if (!brand.wb_url.isNullOrEmpty()) sharedPreferences.edit().putString(WB_URL, brand.wb_url).apply()
+        if (!brand.lamoda_url.isNullOrEmpty()) sharedPreferences.edit().putString(LAMODA_URL, brand.lamoda_url).apply()
+        if (!brand.blogs_list.isNullOrEmpty()) {
+            val blogsListString = gson.toJson(brand.blogs_list)
+            sharedPreferences.edit().putString(BLOGS_LIST, blogsListString).apply()
+        }
+        if (brand.category != null) {
+            val categoryString = gson.toJson(brand.category)
+            sharedPreferences.edit().putString(CATEGORY, categoryString).apply()
+        }
     }
 
     override fun get(): Brand {
