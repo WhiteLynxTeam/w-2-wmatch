@@ -103,7 +103,22 @@
         app:layout_constraintStart_toStartOf="@id/iv_help_link"
         app:layout_constraintTop_toBottomOf="@id/iv_help_link" />
 
-    <TextView
+    <androidx.constraintlayout.helper.widget.Flow
+        android:id="@+id/flw_category"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginHorizontal="16dp"
+        app:flow_horizontalAlign="center"
+        app:flow_horizontalBias="0.5"
+        app:flow_horizontalStyle="spread"
+        app:flow_verticalBias="0.5"
+        app:flow_wrapMode="chain"
+        app:layout_constraintStart_toStartOf="@+id/tv_brand_position"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/count_link"/>
+
+    <!--<TextView
         android:id="@+id/tv_brand1"
         android:layout_width="88dp"
         android:layout_height="28dp"
@@ -244,7 +259,7 @@
         android:textAlignment="center"
         android:textSize="10sp"
         app:layout_constraintStart_toEndOf="@+id/tv_brand10"
-        app:layout_constraintTop_toTopOf="@id/tv_brand10" />
+        app:layout_constraintTop_toTopOf="@id/tv_brand10" />-->
 
     <TextView
         android:id="@+id/tv_links_marketplaces"
@@ -257,7 +272,7 @@
         android:text="Ссылка на актуальный  сайт / маркетплейс  ( Lamoda / WB )"
         android:textSize="14sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tv_brand11" />
+        app:layout_constraintTop_toBottomOf="@id/flw_category" />
 
     <ImageView
         android:id="@+id/iv_help_marketplaces"

@@ -1,16 +1,19 @@
 package ru.w_2_wmatch.di.modules
 
 import android.content.SharedPreferences
+import com.google.gson.Gson
 import dagger.Module
 import dagger.Provides
 import ru.w_2_wmatch.data.api.TokenApi
 import ru.w_2_wmatch.data.api.UserApi
 import ru.w_2_wmatch.data.repository.TokenRepository
 import ru.w_2_wmatch.data.repository.UserRepository
+import ru.w_2_wmatch.data.storage.BrandStorage
 import ru.w_2_wmatch.data.storage.TokenStorage
 import ru.w_2_wmatch.data.storage.UserStorage
 import ru.w_2_wmatch.domain.irepository.ITokenRepository
 import ru.w_2_wmatch.domain.irepository.IUserRepository
+import ru.w_2_wmatch.domain.istorage.IBrandStorage
 import ru.w_2_wmatch.domain.istorage.ITokenStorage
 import ru.w_2_wmatch.domain.istorage.IUserStorage
 import javax.inject.Singleton
@@ -19,7 +22,7 @@ import javax.inject.Singleton
 class DataModule {
     @Provides
     @Singleton
-    fun provideUserRepository(userApi: UserApi) : IUserRepository {
+    fun provideUserRepository(userApi: UserApi): IUserRepository {
         return UserRepository(userApi = userApi)
     }
 
@@ -27,29 +30,43 @@ class DataModule {
     @Singleton
     fun provideTokenRepository(
         tokenApi: TokenApi,
-        tokenStorage: TokenStorage,
-        ) : ITokenRepository {
+        tokenStorage: ITokenStorage,
+    ): ITokenRepository {
         return TokenRepository(
             tokenApi = tokenApi,
-            tokenStorage =  tokenStorage,
-            )
+            tokenStorage = tokenStorage,
+        )
     }
+
     @Provides
     @Singleton
     fun provideTokenStorage(
         sharedPreferences: SharedPreferences,
-        ) : ITokenStorage {
+    ): ITokenStorage {
         return TokenStorage(
             sharedPreferences = sharedPreferences,
-            )
+        )
     }
+
+//    @Provides
+//    @Singleton
+//    fun provideUserStorage(
+//        sharedPreferences: SharedPreferences,
+//    ): IUserStorage {
+//        return UserStorage(
+//            sharedPreferences = sharedPreferences,
+//        )
+//    }
+
     @Provides
     @Singleton
-    fun provideUserStorage(
+    fun provideBrandStorage(
         sharedPreferences: SharedPreferences,
-        ) : IUserStorage {
-        return UserStorage(
+        gson: Gson,
+    ): IBrandStorage {
+        return BrandStorage(
             sharedPreferences = sharedPreferences,
-            )
+            gson = gson
+        )
     }
 }

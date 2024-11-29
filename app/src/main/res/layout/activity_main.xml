@@ -63,11 +63,11 @@
         android:id="@+id/fragment_placeholder"
         android:name="androidx.navigation.fragment.NavHostFragment"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="0dp"
         app:defaultNavHost="true"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintTop_toTopOf="@id/gl_header_bottom"
         app:layout_constraintBottom_toTopOf="@+id/bottom_navigation"
         app:navGraph="@navigation/navigation" />
 
@@ -82,6 +82,7 @@
         android:paddingBottom="34dp"
         app:itemActiveIndicatorStyle="@android:color/transparent"
         app:labelVisibilityMode="labeled"
+        app:layout_constraintTop_toBottomOf="@id/fragment_placeholder"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
