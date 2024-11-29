@@ -6,18 +6,18 @@
     android:layout_height="wrap_content"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context=".view.main.mane_page.ManePageFragment">
-<!--    android:background="@color/gray_figma_bg"-->
+    <!--    android:background="@color/gray_figma_bg"-->
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginTop="48dp">
+        android:layout_marginTop="5dp">
 
         <!--Подписка BUSINESS-->
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/subscription_business_group"
             style="@style/banner_business"
-            android:layout_width="match_parent"
+            android:layout_width="0dp"
             android:layout_height="80dp"
             android:layout_marginTop="5dp"
             android:layout_marginEnd="5dp"
@@ -87,47 +87,18 @@
                 app:layout_constraintStart_toStartOf="@id/community_group"
                 app:layout_constraintTop_toTopOf="@id/community_group" />
 
-            <!--Переделать на recyclerView , orientation horizontal-->
-            <HorizontalScrollView
-                android:layout_width="wrap_content"
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rc_community"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="15dp"
+                android:orientation="horizontal"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/tv_community">
+                app:layout_constraintTop_toBottomOf="@+id/tv_community"
+                tools:listitem="@layout/item_community">
 
-                <androidx.constraintlayout.widget.ConstraintLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent">
-
-                    <ImageView
-                        android:id="@+id/img_1"
-                        android:layout_width="201dp"
-                        android:layout_height="363dp"
-                        android:layout_marginStart="4dp"
-                        android:src="@drawable/img_communiti1"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent" />
-
-                    <ImageView
-                        android:id="@+id/img_2"
-                        android:layout_width="201dp"
-                        android:layout_height="363dp"
-                        android:layout_marginStart="5dp"
-                        android:src="@drawable/img_communiti1"
-                        app:layout_constraintStart_toEndOf="@id/img_1"
-                        app:layout_constraintTop_toTopOf="@id/img_1" />
-
-                    <ImageView
-                        android:id="@+id/img_3"
-                        android:layout_width="201dp"
-                        android:layout_height="363dp"
-                        android:layout_marginStart="5dp"
-                        android:src="@drawable/img_communiti1"
-                        app:layout_constraintStart_toEndOf="@id/img_2"
-                        app:layout_constraintTop_toTopOf="@id/img_1" />
-
-                </androidx.constraintlayout.widget.ConstraintLayout>
-            </HorizontalScrollView>
+            </androidx.recyclerview.widget.RecyclerView>
         </androidx.constraintlayout.widget.ConstraintLayout>
 
         <!--Создайте первую коллабу-->
@@ -644,116 +615,18 @@
                 app:layout_constraintStart_toStartOf="@id/media_group"
                 app:layout_constraintTop_toTopOf="@id/media_group" />
 
-            <!--Переделать на recyclerView , orientation horizontal-->
-            <HorizontalScrollView
-                android:layout_width="wrap_content"
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rc_media"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="15dp"
+                android:orientation="horizontal"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/tv_media">
+                app:layout_constraintTop_toBottomOf="@+id/tv_media"
+                tools:listitem="@layout/item_community">
 
-                <androidx.constraintlayout.widget.ConstraintLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent">
-
-                    <ImageView
-                        android:id="@+id/img_media_1"
-                        android:layout_width="201dp"
-                        android:layout_height="363dp"
-                        android:layout_marginStart="4dp"
-                        android:src="@drawable/img_media1"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent" />
-
-                    <TextView
-                        android:id="@+id/tv_media_name_1"
-                        android:layout_width="126dp"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="15dp"
-                        android:fontFamily="@font/raleway_regular"
-                        android:text="The Wellnus &amp; Sarro"
-                        android:textSize="12sp"
-                        app:layout_constraintStart_toStartOf="@+id/img_media_1"
-                        app:layout_constraintTop_toBottomOf="@+id/img_media_1" />
-
-                    <TextView
-                        android:id="@+id/tv_media_description_1"
-                        android:layout_width="126dp"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="10dp"
-                        android:fontFamily="@font/raleway_regular"
-                        android:paddingBottom="9dp"
-                        android:text="Познакомьтесь будущими партнерам"
-                        android:textSize="10sp"
-                        app:layout_constraintStart_toStartOf="@+id/tv_media_name_1"
-                        app:layout_constraintTop_toBottomOf="@+id/tv_media_name_1" />
-
-                    <ImageView
-                        android:id="@+id/img_media_2"
-                        android:layout_width="201dp"
-                        android:layout_height="363dp"
-                        android:layout_marginStart="5dp"
-                        android:src="@drawable/img_media2"
-                        app:layout_constraintStart_toEndOf="@id/img_media_1"
-                        app:layout_constraintTop_toTopOf="@id/img_media_1" />
-
-                    <TextView
-                        android:id="@+id/tv_media_name_2"
-                        android:layout_width="126dp"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="15dp"
-                        android:fontFamily="@font/raleway_regular"
-                        android:text="The Wellnus &amp; Sarro"
-                        android:textSize="12sp"
-                        app:layout_constraintStart_toStartOf="@+id/img_media_2"
-                        app:layout_constraintTop_toBottomOf="@+id/img_media_1" />
-
-                    <TextView
-                        android:id="@+id/tv_media_description_2"
-                        android:layout_width="126dp"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="10dp"
-                        android:fontFamily="@font/raleway_regular"
-                        android:paddingBottom="9dp"
-                        android:text="Познакомьтесь будущими партнерам"
-                        android:textSize="10sp"
-                        app:layout_constraintStart_toStartOf="@+id/tv_media_name_2"
-                        app:layout_constraintTop_toBottomOf="@+id/tv_media_name_1" />
-
-                    <ImageView
-                        android:id="@+id/img_media_3"
-                        android:layout_width="201dp"
-                        android:layout_height="363dp"
-                        android:layout_marginStart="5dp"
-                        android:src="@drawable/img_communiti1"
-                        app:layout_constraintStart_toEndOf="@id/img_media_2"
-                        app:layout_constraintTop_toTopOf="@id/img_media_1" />
-
-                    <TextView
-                        android:id="@+id/tv_media_name_3"
-                        android:layout_width="126dp"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="15dp"
-                        android:fontFamily="@font/raleway_regular"
-                        android:text="The Wellnus &amp; Sarro"
-                        android:textSize="12sp"
-                        app:layout_constraintStart_toStartOf="@+id/img_media_3"
-                        app:layout_constraintTop_toBottomOf="@+id/img_media_1" />
-
-                    <TextView
-                        android:id="@+id/tv_media_description_3"
-                        android:layout_width="126dp"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="10dp"
-                        android:fontFamily="@font/raleway_regular"
-                        android:paddingBottom="9dp"
-                        android:text="Познакомьтесь будущими партнерам"
-                        android:textSize="10sp"
-                        app:layout_constraintStart_toStartOf="@+id/tv_media_name_3"
-                        app:layout_constraintTop_toBottomOf="@+id/tv_media_name_1" />
-
-                </androidx.constraintlayout.widget.ConstraintLayout>
-            </HorizontalScrollView>
+            </androidx.recyclerview.widget.RecyclerView>
         </androidx.constraintlayout.widget.ConstraintLayout>
 
         <!--Хочу на экспресс - консультацию-->
@@ -848,84 +721,18 @@
                 app:layout_constraintStart_toStartOf="@id/news_group"
                 app:layout_constraintTop_toTopOf="@id/news_group" />
 
-            <!--Переделать на recyclerView , orientation horizontal-->
-            <HorizontalScrollView
-                android:layout_width="wrap_content"
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rc_news"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="15dp"
+                android:orientation="horizontal"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/tv_news">
+                app:layout_constraintTop_toBottomOf="@+id/tv_news"
+                tools:listitem="@layout/item_community">
 
-                <androidx.constraintlayout.widget.ConstraintLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent">
-
-                    <ImageView
-                        android:id="@+id/img_news_1"
-                        android:layout_width="215dp"
-                        android:layout_height="163dp"
-                        android:layout_marginStart="4dp"
-                        android:src="@drawable/img_news1"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent" />
-
-                    <TextView
-                        android:id="@+id/tv_news_name_1"
-                        android:layout_width="205dp"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="15dp"
-                        android:fontFamily="@font/raleway_regular"
-                        android:text="The Wellnus &amp; Sarro"
-                        android:textSize="12sp"
-                        app:layout_constraintStart_toStartOf="@+id/img_news_1"
-                        app:layout_constraintTop_toBottomOf="@+id/img_news_1" />
-
-                    <TextView
-                        android:id="@+id/tv_news_description_1"
-                        android:layout_width="205dp"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="10dp"
-                        android:fontFamily="@font/raleway_regular"
-                        android:paddingBottom="9dp"
-                        android:text="Познакомьтесь будущими партнерам"
-                        android:textSize="10sp"
-                        app:layout_constraintStart_toStartOf="@+id/tv_news_name_1"
-                        app:layout_constraintTop_toBottomOf="@+id/tv_news_name_1" />
-
-                    <ImageView
-                        android:id="@+id/img_news_2"
-                        android:layout_width="215dp"
-                        android:layout_height="163dp"
-                        android:layout_marginStart="5dp"
-                        android:src="@drawable/img_news1"
-                        app:layout_constraintStart_toEndOf="@id/img_news_1"
-                        app:layout_constraintTop_toTopOf="@id/img_news_1" />
-
-                    <TextView
-                        android:id="@+id/tv_news_name_2"
-                        android:layout_width="205dp"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="15dp"
-                        android:fontFamily="@font/raleway_regular"
-                        android:text="The Wellnus &amp; Sarro"
-                        android:textSize="12sp"
-                        app:layout_constraintStart_toStartOf="@+id/img_news_2"
-                        app:layout_constraintTop_toBottomOf="@+id/img_news_1" />
-
-                    <TextView
-                        android:id="@+id/tv_news_description_2"
-                        android:layout_width="205dp"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="10dp"
-                        android:fontFamily="@font/raleway_regular"
-                        android:paddingBottom="9dp"
-                        android:text="Познакомьтесь будущими партнерам"
-                        android:textSize="10sp"
-                        app:layout_constraintStart_toStartOf="@+id/tv_news_name_2"
-                        app:layout_constraintTop_toBottomOf="@+id/tv_news_name_1" />
-
-                </androidx.constraintlayout.widget.ConstraintLayout>
-            </HorizontalScrollView>
+            </androidx.recyclerview.widget.RecyclerView>
         </androidx.constraintlayout.widget.ConstraintLayout>
 
         <!--Обучение-->
@@ -948,84 +755,18 @@
                 app:layout_constraintStart_toStartOf="@id/education_group"
                 app:layout_constraintTop_toTopOf="@id/education_group" />
 
-            <!--Переделать на recyclerView , orientation horizontal-->
-            <HorizontalScrollView
-                android:layout_width="wrap_content"
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rc_education"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="15dp"
+                android:orientation="horizontal"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/tv_education">
+                app:layout_constraintTop_toBottomOf="@+id/tv_education"
+                tools:listitem="@layout/item_community">
 
-                <androidx.constraintlayout.widget.ConstraintLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent">
-
-                    <ImageView
-                        android:id="@+id/img_education_1"
-                        android:layout_width="215dp"
-                        android:layout_height="163dp"
-                        android:layout_marginStart="4dp"
-                        android:src="@drawable/img_education1"
-                        app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent" />
-
-                    <TextView
-                        android:id="@+id/tv_education_name_1"
-                        android:layout_width="205dp"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="15dp"
-                        android:fontFamily="@font/raleway_regular"
-                        android:text="The Wellnus &amp; Sarro"
-                        android:textSize="12sp"
-                        app:layout_constraintStart_toStartOf="@+id/img_education_1"
-                        app:layout_constraintTop_toBottomOf="@+id/img_education_1" />
-
-                    <TextView
-                        android:id="@+id/tv_education_description_1"
-                        android:layout_width="205dp"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="10dp"
-                        android:fontFamily="@font/raleway_regular"
-                        android:paddingBottom="9dp"
-                        android:text="Познакомьтесь будущими партнерам"
-                        android:textSize="10sp"
-                        app:layout_constraintStart_toStartOf="@+id/tv_education_name_1"
-                        app:layout_constraintTop_toBottomOf="@+id/tv_education_name_1" />
-
-                    <ImageView
-                        android:id="@+id/img_education_2"
-                        android:layout_width="215dp"
-                        android:layout_height="163dp"
-                        android:layout_marginStart="5dp"
-                        android:src="@drawable/img_education1"
-                        app:layout_constraintStart_toEndOf="@id/img_education_1"
-                        app:layout_constraintTop_toTopOf="@id/img_education_1" />
-
-                    <TextView
-                        android:id="@+id/tv_education_name_2"
-                        android:layout_width="205dp"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="15dp"
-                        android:fontFamily="@font/raleway_regular"
-                        android:text="The Wellnus &amp; Sarro"
-                        android:textSize="12sp"
-                        app:layout_constraintStart_toStartOf="@+id/img_education_2"
-                        app:layout_constraintTop_toBottomOf="@+id/img_education_1" />
-
-                    <TextView
-                        android:id="@+id/tv_education_description_2"
-                        android:layout_width="205dp"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="10dp"
-                        android:fontFamily="@font/raleway_regular"
-                        android:paddingBottom="9dp"
-                        android:text="Познакомьтесь будущими партнерам"
-                        android:textSize="10sp"
-                        app:layout_constraintStart_toStartOf="@+id/tv_education_name_2"
-                        app:layout_constraintTop_toBottomOf="@+id/tv_education_name_1" />
-
-                </androidx.constraintlayout.widget.ConstraintLayout>
-            </HorizontalScrollView>
+            </androidx.recyclerview.widget.RecyclerView>
         </androidx.constraintlayout.widget.ConstraintLayout>
 
     </androidx.constraintlayout.widget.ConstraintLayout>
