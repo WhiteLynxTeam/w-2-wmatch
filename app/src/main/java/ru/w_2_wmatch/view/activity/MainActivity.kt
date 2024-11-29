@@ -34,6 +34,7 @@ class MainActivity : AppCompatActivity(), OnHeaderChangeListener {
         R.id.nickTelegramFragment,
         R.id.socialNetworkLinkFragment,
         R.id.gotoProfilePart1Fragment,
+        R.id.photosBrandFragment,
         R.id.introFragment,
         R.id.authFragment,
         R.id.regFragment,

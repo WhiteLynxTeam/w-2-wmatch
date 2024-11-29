@@ -118,8 +118,8 @@
         android:label="fragment_key_brand_values"
         tools:layout="@layout/fragment_key_brand_values" >
         <action
-            android:id="@+id/action_keyBrandValuesFragment_to_gotoProfilePart1Fragment"
-            app:destination="@id/gotoProfilePart1Fragment" />
+            android:id="@+id/action_keyBrandValuesFragment_to_photosBrandFragment"
+            app:destination="@id/photosBrandFragment" />
     </fragment>
     <fragment
         android:id="@+id/gotoProfilePart1Fragment"
@@ -129,6 +129,15 @@
         <action
             android:id="@+id/action_gotoProfilePart1Fragment_to_manePageFragment"
             app:destination="@id/manePageFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/photosBrandFragment"
+        android:name="ru.w_2_wmatch.view.questionnaire.photos_of_your_brand.PhotosBrandFragment"
+        android:label="fragment_photos_brand"
+        tools:layout="@layout/fragment_photos_brand" >
+        <action
+            android:id="@+id/action_photosBrandFragment_to_gotoProfilePart1Fragment"
+            app:destination="@id/gotoProfilePart1Fragment" />
     </fragment>
 
 </navigation>
