@@ -16,7 +16,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="30dp"
-            android:layout_marginTop="48dp"
+            android:layout_marginTop="20dp"
             android:layout_marginEnd="10dp"
             android:text="Загрузите вертикальное фото,  лучше  всего  отражающее  суть  вашего  бренда.  Например,  фото  с последней  съёмки  lookbook  или  сезонный  товар  (позже  вы  сможете изменить  эти  фотографии)."
             android:textSize="16sp"
@@ -75,7 +75,7 @@
             android:layout_marginTop="10dp"
             android:layout_marginEnd="5dp"
             android:scaleType="fitXY"
-            android:src="@drawable/the_banner"
+            android:src="@drawable/img_media2"
             app:layout_constraintStart_toStartOf="@id/photo_1"
             app:layout_constraintTop_toBottomOf="@id/photo_1"
             app:layout_constraintEnd_toStartOf="@id/photo_4"/>
@@ -86,7 +86,7 @@
             android:layout_height="296dp"
             android:layout_marginStart="5dp"
             android:scaleType="fitXY"
-            android:src="@drawable/the_banner2"
+            android:src="@drawable/img_media1"
             app:layout_constraintEnd_toEndOf="@id/photo_2"
             app:layout_constraintTop_toTopOf="@id/photo_3"
             app:layout_constraintStart_toEndOf="@id/photo_3"/>

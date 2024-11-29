@@ -13,6 +13,7 @@ import ru.w_2_wmatch.view.questionnaire.gotoprofile.part1.GotoProfilePart1Fragme
 import ru.w_2_wmatch.view.questionnaire.key_brand_values.KeyBrandValuesFragment
 import ru.w_2_wmatch.view.questionnaire.nick_telegram.NickTelegramFragment
 import ru.w_2_wmatch.view.questionnaire.offline_space.OfflineSpaceFragment
+import ru.w_2_wmatch.view.questionnaire.personal_photo.PersonalPhotoFragment
 import ru.w_2_wmatch.view.questionnaire.photos_of_your_brand.PhotosBrandFragment
 import ru.w_2_wmatch.view.questionnaire.social_network_link.SocialNetworkLinkFragment
 import ru.w_2_wmatch.view.questionnaire.target_audience.TargetAudienceFragment
@@ -68,5 +69,8 @@ interface MainModule {
 
     @ContributesAndroidInjector
     fun bindPhotosBrandFragment(): PhotosBrandFragment
+
+    @ContributesAndroidInjector
+    fun bindPersonalPhotoFragment(): PersonalPhotoFragment
 
 }
