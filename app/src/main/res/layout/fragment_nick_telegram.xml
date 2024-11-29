@@ -116,8 +116,8 @@
 
     <ImageView
         android:id="@+id/iv_add"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:src="@drawable/baseline_add_24"
         app:layout_constraintStart_toStartOf="@id/oval"
         app:layout_constraintTop_toTopOf="@id/oval"
