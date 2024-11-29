@@ -47,7 +47,7 @@ class KeyBrandValuesFragment : BaseFragment() {
         super.onViewCreated(view, savedInstanceState)
 
         binding.btnNext.setOnClickListener {
-            findNavController().navigate(R.id.action_keyBrandValuesFragment_to_gotoProfilePart1Fragment)
+            findNavController().navigate(R.id.action_keyBrandValuesFragment_to_photosBrandFragment)
         }
 
         binding.ivHelpKeyValues.setOnClickListener {
