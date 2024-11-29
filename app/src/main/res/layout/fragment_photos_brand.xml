@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.questionnaire.photos_of_your_brand.PhotosBrandFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/tv_vertical_photo"
+            style="@style/Back.TextStyle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="48dp"
+            android:layout_marginEnd="10dp"
+            android:text="Загрузите вертикальное фото,  лучше  всего  отражающее  суть  вашего  бренда.  Например,  фото  с последней  съёмки  lookbook  или  сезонный  товар  (позже  вы  сможете изменить  эти  фотографии)."
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/iv_help_vertical_photo"/>
+
+        <ImageView
+            android:id="@+id/iv_help_vertical_photo"
+            android:layout_width="30dp"
+            android:layout_height="0dp"
+            android:layout_marginEnd="15dp"
+            android:scaleType="centerInside"
+            android:src="@drawable/ic_help"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_vertical_photo"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/tv_vertical_photo" />
+
+        <TextView
+            android:id="@+id/count_vertical_photo"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="11/30"
+            android:layout_marginTop="10dp"
+            app:layout_constraintTop_toBottomOf="@id/iv_help_vertical_photo"
+            app:layout_constraintEnd_toEndOf="@id/iv_help_vertical_photo"/>
+        
+        <ImageView
+            android:id="@+id/photo_1"
+            android:layout_width="0dp"
+            android:layout_height="296dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="5dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/img_media1"
+            app:layout_constraintStart_toStartOf="@id/tv_vertical_photo"
+            app:layout_constraintTop_toBottomOf="@id/count_vertical_photo"
+            app:layout_constraintEnd_toStartOf="@id/photo_2"/>
+
+        <ImageView
+            android:id="@+id/photo_2"
+            android:layout_width="0dp"
+            android:layout_height="296dp"
+            android:layout_marginEnd="30dp"
+            android:layout_marginStart="5dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/img_media2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/photo_1"
+            app:layout_constraintStart_toEndOf="@id/photo_1"/>
+
+        <ImageView
+            android:id="@+id/photo_3"
+            android:layout_width="0dp"
+            android:layout_height="296dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="5dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/the_banner"
+            app:layout_constraintStart_toStartOf="@id/photo_1"
+            app:layout_constraintTop_toBottomOf="@id/photo_1"
+            app:layout_constraintEnd_toStartOf="@id/photo_4"/>
+
+        <ImageView
+            android:id="@+id/photo_4"
+            android:layout_width="0dp"
+            android:layout_height="296dp"
+            android:layout_marginStart="5dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/the_banner2"
+            app:layout_constraintEnd_toEndOf="@id/photo_2"
+            app:layout_constraintTop_toTopOf="@id/photo_3"
+            app:layout_constraintStart_toEndOf="@id/photo_3"/>
+
+        <TextView
+            android:id="@+id/tv_description"
+            style="@style/Back.TextStyle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="10dp"
+            android:text="Так Вас будут видеть Ваши будущие партнеры"
+            android:textSize="12sp"
+            app:layout_constraintStart_toStartOf="@id/tv_vertical_photo"
+            app:layout_constraintTop_toBottomOf="@id/photo_3"
+            />
+
+        <TextView
+            android:id="@+id/tv_logo_and_photo"
+            style="@style/Back.TextStyle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="10dp"
+            android:text="Сначала  загрузите  логотип  вашего  бренда,  а  затем —больше  фотографий  для  расширенного  знакомства."
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="@id/tv_vertical_photo"
+            app:layout_constraintTop_toBottomOf="@id/tv_description"
+            app:layout_constraintEnd_toStartOf="@id/iv_help_logo_and_photo"/>
+
+        <ImageView
+            android:id="@+id/iv_help_logo_and_photo"
+            android:layout_width="30dp"
+            android:layout_height="0dp"
+            android:layout_marginEnd="15dp"
+            android:scaleType="centerInside"
+            android:src="@drawable/ic_help"
+            app:layout_constraintBottom_toBottomOf="@+id/tv_logo_and_photo"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/tv_logo_and_photo" />
+
+        <TextView
+            android:id="@+id/count_logo_and_photo"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="12/30"
+            android:layout_marginTop="10dp"
+            app:layout_constraintTop_toBottomOf="@id/iv_help_logo_and_photo"
+            app:layout_constraintEnd_toEndOf="@id/iv_help_logo_and_photo"/>
+
+        <ImageView
+            android:id="@+id/download_logo"
+            android:layout_width="0dp"
+            android:layout_height="151dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="5dp"
+            android:background="@drawable/bg_download_logo"
+            app:layout_constraintStart_toStartOf="@id/tv_vertical_photo"
+            app:layout_constraintTop_toBottomOf="@id/count_logo_and_photo"
+            app:layout_constraintEnd_toStartOf="@id/photo_5"/>
+
+        <ImageView
+            android:id="@+id/iv_add"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/baseline_add_24"
+            app:layout_constraintStart_toStartOf="@id/download_logo"
+            app:layout_constraintTop_toTopOf="@id/download_logo"
+            app:layout_constraintEnd_toEndOf="@id/download_logo"
+            app:layout_constraintBottom_toBottomOf="@id/download_logo"/>
+
+        <ImageView
+            android:id="@+id/photo_5"
+            android:layout_width="0dp"
+            android:layout_height="151dp"
+            android:layout_marginStart="5dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/img_news1"
+            app:layout_constraintStart_toEndOf="@id/download_logo"
+            app:layout_constraintTop_toTopOf="@+id/download_logo"
+            app:layout_constraintEnd_toEndOf="@id/photo_4"/>
+
+        <ImageView
+            android:id="@+id/photo_6"
+            android:layout_width="0dp"
+            android:layout_height="151dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="5dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/img_news1"
+            app:layout_constraintStart_toStartOf="@id/download_logo"
+            app:layout_constraintTop_toBottomOf="@+id/download_logo"
+            app:layout_constraintEnd_toStartOf="@id/photo_7"/>
+
+        <ImageView
+            android:id="@+id/photo_7"
+            android:layout_width="0dp"
+            android:layout_height="151dp"
+            android:layout_marginStart="5dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/img_news1"
+            app:layout_constraintStart_toEndOf="@id/photo_6"
+            app:layout_constraintTop_toTopOf="@+id/photo_6"
+            app:layout_constraintEnd_toEndOf="@id/photo_4"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            style="@style/PrimaryBigButtonActive"
+            android:id="@+id/btn_next"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="16dp"
+            android:text="Далее"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/photo_6"
+            app:layout_constraintBottom_toBottomOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.core.widget.NestedScrollView>
