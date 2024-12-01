@@ -132,7 +132,7 @@
     </fragment>
     <fragment
         android:id="@+id/photosBrandFragment"
-        android:name="ru.w_2_wmatch.view.questionnaire.photos_of_your_brand.PhotosBrandFragment"
+        android:name="ru.w_2_wmatch.view.questionnaire.photos_of_your_brand.part1.PhotosBrandFragment"
         android:label="fragment_photos_brand"
         tools:layout="@layout/fragment_photos_brand" >
         <action
