@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".view.questionnaire.photos_of_your_brand.PhotosBrandFragment">
+    tools:context=".view.questionnaire.photos_of_your_brand.part1.PhotosBrandFragment">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -158,35 +158,38 @@
             app:layout_constraintEnd_toEndOf="@id/download_logo"
             app:layout_constraintBottom_toBottomOf="@id/download_logo"/>
 
-        <ImageView
+        <com.google.android.material.imageview.ShapeableImageView
             android:id="@+id/photo_5"
             android:layout_width="0dp"
             android:layout_height="151dp"
             android:layout_marginStart="5dp"
             android:scaleType="fitXY"
+            app:shapeAppearance="@style/shape_appearance"
             android:src="@drawable/img_news1"
             app:layout_constraintStart_toEndOf="@id/download_logo"
             app:layout_constraintTop_toTopOf="@+id/download_logo"
             app:layout_constraintEnd_toEndOf="@id/photo_4"/>
 
-        <ImageView
+        <com.google.android.material.imageview.ShapeableImageView
             android:id="@+id/photo_6"
             android:layout_width="0dp"
             android:layout_height="151dp"
             android:layout_marginTop="10dp"
             android:layout_marginEnd="5dp"
             android:scaleType="fitXY"
+            app:shapeAppearance="@style/shape_appearance"
             android:src="@drawable/img_news1"
             app:layout_constraintStart_toStartOf="@id/download_logo"
             app:layout_constraintTop_toBottomOf="@+id/download_logo"
             app:layout_constraintEnd_toStartOf="@id/photo_7"/>
 
-        <ImageView
+        <com.google.android.material.imageview.ShapeableImageView
             android:id="@+id/photo_7"
             android:layout_width="0dp"
             android:layout_height="151dp"
             android:layout_marginStart="5dp"
             android:scaleType="fitXY"
+            app:shapeAppearance="@style/shape_appearance"
             android:src="@drawable/img_news1"
             app:layout_constraintStart_toEndOf="@id/photo_6"
             app:layout_constraintTop_toTopOf="@+id/photo_6"
