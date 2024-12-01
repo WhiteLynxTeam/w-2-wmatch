@@ -24,4 +24,6 @@
     <!-- text on button -->
     <color name="gray_bg">#FFF8F8F8</color>
     <color name="gray_figma_bg">#FFF3F3F3</color>
+    
+    <color name="blue_dark_bg">#758AB4</color>
 </resources>
