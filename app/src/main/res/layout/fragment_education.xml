@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/gray_figma_bg"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".view.education.EducationFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="37dp">
+
+        <!--С чего начать на пути к коллабе-->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/path_to_collab_group"
+            style="@style/left_radius_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/tv_path_to_collab"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/raleway_regular"
+                android:text="С чего начать на пути к коллабе"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="@id/path_to_collab_group"
+                app:layout_constraintTop_toTopOf="@id/path_to_collab_group" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rc_path_to_collab"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:orientation="horizontal"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_path_to_collab"
+                tools:listitem="@layout/item_education_page">
+
+            </androidx.recyclerview.widget.RecyclerView>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <!--Как формируются Метчи-->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/formed_match_group"
+            style="@style/left_radius_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/path_to_collab_group">
+
+            <TextView
+                android:id="@+id/tv_formed_match"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/raleway_regular"
+                android:text="Как формируются Метчи"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="@id/formed_match_group"
+                app:layout_constraintTop_toTopOf="@id/formed_match_group" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rc_formed_match"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:orientation="horizontal"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_formed_match"
+                tools:listitem="@layout/item_news_education">
+
+            </androidx.recyclerview.widget.RecyclerView>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <!--Хочу на экспресс - консультацию-->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/express_consultation_group"
+            style="@style/left_radius_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingStart="14dp"
+            android:layout_marginTop="5dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/formed_match_group">
+
+            <TextView
+                android:id="@+id/tv_express_consultation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/raleway_regular"
+                android:text="Хочу на экспресс - консультацию"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <View
+                android:id="@+id/view_support_w2w"
+                style="@style/all_radius_view"
+                android:layout_width="match_parent"
+                android:layout_height="81dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginEnd="22dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_express_consultation" />
+
+            <ImageView
+                android:id="@+id/iv_ic_support"
+                style="@style/style_ic_ruble"
+                android:layout_width="34dp"
+                android:layout_height="34dp"
+                android:layout_marginStart="15dp"
+                android:scaleType="center"
+                android:src="@drawable/ic_support"
+                app:layout_constraintBottom_toBottomOf="@+id/view_support_w2w"
+                app:layout_constraintStart_toStartOf="@+id/view_support_w2w"
+                app:layout_constraintTop_toTopOf="@+id/view_support_w2w" />
+
+            <TextView
+                android:id="@+id/tv_your_merch"
+                android:layout_width="217dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="13dp"
+                android:fontFamily="@font/poiretone_regular"
+                android:text="Чат поддержки W2W метч"
+                android:textColor="@color/white"
+                android:textSize="14sp"
+                android:layout_marginTop="15dp"
+                app:layout_constraintStart_toEndOf="@+id/iv_ic_support"
+                app:layout_constraintTop_toTopOf="@+id/view_support_w2w" />
+
+            <TextView
+                android:layout_width="217dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="7dp"
+                android:fontFamily="@font/mulish_light"
+                android:text="Вы получите  всю нужную информацию в чате поддержки"
+                android:textColor="@color/white"
+                android:textSize="10sp"
+                app:layout_constraintStart_toStartOf="@id/tv_your_merch"
+                app:layout_constraintTop_toBottomOf="@+id/tv_your_merch" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <!--Какие пути развития коллаборации существуют-->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/develop_collabs_group"
+            style="@style/left_radius_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/express_consultation_group">
+
+            <TextView
+                android:id="@+id/tv_develop_collabs"
+                android:layout_width="333dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/raleway_regular"
+                android:text="Какие пути развития коллаборации существуют"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="@id/develop_collabs_group"
+                app:layout_constraintTop_toTopOf="@id/develop_collabs_group" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rc_develop_collabs"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:orientation="horizontal"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_develop_collabs"
+                tools:listitem="@layout/item_education_page">
+
+            </androidx.recyclerview.widget.RecyclerView>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <!--Обучение-->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/education_group"
+            style="@style/left_radius_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/develop_collabs_group">
+
+            <TextView
+                android:id="@+id/tv_education"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Обучение"
+                android:fontFamily="@font/raleway_regular"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="@id/education_group"
+                app:layout_constraintTop_toTopOf="@id/education_group" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rc_education"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:orientation="horizontal"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv_education"
+                tools:listitem="@layout/item_community">
+
+            </androidx.recyclerview.widget.RecyclerView>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>

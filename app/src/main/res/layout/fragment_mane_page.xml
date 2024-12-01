@@ -11,7 +11,7 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginBottom="47dp">
+        android:layout_marginBottom="37dp">
 
         <!--Подписка BUSINESS-->
         <androidx.constraintlayout.widget.ConstraintLayout
@@ -624,7 +624,7 @@
                 app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/tv_media"
-                tools:listitem="@layout/item_community">
+                tools:listitem="@layout/item_media">
 
             </androidx.recyclerview.widget.RecyclerView>
         </androidx.constraintlayout.widget.ConstraintLayout>
@@ -730,7 +730,7 @@
                 app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/tv_news"
-                tools:listitem="@layout/item_community">
+                tools:listitem="@layout/item_news_education">
 
             </androidx.recyclerview.widget.RecyclerView>
         </androidx.constraintlayout.widget.ConstraintLayout>
@@ -764,7 +764,7 @@
                 app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/tv_education"
-                tools:listitem="@layout/item_community">
+                tools:listitem="@layout/item_news_education">
 
             </androidx.recyclerview.widget.RecyclerView>
         </androidx.constraintlayout.widget.ConstraintLayout>
