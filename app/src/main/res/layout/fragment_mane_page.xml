@@ -11,7 +11,7 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginBottom="47dp">
+        android:layout_marginBottom="37dp">
 
         <!--Подписка BUSINESS-->
         <androidx.constraintlayout.widget.ConstraintLayout
@@ -203,13 +203,15 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="@id/tv_statistics" />
 
-            <TextView
+            <Spinner
                 android:id="@+id/tv_period"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="15dp"
                 android:text="За выбранный период"
+                android:spinnerMode="dropdown"
                 android:textSize="12sp"
+                android:layout_marginStart="-10dp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/tv_statistics" />
 
@@ -230,7 +232,7 @@
                 android:layout_marginTop="16dp"
                 android:text="50"
                 android:textSize="10sp"
-                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="@id/tv_progress_100"
                 app:layout_constraintTop_toBottomOf="@id/tv_progress_100" />
 
             <TextView
@@ -240,7 +242,7 @@
                 android:layout_marginTop="16dp"
                 android:text="25"
                 android:textSize="10sp"
-                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="@id/tv_progress_100"
                 app:layout_constraintTop_toBottomOf="@id/tv_progress_50" />
 
             <TextView
@@ -250,7 +252,7 @@
                 android:layout_marginTop="16dp"
                 android:text="0"
                 android:textSize="10sp"
-                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="@id/tv_progress_100"
                 app:layout_constraintTop_toBottomOf="@id/tv_progress_25" />
 
             <ProgressBar
@@ -624,7 +626,7 @@
                 app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/tv_media"
-                tools:listitem="@layout/item_community">
+                tools:listitem="@layout/item_media">
 
             </androidx.recyclerview.widget.RecyclerView>
         </androidx.constraintlayout.widget.ConstraintLayout>
@@ -730,7 +732,7 @@
                 app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/tv_news"
-                tools:listitem="@layout/item_community">
+                tools:listitem="@layout/item_news_education">
 
             </androidx.recyclerview.widget.RecyclerView>
         </androidx.constraintlayout.widget.ConstraintLayout>
@@ -764,7 +766,7 @@
                 app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/tv_education"
-                tools:listitem="@layout/item_community">
+                tools:listitem="@layout/item_news_education">
 
             </androidx.recyclerview.widget.RecyclerView>
         </androidx.constraintlayout.widget.ConstraintLayout>
