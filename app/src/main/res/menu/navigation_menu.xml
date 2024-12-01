@@ -15,6 +15,7 @@
     <item
         android:id="@+id/w2w"
         android:title=""
+        android:enabled="false"
         app:showAsAction="withText" />
     <item
         android:id="@+id/education"
