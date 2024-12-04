@@ -1,4 +1,4 @@
-package ru.w_2_wmatch.view.main.match_page
+package ru.w_2_wmatch.view.main.collabs
 
 import ru.w_2_wmatch.databinding.ItemMyLikeBinding
 import ru.w_2_wmatch.domain.models.MyLikes

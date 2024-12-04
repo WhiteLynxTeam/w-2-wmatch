@@ -5,8 +5,9 @@ import dagger.android.ContributesAndroidInjector
 import ru.w_2_wmatch.view.activity.MainActivity
 import ru.w_2_wmatch.view.auth.AuthFragment
 import ru.w_2_wmatch.view.intro.IntroFragment
-import ru.w_2_wmatch.view.main.match_page.MatchPageFragment
-import ru.w_2_wmatch.view.main.mane_page.ManePageFragment
+import ru.w_2_wmatch.view.main.collabs.PageCollabsFragment
+import ru.w_2_wmatch.view.main.education.PageEducationFragment
+import ru.w_2_wmatch.view.main.mane.PageManeFragment
 import ru.w_2_wmatch.view.questionnaire.brand_position.BrandPositionFragment
 import ru.w_2_wmatch.view.questionnaire.brands_mission.BrandsMissionFragment
 import ru.w_2_wmatch.view.questionnaire.gotoprofile.part1.GotoProfilePart1Fragment
@@ -63,10 +64,13 @@ interface MainModule {
     fun bindGotoProfilePart1Fragment(): GotoProfilePart1Fragment
 
     @ContributesAndroidInjector
-    fun bindMatchPageFragment(): MatchPageFragment
+    fun bindPageCollabsFragment(): PageCollabsFragment
 
     @ContributesAndroidInjector
-    fun bindManePageFragment(): ManePageFragment
+    fun bindPageManeFragment(): PageManeFragment
+
+    @ContributesAndroidInjector
+    fun bindPageEducationFragment(): PageEducationFragment
 
     @ContributesAndroidInjector
     fun bindPhotosBrandFragment(): PhotosBrandFragment

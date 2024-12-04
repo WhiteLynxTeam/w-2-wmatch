@@ -1,4 +1,4 @@
-package ru.w_2_wmatch.view.main.match_page
+package ru.w_2_wmatch.view.main.collabs
 
 import android.view.LayoutInflater
 import android.view.ViewGroup

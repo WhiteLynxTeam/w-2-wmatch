@@ -25,9 +25,6 @@
         <action
             android:id="@+id/action_introFragment_to_nickTelegramFragment"
             app:destination="@id/nickTelegramFragment" />
-        <action
-            android:id="@+id/action_introFragment_to_matchPageFragment"
-            app:destination="@id/matchPageFragment" />
     </fragment>
     <fragment
         android:id="@+id/authFragment"
@@ -79,7 +76,7 @@
         tools:layout="@layout/fragment_choosing_to_fill_questionnaire" >
         <action
             android:id="@+id/action_choosingToFillQuestionnaireFragment_to_manePageFragment"
-            app:destination="@id/manePageFragment" />
+            app:destination="@id/pageManeFragment" />
         <action
             android:id="@+id/action_choosingToFillQuestionnaireFragment_to_nickTelegramFragment"
             app:destination="@id/nickTelegramFragment" />
@@ -90,18 +87,18 @@
         android:label="fragment_target_audience"
         tools:layout="@layout/fragment_target_audience" />
     <fragment
-        android:id="@+id/matchPageFragment"
-        android:name="ru.w_2_wmatch.view.main.match_page.MatchPageFragment"
-        android:label="fragment_match_page"
-        tools:layout="@layout/fragment_match_page" />
+        android:id="@+id/pageCollabsFragment"
+        android:name="ru.w_2_wmatch.view.main.collabs.PageCollabsFragment"
+        android:label="fragment_collabs_page"
+        tools:layout="@layout/fragment_page_collabs" />
     <fragment
-        android:id="@+id/manePageFragment"
-        android:name="ru.w_2_wmatch.view.main.mane_page.ManePageFragment"
+        android:id="@+id/pageManeFragment"
+        android:name="ru.w_2_wmatch.view.main.mane.PageManeFragment"
         android:label="fragment_mane_page"
-        tools:layout="@layout/fragment_mane_page" >
+        tools:layout="@layout/fragment_page_mane" >
         <action
-            android:id="@+id/action_manePageFragment_to_matchPageFragment"
-            app:destination="@id/matchPageFragment" />
+            android:id="@+id/action_pageManeFragment_to_matchPageFragment"
+            app:destination="@id/pageCollabsFragment" />
     </fragment>
     <fragment
         android:id="@+id/socialNetworkLinkFragment"
@@ -128,7 +125,7 @@
         tools:layout="@layout/fragment_goto_profile_part1">
         <action
             android:id="@+id/action_gotoProfilePart1Fragment_to_manePageFragment"
-            app:destination="@id/manePageFragment" />
+            app:destination="@id/pageManeFragment" />
     </fragment>
     <fragment
         android:id="@+id/photosBrandFragment"
@@ -139,5 +136,10 @@
             android:id="@+id/action_photosBrandFragment_to_gotoProfilePart1Fragment"
             app:destination="@id/gotoProfilePart1Fragment" />
     </fragment>
+    <fragment
+        android:id="@+id/pageEducationFragment"
+        android:name="ru.w_2_wmatch.view.main.education.PageEducationFragment"
+        android:label="fragment_page_education"
+        tools:layout="@layout/fragment_page_education" />
 
 </navigation>

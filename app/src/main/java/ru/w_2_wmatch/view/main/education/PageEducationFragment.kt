@@ -1,4 +1,4 @@
-package ru.w_2_wmatch.view.education
+package ru.w_2_wmatch.view.main.education
 
 import androidx.fragment.app.viewModels
 import android.os.Bundle
@@ -7,17 +7,16 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import ru.w_2_wmatch.R
-import ru.w_2_wmatch.databinding.FragmentEducationBinding
-import ru.w_2_wmatch.databinding.FragmentManePageBinding
+import ru.w_2_wmatch.databinding.FragmentPageEducationBinding
 import ru.w_2_wmatch.domain.models.Community
 import ru.w_2_wmatch.domain.models.Education
 import ru.w_2_wmatch.domain.models.NewsEducation
-import ru.w_2_wmatch.view.education.adapters.EducationAdapter
-import ru.w_2_wmatch.view.main.mane_page.adapters.CommunityAdapter
-import ru.w_2_wmatch.view.main.mane_page.adapters.NewsEducationAdapter
+import ru.w_2_wmatch.view.main.education.adapters.EducationAdapter
+import ru.w_2_wmatch.view.main.mane.adapters.CommunityAdapter
+import ru.w_2_wmatch.view.main.mane.adapters.NewsEducationAdapter
 
-class EducationFragment : Fragment() {
-    private var _binding: FragmentEducationBinding? = null
+class PageEducationFragment : Fragment() {
+    private var _binding: FragmentPageEducationBinding? = null
     private val binding get() = _binding!!
 
     private lateinit var educationAdapter: EducationAdapter
@@ -47,16 +46,16 @@ class EducationFragment : Fragment() {
     )
 
     companion object {
-        fun newInstance() = EducationFragment()
+        fun newInstance() = PageEducationFragment()
     }
 
-    private val viewModel: EducationViewModel by viewModels()
+    private val viewModel: PageEducationViewModel by viewModels()
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        _binding = FragmentEducationBinding.inflate(inflater, container, false)
+        _binding = FragmentPageEducationBinding.inflate(inflater, container, false)
         return binding.root
     }
 

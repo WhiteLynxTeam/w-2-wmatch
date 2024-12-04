@@ -1,4 +1,4 @@
-package ru.w_2_wmatch.view.education.adapters
+package ru.w_2_wmatch.view.main.education.adapters
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
