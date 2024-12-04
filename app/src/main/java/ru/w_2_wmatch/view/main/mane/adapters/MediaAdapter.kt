@@ -1,4 +1,4 @@
-package ru.w_2_wmatch.view.main.mane_page.adapters
+package ru.w_2_wmatch.view.main.mane.adapters
 
 import android.view.LayoutInflater
 import android.view.ViewGroup

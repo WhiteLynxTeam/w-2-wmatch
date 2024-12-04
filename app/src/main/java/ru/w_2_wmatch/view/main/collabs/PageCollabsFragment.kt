@@ -1,4 +1,4 @@
-package ru.w_2_wmatch.view.main.match_page
+package ru.w_2_wmatch.view.main.collabs
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -8,22 +8,22 @@ import android.widget.AdapterView
 import android.widget.ArrayAdapter
 import android.widget.Toast
 import ru.w_2_wmatch.R
-import ru.w_2_wmatch.databinding.FragmentMatchPageBinding
+import ru.w_2_wmatch.databinding.FragmentPageCollabsBinding
 import ru.w_2_wmatch.domain.models.LikedUsers
 import ru.w_2_wmatch.domain.models.MyLikes
 import ru.w_2_wmatch.domain.models.RecommendedBrands
 import ru.w_2_wmatch.view.base.BaseFragment
 
-class MatchPageFragment : BaseFragment() {
+class PageCollabsFragment : BaseFragment() {
 
-    private var _binding: FragmentMatchPageBinding? = null
+    private var _binding: FragmentPageCollabsBinding? = null
     private val binding get() = _binding!!
     private lateinit var likedUsersAdapter: LikedUsersAdapter
     private lateinit var recommendedBrandsAdapter: RecommendedBrandsAdapter
     private lateinit var myLikesAdapter: MyLikesAdapter
     private lateinit var myMatchesAdapter: MyLikesAdapter
 
-    private lateinit var viewModel: MatchPageViewModel
+    private lateinit var viewModel: PageCollabsViewModel
 
     private val users = listOf(
         LikedUsers(R.drawable.img_profile, "Photo 1"),
@@ -169,7 +169,7 @@ class MatchPageFragment : BaseFragment() {
         savedInstanceState: Bundle?
     ): View {
 
-        _binding = FragmentMatchPageBinding.inflate(inflater, container, false)
+        _binding = FragmentPageCollabsBinding.inflate(inflater, container, false)
         return binding.root
     }
 

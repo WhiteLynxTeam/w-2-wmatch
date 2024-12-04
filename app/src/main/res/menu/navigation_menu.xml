@@ -8,17 +8,17 @@
         android:title="@string/merch"
         app:showAsAction="withText" />
     <item
-        android:id="@+id/collabs"
+        android:id="@+id/pageCollabsFragment"
         android:icon="@drawable/ic_collabs"
         android:title="@string/collabs"
         app:showAsAction="withText" />
     <item
-        android:id="@+id/w2w"
+        android:id="@+id/pageManeFragment"
         android:title=""
         android:enabled="false"
         app:showAsAction="withText" />
     <item
-        android:id="@+id/education"
+        android:id="@+id/pageEducationFragment"
         android:icon="@drawable/ic_education"
         android:title="@string/education"
         app:showAsAction="withText" />

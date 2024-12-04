@@ -1,4 +1,4 @@
-package ru.w_2_wmatch.view.main.mane_page
+package ru.w_2_wmatch.view.main.mane
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -6,26 +6,25 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.AdapterView
 import android.widget.ArrayAdapter
-import android.widget.Toast
 import ru.w_2_wmatch.R
-import ru.w_2_wmatch.databinding.FragmentManePageBinding
+import ru.w_2_wmatch.databinding.FragmentPageManeBinding
 import ru.w_2_wmatch.domain.models.Community
 import ru.w_2_wmatch.domain.models.Media
 import ru.w_2_wmatch.domain.models.NewsEducation
 import ru.w_2_wmatch.view.base.BaseFragment
-import ru.w_2_wmatch.view.main.mane_page.adapters.CommunityAdapter
-import ru.w_2_wmatch.view.main.mane_page.adapters.MediaAdapter
-import ru.w_2_wmatch.view.main.mane_page.adapters.NewsEducationAdapter
+import ru.w_2_wmatch.view.main.mane.adapters.CommunityAdapter
+import ru.w_2_wmatch.view.main.mane.adapters.MediaAdapter
+import ru.w_2_wmatch.view.main.mane.adapters.NewsEducationAdapter
 
-class ManePageFragment : BaseFragment() {
-    private var _binding: FragmentManePageBinding? = null
+class PageManeFragment : BaseFragment() {
+    private var _binding: FragmentPageManeBinding? = null
     private val binding get() = _binding!!
 
     private lateinit var communityAdapter: CommunityAdapter
     private lateinit var mediaAdapter: MediaAdapter
     private lateinit var newsEducationAdapter: NewsEducationAdapter
 
-    private lateinit var viewModel: ManePageViewModel
+    private lateinit var viewModel: PageManeViewModel
 
     private val community = listOf(
         Community(
@@ -124,7 +123,7 @@ class ManePageFragment : BaseFragment() {
             showNotification()
         }
 
-        _binding = FragmentManePageBinding.inflate(inflater, container, false)
+        _binding = FragmentPageManeBinding.inflate(inflater, container, false)
         return binding.root
     }
 
