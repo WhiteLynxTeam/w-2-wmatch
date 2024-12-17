@@ -3,6 +3,7 @@ package ru.w_2_wmatch.di.modules
 import dagger.Module
 import dagger.Provides
 import ru.w_2_wmatch.domain.usecases.AuthUseCase
+import ru.w_2_wmatch.domain.usecases.GetQuestionnaireCategoriesApiUseCase
 import ru.w_2_wmatch.domain.usecases.GetRefreshTokenPrefUseCase
 import ru.w_2_wmatch.domain.usecases.GetTokenApiUseCase
 import ru.w_2_wmatch.domain.usecases.RefreshTokenApiUseCase
@@ -49,8 +50,10 @@ class AppModule() {
     @Provides
     fun provideBrandPositionViewModelFactory(
         saveBrandPrefUseCase: SaveBrandPrefUseCase,
+        getQuestionnaireCategoriesApiUseCase: GetQuestionnaireCategoriesApiUseCase,
         ) = BrandPositionViewModel.Factory(
         saveBrandPrefUseCase = saveBrandPrefUseCase,
+        getQuestionnaireCategoriesApiUseCase = getQuestionnaireCategoriesApiUseCase,
     )
 
 }

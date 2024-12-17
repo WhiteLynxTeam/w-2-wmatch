@@ -4,14 +4,17 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.TextView
 import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.lifecycleScope
 import androidx.navigation.fragment.findNavController
 import kotlinx.coroutines.launch
 import ru.w_2_wmatch.R
 import ru.w_2_wmatch.databinding.FragmentBrandPositionBinding
+import ru.w_2_wmatch.databinding.ItemTextviewBinding
 import ru.w_2_wmatch.domain.AppState
 import ru.w_2_wmatch.domain.models.Brand
+import ru.w_2_wmatch.domain.models.QuestionnaireChoicesItem
 import ru.w_2_wmatch.utils.uiextensions.showSnackbarLong
 import ru.w_2_wmatch.view.base.BaseFragment
 import javax.inject.Inject
@@ -46,6 +49,19 @@ class BrandPositionFragment : BaseFragment() {
 
         viewModel =
             ViewModelProvider(this, vmFactory)[BrandPositionViewModel::class.java]
+
+        viewLifecycleOwner.lifecycleScope.launch {
+            viewModel.categories.collect { categories ->
+                println("categories - $categories")
+                if (categories.isNotEmpty()) {
+                    categories.forEach {
+                        val itemTextView = createItemTextView(it)
+                        binding.flwCategory.referencedIds += itemTextView.id
+                        binding.root.addView(itemTextView)
+                    }
+                }
+            }
+        }
 
         viewLifecycleOwner.lifecycleScope.launch {
             viewModel.appStateFlow.collect {
@@ -83,4 +99,13 @@ class BrandPositionFragment : BaseFragment() {
         }
     }
 
+    private fun createItemTextView(itemQuestionnaireChoicesItem: QuestionnaireChoicesItem) =
+        (ItemTextviewBinding.inflate(
+            LayoutInflater.from(context),
+            binding.root,
+            false
+        ) as TextView).apply {
+            text = itemQuestionnaireChoicesItem.name
+            id = View.generateViewId()
+        }
 }
