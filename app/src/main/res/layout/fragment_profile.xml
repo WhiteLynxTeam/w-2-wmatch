@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/gray_figma_bg">
@@ -49,6 +50,7 @@
             style="@style/left_radius_view"
             android:layout_width="match_parent"
             android:layout_height="174dp"
+            android:layout_marginTop="5dp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/profile">
 
@@ -73,16 +75,6 @@
                 app:layout_constraintTop_toTopOf="parent" />
 
 
-            <androidx.appcompat.widget.AppCompatButton
-                android:id="@+id/container_annex"
-                style="@style/PrimaryBigButtonNotActive_left_radius_orange"
-                android:layout_marginStart="20dp"
-                android:layout_marginTop="10dp"
-                android:fontFamily="@font/raleway_regular"
-                android:text="The Annex"
-                app:layout_constraintStart_toEndOf="@id/avatar"
-                app:layout_constraintTop_toBottomOf="@+id/name_text" />
-
             <!--            <TextView-->
             <!--                android:id="@+id/annex"-->
             <!--                android:layout_width="245dp"-->
@@ -95,10 +87,24 @@
             <!--                app:layout_constraintStart_toEndOf="@id/avatar"-->
             <!--                app:layout_constraintTop_toBottomOf="@id/name_text" />-->
 
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/container_annex"
+                style="@style/PrimaryBigEtOrange"
+                android:layout_height="40dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="12dp"
+                android:fontFamily="@font/raleway_regular"
+                android:paddingStart="43dp"
+                android:text="The Annex"
+                android:textAlignment="textStart"
+                app:layout_constraintStart_toEndOf="@id/avatar"
+                app:layout_constraintTop_toBottomOf="@+id/name_text" />
+
             <View
                 android:id="@+id/container_match"
-                style="@style/Primary_brand_left_radius"
+                style="@style/PrimaryBigEt_elevation"
                 android:layout_width="wrap_content"
+                android:layout_height="40dp"
                 android:layout_marginStart="20dp"
                 android:layout_marginTop="5dp"
                 app:layout_constraintStart_toEndOf="@+id/avatar"
@@ -359,12 +365,76 @@
 
             <View
                 android:id="@+id/container_consultation"
-                style="@style/banner_business"
-                android:layout_width="288dp"
-                android:layout_height="wrap_content"
+                style="@style/PrimaryBigEtOrange_right_consult"
+                android:layout_width="360dp"
+                android:layout_height="84dp"
                 android:layout_marginTop="5dp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/help_consult"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="35dp"
+                android:src="@drawable/ic_help"
+                app:layout_constraintStart_toStartOf="@+id/container_consultation"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/text_consult1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="25dp"
+                android:fontFamily="@font/raleway_regular"
+                android:text="Хочу"
+                android:textColor="@color/brand_orange"
+                android:textSize="16sp"
+                app:layout_constraintStart_toEndOf="@+id/help_consult"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/text_consult2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/raleway_regular"
+                android:text="Экспресс-консультацию"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="@+id/text_consult1"
+                app:layout_constraintTop_toBottomOf="@+id/text_consult1" />
+
+            <View
+                android:id="@+id/container_consultation2"
+                style="@style/PrimaryBigEtOrange_consult"
+                android:layout_width="84dp"
+                android:layout_height="84dp"
+                android:layout_marginStart="5dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/container_consultation" />
+
+            <ImageView
+                android:id="@+id/present_consult"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="37dp"
+                android:layout_marginTop="17dp"
+                android:src="@drawable/ic_present"
+                app:layout_constraintStart_toStartOf="@+id/container_consultation2"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/text_present"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="5dp"
+                android:fontFamily="@font/raleway_regular"
+                android:text="Пригласить \n     друга"
+                android:textSize="10sp"
+                app:layout_constraintStart_toStartOf="@+id/container_consultation2"
+                app:layout_constraintTop_toBottomOf="@+id/present_consult" />
 
 
         </androidx.constraintlayout.widget.ConstraintLayout>
@@ -372,10 +442,10 @@
         <!--Инструменты-->
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/tools2"
-            android:layout_width="match_parent"
             style="@style/left_radius_view"
-            android:layout_marginTop="5dp"
+            android:layout_width="match_parent"
             android:layout_height="310dp"
+            android:layout_marginTop="5dp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/consultation">
 
@@ -476,10 +546,10 @@
         <!--Настройки-->
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/settings"
-            android:layout_width="match_parent"
             style="@style/left_radius_view"
-            android:layout_marginTop="5dp"
+            android:layout_width="match_parent"
             android:layout_height="344dp"
+            android:layout_marginTop="5dp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/tools2">
 
