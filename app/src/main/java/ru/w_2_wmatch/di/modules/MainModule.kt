@@ -8,6 +8,7 @@ import ru.w_2_wmatch.view.intro.IntroFragment
 import ru.w_2_wmatch.view.main.collabs.PageCollabsFragment
 import ru.w_2_wmatch.view.main.education.PageEducationFragment
 import ru.w_2_wmatch.view.main.mane.PageManeFragment
+import ru.w_2_wmatch.view.profile.ProfileFragment
 import ru.w_2_wmatch.view.questionnaire.brand_position.BrandPositionFragment
 import ru.w_2_wmatch.view.questionnaire.brands_mission.BrandsMissionFragment
 import ru.w_2_wmatch.view.questionnaire.gotoprofile.part1.GotoProfilePart1Fragment
@@ -80,5 +81,8 @@ interface MainModule {
 
     @ContributesAndroidInjector
     fun bindPhotosBrand2Fragment(): PhotosBrand2Fragment
+
+    @ContributesAndroidInjector
+    fun bindProfileFragment(): ProfileFragment
 
 }

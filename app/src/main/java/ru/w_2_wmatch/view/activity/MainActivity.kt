@@ -48,40 +48,17 @@ class MainActivity : AppCompatActivity(), OnHeaderChangeListener {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-//        binding.fabNoactive.setOnClickListener {
-//            supportFragmentManager
-//                .beginTransaction()
-//                .replace(R.id.fragment_placeholder,ManePageFragment())
-//                .addToBackStack(null)
-//                .commit()
-//        }
-
         binding.bottomNavigation.setupWithNavController(navController)
-
-//        binding.bottomNavigation.setOnNavigationItemSelectedListener {
-//            when (it.itemId) {
-//                R.id.education -> {
-//                    val tag = "education"
-//                    val fragment = checkFragmentExistence(tag)
-//                    changeFragment(EducationFragment(), tag)
-//                    true
-//                }
-//
-//                R.id.merch -> {
-//                    val tag = "merch"
-//                    val fragment = checkFragmentExistence(tag)
-//                    changeFragment(MatchPageFragment(), tag)
-//                    true
-//                }
-//                else -> false
-//            }
-//        }
 
         initMenu()
         initShowOrHide()
 
         binding.btnBack.setOnClickListener {
             onBackClick()
+        }
+
+        binding.avatar.setOnClickListener {
+            navController.navigate(R.id.profileFragment)
         }
     }
 
@@ -130,19 +107,6 @@ class MainActivity : AppCompatActivity(), OnHeaderChangeListener {
             }
         }
     }
-
-//    //1. Проверка на существование фрагмента. Если фрагмент есть, то мы его не пересоздаем, а используем вновь:
-//    private fun checkFragmentExistence(tag: String): Fragment? =
-//        supportFragmentManager.findFragmentByTag(tag)
-//
-//    //2. Сам запуск фрагмента:
-//    private fun changeFragment(fragment: Fragment, tag: String) {
-//        supportFragmentManager
-//            .beginTransaction()
-//            .replace(R.id.fragment_placeholder, fragment, tag)
-//            .addToBackStack(null)
-//            .commit()
-//    }
 
     override fun hideBackArrow() {
         binding.btnBack.hide()
