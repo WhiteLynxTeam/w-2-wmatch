@@ -1,0 +1,685 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/gray_figma_bg">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <!--Профиль-->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/profile"
+            android:layout_width="match_parent"
+            android:layout_height="78dp"
+            android:background="@color/white"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+
+            <ImageView
+                android:id="@+id/back"
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:layout_marginStart="25dp"
+                android:layout_marginTop="44dp"
+                android:src="@drawable/ic_back"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/profile_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:fontFamily="@font/raleway_regular"
+                android:text="Профиль"
+                android:textSize="16sp"
+                app:layout_constraintBottom_toBottomOf="@+id/back"
+                app:layout_constraintStart_toEndOf="@+id/back" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <!--Имя-->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/name"
+            style="@style/left_radius_view"
+            android:layout_width="match_parent"
+            android:layout_height="174dp"
+            android:layout_marginTop="5dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/profile">
+
+
+            <ImageView
+                android:id="@+id/avatar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/img_avatar"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/name_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:fontFamily="@font/raleway_regular"
+                android:text="Зильверг Юлия"
+                android:textSize="16sp"
+                app:layout_constraintStart_toEndOf="@id/avatar"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+            <!--            <TextView-->
+            <!--                android:id="@+id/annex"-->
+            <!--                android:layout_width="245dp"-->
+            <!--                android:layout_height="40dp"-->
+            <!--                android:layout_marginStart="63dp"-->
+            <!--                android:layout_marginTop="15dp"-->
+            <!--                android:fontFamily="@font/raleway_regular"-->
+            <!--                android:text="The Annex"-->
+            <!--                android:textSize="16sp"-->
+            <!--                app:layout_constraintStart_toEndOf="@id/avatar"-->
+            <!--                app:layout_constraintTop_toBottomOf="@id/name_text" />-->
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/container_annex"
+                style="@style/PrimaryBigEtOrange"
+                android:layout_height="40dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="12dp"
+                android:fontFamily="@font/raleway_regular"
+                android:paddingStart="43dp"
+                android:text="The Annex"
+                android:textAlignment="textStart"
+                app:layout_constraintStart_toEndOf="@id/avatar"
+                app:layout_constraintTop_toBottomOf="@+id/name_text" />
+
+            <View
+                android:id="@+id/container_match"
+                style="@style/PrimaryBigEt_elevation"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="5dp"
+                app:layout_constraintStart_toEndOf="@+id/avatar"
+                app:layout_constraintTop_toBottomOf="@+id/container_annex" />
+
+            <TextView
+                android:id="@+id/text_LITE_Match"
+                android:layout_width="245dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/raleway_regular"
+                android:text="LITE MATCH"
+                android:textColor="@color/brand_orange"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="@+id/container_match"
+                app:layout_constraintTop_toTopOf="@+id/container_match" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <!--Инструменты-->
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/tools"
+            style="@style/left_radius_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/name">
+
+
+            <TextView
+                android:id="@+id/text_tools"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/raleway_regular"
+                android:text="Инструменты"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <HorizontalScrollView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:scrollbars="none"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/text_tools">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:id="@+id/card"
+                        android:layout_width="215dp"
+                        android:layout_height="163dp"
+                        android:src="@drawable/ic_card"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <ImageView
+                        android:id="@+id/moschino_card"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/img_moschino"
+                        app:layout_constraintStart_toEndOf="@+id/card"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/text_card"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dp"
+                        android:fontFamily="@font/raleway_regular"
+                        android:text="Карточка бренда"
+                        android:textSize="12sp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/card" />
+
+                    <TextView
+                        android:id="@+id/text_moschino2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:fontFamily="@font/raleway_regular"
+                        android:text="Познакомьтесь будущими партнерами"
+                        android:textSize="10sp"
+                        app:layout_constraintStart_toStartOf="@+id/text_moschino"
+                        app:layout_constraintTop_toBottomOf="@+id/text_moschino" />
+
+
+                    <TextView
+                        android:id="@+id/text_moschino"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dp"
+                        android:fontFamily="@font/raleway_regular"
+                        android:text="Мои коллабы"
+                        android:textSize="12sp"
+                        app:layout_constraintStart_toStartOf="@id/moschino_card"
+                        app:layout_constraintTop_toBottomOf="@+id/moschino_card" />
+
+                    <TextView
+                        android:id="@+id/text_card2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:fontFamily="@font/raleway_regular"
+                        android:text="Познакомьтесь с будущими мартнерами"
+                        android:textSize="10sp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/text_card" />
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </HorizontalScrollView>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <!--Коммуникация-->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/communication"
+            style="@style/left_radius_view"
+            android:layout_width="match_parent"
+            android:layout_height="344dp"
+            android:layout_marginTop="5dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tools">
+
+
+            <TextView
+                android:id="@+id/text_communication"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/raleway_regular"
+                android:text="Коммуникация"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/communication_help"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="290dp"
+                android:src="@drawable/ic_help"
+                app:layout_constraintStart_toEndOf="@+id/text_communication"
+                app:layout_constraintTop_toTopOf="@+id/text_communication" />
+
+
+            <View
+                android:id="@+id/container_care_service"
+                style="@style/left_radius_banner"
+                android:layout_width="wrap_content"
+                android:layout_height="80dp"
+                android:layout_marginTop="20dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/text_communication" />
+
+            <ImageView
+                android:id="@+id/img_care_service"
+                style="@style/style_ic_ruble"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="15dp"
+                android:src="@drawable/ic_care_service"
+                app:layout_constraintStart_toStartOf="@+id/container_care_service"
+                app:layout_constraintTop_toTopOf="@+id/container_care_service" />
+
+            <TextView
+                android:id="@+id/text_care_service"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="25dp"
+                android:fontFamily="@font/raleway_regular"
+                android:text="Служба заботы"
+                android:textSize="14sp"
+                app:layout_constraintStart_toEndOf="@+id/img_care_service"
+                app:layout_constraintTop_toTopOf="@+id/container_care_service" />
+
+            <View
+                android:id="@+id/container_instructions"
+                style="@style/left_radius_banner"
+                android:layout_width="wrap_content"
+                android:layout_height="80dp"
+                android:layout_marginTop="5dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/container_care_service" />
+
+            <ImageView
+                android:id="@+id/img_instructions"
+                style="@style/style_ic_ruble"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:src="@drawable/ic_instructions"
+                app:layout_constraintStart_toStartOf="@+id/img_care_service"
+                app:layout_constraintTop_toTopOf="@+id/container_instructions" />
+
+            <TextView
+                android:id="@+id/text_instructions"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="25dp"
+                android:fontFamily="@font/raleway_regular"
+                android:text="Как пользоваться W2W Match"
+                android:textSize="14sp"
+                app:layout_constraintStart_toEndOf="@+id/img_instructions"
+                app:layout_constraintTop_toTopOf="@+id/container_instructions" />
+
+            <View
+                android:id="@+id/container_offers"
+                style="@style/left_radius_banner"
+                android:layout_width="wrap_content"
+                android:layout_height="80dp"
+                android:layout_marginTop="5dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/container_instructions" />
+
+            <ImageView
+                android:id="@+id/img_offer"
+                style="@style/style_ic_ruble"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:src="@drawable/ic_support_orange"
+                app:layout_constraintStart_toStartOf="@+id/img_instructions"
+                app:layout_constraintTop_toTopOf="@+id/container_offers" />
+
+            <TextView
+                android:id="@+id/text_offers"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="25dp"
+                android:fontFamily="@font/raleway_regular"
+                android:text="Предложить улучшения"
+                android:textSize="14sp"
+                app:layout_constraintStart_toEndOf="@+id/img_instructions"
+                app:layout_constraintTop_toTopOf="@+id/container_offers" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <!--Консультация-->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/consultation"
+            android:layout_width="match_parent"
+            android:layout_height="90dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/communication">
+
+            <View
+                android:id="@+id/container_consultation"
+                style="@style/PrimaryBigEtOrange_right_consult"
+                android:layout_width="360dp"
+                android:layout_height="84dp"
+                android:layout_marginTop="5dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/help_consult"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="35dp"
+                android:src="@drawable/ic_help"
+                app:layout_constraintStart_toStartOf="@+id/container_consultation"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/text_consult1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="25dp"
+                android:fontFamily="@font/raleway_regular"
+                android:text="Хочу"
+                android:textColor="@color/brand_orange"
+                android:textSize="16sp"
+                app:layout_constraintStart_toEndOf="@+id/help_consult"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/text_consult2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/raleway_regular"
+                android:text="Экспресс-консультацию"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="@+id/text_consult1"
+                app:layout_constraintTop_toBottomOf="@+id/text_consult1" />
+
+            <View
+                android:id="@+id/container_consultation2"
+                style="@style/PrimaryBigEtOrange_consult"
+                android:layout_width="84dp"
+                android:layout_height="84dp"
+                android:layout_marginStart="5dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/container_consultation" />
+
+            <ImageView
+                android:id="@+id/present_consult"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="37dp"
+                android:layout_marginTop="17dp"
+                android:src="@drawable/ic_present"
+                app:layout_constraintStart_toStartOf="@+id/container_consultation2"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/text_present"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="5dp"
+                android:fontFamily="@font/raleway_regular"
+                android:text="Пригласить \n     друга"
+                android:textSize="10sp"
+                app:layout_constraintStart_toStartOf="@+id/container_consultation2"
+                app:layout_constraintTop_toBottomOf="@+id/present_consult" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <!--Инструменты-->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/tools2"
+            style="@style/left_radius_view"
+            android:layout_width="match_parent"
+            android:layout_height="310dp"
+            android:layout_marginTop="5dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/consultation">
+
+            <TextView
+                android:id="@+id/text_tools2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:fontFamily="@font/raleway_regular"
+                android:text="Инструменты"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <HorizontalScrollView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:scrollbars="none"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/text_tools2">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:id="@+id/img_interview"
+                        style="@style/style_ic_ruble"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="30dp"
+                        android:src="@drawable/img_interview"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <ImageView
+                        android:id="@+id/img_education"
+                        style="@style/style_ic_ruble"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:src="@drawable/img_education"
+                        app:layout_constraintStart_toEndOf="@+id/img_interview"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/text_interview1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="30dp"
+                        android:layout_marginTop="10dp"
+                        android:fontFamily="@font/raleway_regular"
+                        android:text="Дать интервью"
+                        android:textSize="12sp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/img_interview" />
+
+                    <TextView
+                        android:id="@+id/text_education"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:fontFamily="@font/raleway_regular"
+                        android:text="Познакомьтесь с будущими партнерами"
+                        android:textSize="10sp"
+                        app:layout_constraintStart_toStartOf="@+id/text_interview2"
+                        app:layout_constraintTop_toBottomOf="@+id/text_interview2" />
+
+                    <TextView
+                        android:id="@+id/text_interview2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:fontFamily="@font/raleway_regular"
+                        android:text="Обучение"
+                        android:textSize="12sp"
+                        app:layout_constraintStart_toStartOf="@+id/img_education"
+                        app:layout_constraintTop_toBottomOf="@+id/img_education" />
+
+                    <TextView
+                        android:id="@+id/text_education2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="30dp"
+                        android:layout_marginTop="10dp"
+                        android:fontFamily="@font/raleway_regular"
+                        android:text="Познакомьтесь с будущими партнерами"
+                        android:textSize="10sp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/text_interview1" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </HorizontalScrollView>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <!--Настройки-->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/settings"
+            style="@style/left_radius_view"
+            android:layout_width="match_parent"
+            android:layout_height="344dp"
+            android:layout_marginTop="5dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tools2">
+
+            <TextView
+                android:id="@+id/text_settings"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:fontFamily="@font/raleway_regular"
+                android:text="Настройки"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/settings_help"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="290dp"
+                android:layout_marginTop="3dp"
+                android:src="@drawable/ic_help"
+                app:layout_constraintStart_toEndOf="@+id/text_settings"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <View
+                android:id="@+id/container_info"
+                style="@style/left_radius_banner"
+                android:layout_width="wrap_content"
+                android:layout_height="80dp"
+
+                android:layout_marginTop="25dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/text_settings" />
+
+
+            <ImageView
+                android:id="@+id/img_info"
+                style="@style/style_ic_ruble"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="15dp"
+                android:src="@drawable/ic_education_orange"
+                app:layout_constraintStart_toStartOf="@id/container_info"
+                app:layout_constraintTop_toTopOf="@+id/container_info" />
+
+            <TextView
+                android:id="@+id/text_info"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="25dp"
+                android:fontFamily="@font/raleway_regular"
+                android:text="Личная информация"
+                android:textSize="14sp"
+                app:layout_constraintStart_toEndOf="@+id/img_info"
+                app:layout_constraintTop_toTopOf="@+id/container_info" />
+
+            <View
+                android:id="@+id/container_safety"
+                style="@style/left_radius_banner"
+                android:layout_width="wrap_content"
+                android:layout_height="80dp"
+
+                android:layout_marginTop="5dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/container_info" />
+
+
+            <ImageView
+                android:id="@+id/img_safety"
+                style="@style/style_ic_ruble"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="15dp"
+                android:src="@drawable/ic_safety"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/container_safety" />
+
+            <TextView
+                android:id="@+id/text_safety"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="25dp"
+                android:fontFamily="@font/raleway_regular"
+                android:text="Безопасность"
+                android:textSize="14sp"
+                app:layout_constraintStart_toEndOf="@+id/img_info"
+                app:layout_constraintTop_toBottomOf="@+id/container_info" />
+
+
+            <View
+                android:id="@+id/container_rate"
+                style="@style/left_radius_banner"
+                android:layout_width="wrap_content"
+                android:layout_height="80dp"
+
+                android:layout_marginTop="5dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/container_safety" />
+
+
+            <ImageView
+                android:id="@+id/img_rate"
+                style="@style/style_ic_ruble"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="15dp"
+                android:src="@drawable/ic_ruble"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/container_rate" />
+
+            <TextView
+                android:id="@+id/text_rate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="25dp"
+                android:fontFamily="@font/raleway_regular"
+                android:text="Настройки тарифа"
+                android:textSize="14sp"
+                app:layout_constraintStart_toEndOf="@+id/img_info"
+                app:layout_constraintTop_toBottomOf="@+id/container_safety" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.core.widget.NestedScrollView>
