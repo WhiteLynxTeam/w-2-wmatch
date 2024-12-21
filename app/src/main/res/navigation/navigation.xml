@@ -141,5 +141,10 @@
         android:name="ru.w_2_wmatch.view.main.education.PageEducationFragment"
         android:label="fragment_page_education"
         tools:layout="@layout/fragment_page_education" />
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="ru.w_2_wmatch.view.profile.ProfileFragment"
+        android:label="fragment_profile"
+        tools:layout="@layout/fragment_profile" />
 
 </navigation>
