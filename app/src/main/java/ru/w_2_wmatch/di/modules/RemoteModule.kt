@@ -7,6 +7,7 @@ import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
+import ru.w_2_wmatch.data.api.QuestionnaireApi
 import ru.w_2_wmatch.data.api.TokenApi
 import ru.w_2_wmatch.data.api.UserApi
 import java.util.concurrent.TimeUnit
@@ -46,6 +47,10 @@ class RemoteModule {
     @Provides
     @Singleton
     fun provideTokenApi(retrofit: Retrofit): TokenApi = retrofit.create(TokenApi::class.java)
+
+    @Provides
+    @Singleton
+    fun provideQuestionnaireApi(retrofit: Retrofit): QuestionnaireApi = retrofit.create(QuestionnaireApi::class.java)
 
     companion object {
         private const val HALF_MINUTE_FOR_SLOW_INTERNET = 75L
